@@ -2,31 +2,31 @@
 title: chat:removeSuggestion
 ---
 
-## About
-Triggering this allows you to remove any existing command suggestions for the specified command.
+## 关于
+触发此操作可以删除指定命令的所有现有命令建议。
 
-## Name
+## 事件名称
 ```
 chat:removeSuggestion
 ```
 
-Parameters
+参数
 ----------
 
 ```
 string commandName
 ```
 
-Examples
+示例
 --------
-This example removes the suggestion that was created with the example of [chat:addSuggestion](../chat-addSuggestion).
+本示例删除了通过[chat:addSuggestion](../chat-addSuggestion)示例创建的建议。
 
-##### Lua Example:
+##### Lua 示例：
 ```lua
 TriggerEvent('chat:removeSuggestion', '/command')
 ```
 
-##### C\# Example:
+##### C\# 示例：
 ```csharp
 TriggerEvent("chat:removeSuggestion", "/command");
 ```

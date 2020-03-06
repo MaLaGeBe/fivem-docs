@@ -2,26 +2,26 @@
 title: chat:addSuggestion
 ---
 
-## About
-Triggering this event allows you to add command suggestions to your chat.
+## 关于
+触发此事件可使您向聊天框添加命令建议。
 
-## Name
+## 事件名称
 ```
 chat:addSuggestion
 ```
 
-Parameters
+参数
 ----------
 
 ```
 string commandName, string commandDescription, object commandParameters
 ```
 
-Examples
+示例
 --------
-This example adds a command suggestion for the `/command` command.
+T他的示例为`/command`命令添加了命令建议。
 
-##### Lua Example:
+##### Lua 示例：
 ```lua
 -- Note, the command has to start with `/`.
 TriggerEvent('chat:addSuggestion', '/command', 'help text', {
@@ -30,7 +30,7 @@ TriggerEvent('chat:addSuggestion', '/command', 'help text', {
 })
 ```
 
-##### C\# Example:
+##### C\# 示例：
 ```csharp
 TriggerEvent("chat:addSuggestion", "/command", "help text", new[]
 {
@@ -39,7 +39,7 @@ TriggerEvent("chat:addSuggestion", "/command", "help text", new[]
 });
 ```
 
-##### JS Example:
+##### JS 示例：
 ```js
 setImmediate(() => {
   emit('chat:addSuggestion', '/command', 'help text', [
@@ -49,5 +49,5 @@ setImmediate(() => {
 });
 ```
 
-## Example Result:
+## 示例结果：
 ![screenshot-1](/chat_addSuggestion.png)

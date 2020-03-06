@@ -2,24 +2,24 @@
 title: enteredVehicle
 ---
 
-Name
+事件名称
 ----------
 ```
 baseevents:enteredVehicle
 ```
 
-Parameters
+参数
 ----------
 
 ```
 vehicle currentVehicle, int currentSeat, string vehicleDisplayName
 ```
 
-- **currentVehicle**: The handle of the vehicle the player just entered.
-- **currentSeat**: The seat number (-1 is drivers seat, 0 = passenger right front, etc.) in which the player is sitting.
-- **vehicleDisplayName**: A string containing the display name of the vehicle the player just entered.
+- **currentVehicle**: 玩家刚进入载具的句柄
+- **currentSeat**: 玩家坐在车里的座位号（-1是驾驶员座位，0代表乘客右前坐等）。
+- **vehicleDisplayName**: 一个字符串，其中包含玩家刚刚输入的车辆的显示名称。
 
-Examples
+示例
 --------
 
 TODO

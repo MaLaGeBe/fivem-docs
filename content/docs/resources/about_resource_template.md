@@ -1,11 +1,11 @@
 ---
-title: Resource Template
+title: 资源模板
 toc_hide: true
 draft: true
 ---
 
-## About
-Basic description about this resource.
+## 关于
+关于此资源的基本描述。
 
 ## Exports
 

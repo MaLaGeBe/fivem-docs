@@ -2,16 +2,16 @@
 title: onClientGameTypeStop
 ---
 
-Parameters
+参数
 ----------
 
 ```
 string resourceName
 ```
 
-- **resourceName**: The name of the resource/gametype that stopped.
+- **resourceName**: 停止的资源/游戏类型的名称。
 
-Examples
+示例
 --------
 
 TODO

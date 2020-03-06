@@ -2,31 +2,31 @@
 title: chat:clear
 ---
 
-## About
-Clears the chat messages/history and the sent messages history buffer.
+## 关于
+清除聊天消息/历史记录和已发送消息的历史记录缓冲区。
 
-## Name
+## 事件名称
 ```
 chat:clear
 ```
 
-Parameters
+参数
 ----------
 
-This event has no parameters.
+此事件没有参数。
 
-Examples
+示例
 --------
-This example registers a `/clear` command that clears the chat.
+这个例子注册了一个清除聊天的 `/clear` 命令。
 
-##### Lua Example:
+##### Lua 示例：
 ```lua
 RegisterCommand('clear', function(source, args)
     TriggerEvent('chat:clear')
 end, false)
 ```
 
-##### C\# Example:
+##### C\# 示例：
 ```csharp
 // In a method or the class constructor
 RegisterCommand("clear", new Action<int, List<object>, string>(source, args, raw) =>

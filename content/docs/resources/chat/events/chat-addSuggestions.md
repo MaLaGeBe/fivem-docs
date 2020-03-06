@@ -2,25 +2,25 @@
 title: chat:addSuggestions
 ---
 
-## About
-Triggering this event allows you to add multiple command suggestions to your chat using a single event.
+## 关于
+触发此事件使您可以使用单个事件向聊天添加多个命令建议。
 
-## Name
+## 事件名称
 ```
 chat:addSuggestions
 ```
 
 
-Parameters
+参数
 ----------
 
 ```
 array suggestions
 ```
 
-- **suggestions**: an array containing multiple [suggestion](../chat-addSuggestion) objects.
+- **suggestions**: 包含多个[建议](../chat-addSuggestion)对象的数组。
 
-Examples
+示例
 --------
 
 TODO

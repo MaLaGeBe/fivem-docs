@@ -2,41 +2,41 @@
 title: chatMessage
 ---
 
-## About
-This event is available both in the client and in the server.  
-In the client this event is **deprecated**! Use [chat:addMessage](../chat-addMessage) instead.  
-Triggering this event in the client allows you to send a chat message to this client.  
-Listening for this event in the server allows you to read/log/reply the message.  
+## 关于
+此事件在客户端和服务器中均可用。
+在客户端中，此事件 **已弃用**！请使用 [chat:addMessage](../chat-addMessage) 代替。
+在客户端中触发此事件使您可以向该客户端发送聊天消息。
+在服务器中侦听此事件使您可以读取/记录/回复消息。
 
-## Name
+## 事件名称
 ```
 chatMessage
 ```
 
-Parameters
+参数
 ----------
 
-##### Client side:
+##### 客户端：
 ```
 string author, array color, string text
 ```
-- **author**: The name of the player that sent the message.
-- **color**: The color array. Color syntax: `{255, 255, 255} ( {r, g, b} )`
-- **text**: The message
+- **author**: 发送消息的玩家名称。
+- **color**: 颜色数组。 颜色语法：`{255, 255, 255} ( {r, g, b} )`
+- **text**: 消息内容
 
-##### Server side:
+##### 服务端：
 ```
 source, string author, string text
 ```
 - **source**: The source of the chat message
-- **author**: The name of the player that sent the message.
-- **text**: The message
+- **author**: 发送消息的玩家名称。
+- **text**: 消息内容
 
 
-Examples
+示例
 --------
 
-##### Server-side JS Example:
+##### 服务端 JS 示例：
 ```javascript
 onNet('chatMessage', (src, author, text)=>{
     // Log the message
@@ -54,4 +54,4 @@ onNet('chatMessage', (src, author, text)=>{
     }
 })
 ```
-**Note:** We are using `setImmediate()` otherwise the reply (`Pong!`) will show up in the chat before the command (`/ping`).
+**注意：** 我们使用的是`setImmediate()`，否则该回复(`Pong!`)将在命令(`/ping`)之前显示在聊天框中

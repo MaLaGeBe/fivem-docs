@@ -4,39 +4,38 @@ title: mapmanager
 
 Mapmanager
 ------
-Mapmanager is an included citizenfx resource that handles map changes, game types, and compatability between gametypes and maps.
+Mapmanager是随附的citizenfx资源，用于处理地图更改，游戏类型以及游戏类型与地图之间的兼容性。
 
 
 
 
-
-Resource Structure
+资源结构
 ------
 
-### Client Scripts
+### 客户端脚本
 
 - mapmanager_client.lua
 
-### Server Scripts
+### 服务端脚本
 
 - mapmanager_server.lua
 
-## Shared Scripts
+## 共享脚本
 
 - mapmanager_shared.lua
 
-Exports
+输出
 ------
 
-Exports are called using exports["mapmanger"]:exportname(args)
+使用 `exports["mapmanger"]:exportname(args)` 调用输出
 
 
 ### getCurrentGameType
 
-Returns the current game type.
+返回当前的游戏类型。
 
-Arguments :
-None
+参数：
+无
 
 ```lua
 -- mapmanager_server.lua
@@ -48,10 +47,10 @@ end
 
 ### getCurrentMap
 
-Returns the current map.
+返回当前地图。
 
-Arguments :
-None
+参数：
+无
 
 
 ```lua
@@ -64,9 +63,9 @@ end
 
 ### changeGameType
 
-Changes the current game type.
+更改当前的游戏类型。
 
-Arguments :
+参数：
 gameType
 
 ```lua
@@ -87,9 +86,9 @@ end
 
 ### changeMap
 
-Changes the current map
+更改当前地图
 
-Arguments :
+参数：
 map
 
 ```lua
@@ -107,9 +106,9 @@ end
 
 ### doesMapSupportGameType
 
-Returns a bool variables as to whether or not a map supports a game type.
+返回有关地图是否支持游戏类型的布尔变量。
 
-Arguments :
+参数：
 gameType
 map
 
@@ -135,9 +134,9 @@ end
 
 ### getMaps
 
-Returns a table of all available maps.
+返回所有可用地图的表格。
 
-Arguments :
+参数：
 None
 
 ```lua
@@ -150,9 +149,9 @@ end
 
 ### roundEnded
 
-Will end a round.
+将结束一个回合。
 
-Arguments :
+参数：
 None
 
 

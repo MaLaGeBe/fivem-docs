@@ -2,12 +2,12 @@
 title: sessionInitialized
 ---
 
-Parameters
+参数
 ----------
 
 TODO
 
-Examples
+示例
 --------
 
 TODO

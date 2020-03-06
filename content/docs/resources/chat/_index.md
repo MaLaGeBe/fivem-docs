@@ -4,18 +4,17 @@ hidden: false
 ---
 
 
-## About
-The chat resource provides custom chat functionality for FiveM using a NUI-based interface.
-It is included and maintained at the cfx-server-data repository.
+## 关于
+聊天资源使用基于NUI的界面为FiveM提供自定义聊天功能。
+它包含在cfx服务器数据存储库中并在其中维护。
 
+## 输出
+_此资源没有任何输出功能。_
 
-## Exports
-_This resource does not have any export functions._
+## 事件
 
-## Events
-
-### Client
-- [chatMessage](./events/chatMessage) (deprecated, use chat:addMessage instead)
+### 客户端
+- [chatMessage](./events/chatMessage) （已弃用，请使用`chat:addMessage`）
 - [chat:addMessage](./events/chat-addMessage)
 - [chat:addSuggestion](./events/chat-addSuggestion)
 - [chat:addSuggestions](./events/chat-addSuggestions)
@@ -23,5 +22,5 @@ _This resource does not have any export functions._
 - [chat:addTemplate](./events/chat-addTemplate)
 - [chat:clear](./events/chat-clear)
 
-### Server
+### 服务端
 - [chatMessage](./events/chatMessage)

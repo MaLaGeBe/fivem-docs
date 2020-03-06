@@ -2,22 +2,22 @@
 title: playerSpawned
 ---
 
-Parameters
+参数
 ----------
 
 ```
 object spawnInfo
 ```
 
-- **spawnInfo**: An object containing the following information:
-    - **(float) x**: The x coordinate of where the player spawned to.
-    - **(float) y**: The y coordinate of where the player spawned to.
-    - **(float) z**: The z coordinate of where the player spawned to.
-    - **(float) heading**: The heading that the player is facing when spawned.
-    - **(int) idx**: The spawnpoint index.
-    - **(Hash) model**: The ped model hash the player spawned as.
+- **spawnInfo**: 包含以下信息的对象：
+    - **(float) x**: 生成玩家位置的x坐标。
+    - **(float) y**: 生成玩家位置的y坐标。
+    - **(float) z**: 生成玩家位置的z坐标。
+    - **(float) heading**: 生成时玩家时面向位置。
+    - **(int) idx**: 生成点索引。
+    - **(Hash) model**: 生成玩家的ped模型哈希值。
 
-Examples
+示例
 --------
 
 ```js

@@ -2,23 +2,23 @@
 title: onPlayerWasted
 ---
 
-Name
+事件名称
 ----------
 ```
 baseevents:onPlayerWasted
 ```
 
 
-Parameters
+参数
 ----------
 
 ```
 array deathCoords
 ```
 
-- **deathCoords**: A table containing the x, y and z coordinates of where the (source) player died.
+- **deathCoords**: 包含（源）玩家死亡位置的x、y和z坐标的表格。
 
-Examples
+示例
 --------
 
 TODO

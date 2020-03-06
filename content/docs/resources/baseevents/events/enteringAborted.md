@@ -2,19 +2,19 @@
 title: enteringAborted
 ---
 
-Name
+事件名称
 ----------
 ```
 baseevents:enteringAborted
 ```
 
-Parameters
+参数
 ----------
 
-_There are no parameters for this event._
+_此事件没有参数。_
 
 
-Examples
+示例
 --------
 
 TODO

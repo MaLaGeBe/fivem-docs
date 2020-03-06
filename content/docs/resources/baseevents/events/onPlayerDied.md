@@ -2,27 +2,27 @@
 title: onPlayerDied
 ---
 
-Name
+事件名称
 ----------
 ```
 baseevents:onPlayerDied
 ```
 
-Parameters
+参数
 ----------
 
 ```
 int killerType, array deathCoords
 ```
 
-- **killerType**: The pedType of the ped that killed this player. (View the screenshot below for available pedTypes)
-- **deathCoords**: An array containing the x, y, z coordinates of where the player died.
+- **killerType**: 杀死该玩家的ped的pedTypes。（查看下面的屏幕快照以获取可用的pedTypes）
+- **deathCoords**: 包含玩家死亡地点的x，y，z坐标的数组。
 
 
 ##### Ped types
 ![](/ped_types.png)
 
-Examples
+示例
 --------
 
 TODO

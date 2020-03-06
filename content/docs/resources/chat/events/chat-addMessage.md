@@ -2,9 +2,9 @@
 title: chat:addMessage
 ---
 
-## About
-Triggering this event allows you to send a chat message to this client.
-Message object structure:
+## 关于
+触发此事件使您可以向此客户端发送聊天消息。
+消息对象结构：
 
 ```lua
 message = {
@@ -15,24 +15,24 @@ message = {
 }
 ```
 
-## Name
+## 事件名称
 ```
 chat:addMessage
 ```
 
-Parameters
+参数
 ----------
 
 ```
 object message
 ```
 
-Examples
+示例
 --------
 
-This example sends a chat message to a player locally from a client script (only the executing client will see it).
+本示例从客户端脚本向本地玩家发送聊天消息（只有执行客户端会看到此消息）。
 
-##### Lua Example:
+##### Lua 示例：
 ```lua
 TriggerEvent('chat:addMessage', {
   color = { 255, 0, 0},
@@ -41,7 +41,7 @@ TriggerEvent('chat:addMessage', {
 })
 ```
 
-##### C\# Example:
+##### C\# 示例：
 ```csharp
 TriggerEvent("chat:addMessage", new
 {
@@ -51,5 +51,5 @@ TriggerEvent("chat:addMessage", new
 });
 ```
 
-### Example Result:
+### 示例结果：
 ![screenshot-1](/chat_addMessage.png)

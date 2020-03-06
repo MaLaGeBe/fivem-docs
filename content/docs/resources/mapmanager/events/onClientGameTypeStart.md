@@ -2,16 +2,16 @@
 title: onClientGameTypeStart
 ---
 
-Parameters
+参数
 ----------
 
 ```
 string resourceName
 ```
 
-- **resourceName**: The name of the resource/gametype that started.
+- **resourceName**: 启动的资源/游戏类型的名称。
 
-Examples
+示例
 --------
 
 TODO

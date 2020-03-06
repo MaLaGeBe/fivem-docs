@@ -1,6 +1,6 @@
 ---
-title: Resources
+title: 资源
 weight: 600
 ---
 
-If you are looking for community resources, take a look at the forums!
+如果您正在寻找社区资源，请查看论坛！

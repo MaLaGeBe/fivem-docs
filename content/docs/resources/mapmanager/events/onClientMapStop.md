@@ -2,16 +2,16 @@
 title: onClientMapStop
 ---
 
-Parameters
+参数
 ----------
 
 ```
 string resourceName
 ```
 
-- **resourceName**:  The name of the resource/map that stopped.
+- **resourceName**:  停止的资源/地图名称。
 
-Examples
+示例
 --------
 
 TODO

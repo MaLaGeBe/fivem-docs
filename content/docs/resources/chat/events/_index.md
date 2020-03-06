@@ -1,11 +1,11 @@
 ---
-title: Events
+title: 事件
 ---
 
-## Events
+## 事件
 
-### Client
-- [chatMessage](./chatMessage) (deprecated, use chat:addMessage instead)
+### 客户端
+- [chatMessage](./chatMessage) （已弃用，请使用`chat:addMessage`）
 - [chat:addMessage](./chat-addMessage)
 - [chat:addSuggestion](./chat-addSuggestion)
 - [chat:addSuggestions](./chat-addSuggestions)
@@ -13,5 +13,5 @@ title: Events
 - [chat:addTemplate](./chat-addTemplate)
 - [chat:clear](./chat-clear)
 
-### Server
+### 服务端
 - [chatMessage](./chatMessage)

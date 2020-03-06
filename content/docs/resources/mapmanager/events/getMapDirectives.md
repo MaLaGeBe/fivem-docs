@@ -2,16 +2,16 @@
 title: getMapDirectives
 ---
 
-Parameters
+参数
 ----------
 
 ```
 function add
 ```
 
-- **add**: A function used to add a specific map directive.
+- **add**: 用于添加特定map指令的函数。
 
-Examples
+示例
 --------
 
 TODO

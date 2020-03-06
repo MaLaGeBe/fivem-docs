@@ -2,16 +2,16 @@
 title: onClientMapStart
 ---
 
-Parameters
+参数
 ----------
 
 ```
 string resourceName
 ```
 
-- **resourceName**:  The name of the resource/map that started.
+- **resourceName**:  启动的资源/地图名称。
 
-Examples
+示例
 --------
 
 TODO
