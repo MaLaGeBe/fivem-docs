@@ -1,10 +1,10 @@
 ---
-title: Support
+title: 支持
 weight: 800
 layout: single
 ---
 
-- [Client FAQ](/docs/support/client-faq)
-- [Client issues](/docs/support/client-issues)
-- [Server issues](/docs/support/server-issues)
-- [Server debugging](/docs/support/server-debug)
+- [客户端常见问题](/docs/support/client-faq)
+- [客户端问题](/docs/support/client-issues)
+- [服务端问题](/docs/support/server-issues)
+- [服务端调试](/docs/support/server-debug)

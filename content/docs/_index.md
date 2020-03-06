@@ -33,7 +33,7 @@ FiveM 中文文档
         <li><a href="/server-manual/setting-up-a-server">入门</a></li>
         <li><a href="/scripting-manual/introduction">编写脚本</a></li>
         <li><a href="/support/server-issues">疑难问题解答</a></li>
-        <li><a href="/server-manual/migrating-from-citmp">从CitizenMP.Server迁移/a></li>
+        <li><a href="/server-manual/migrating-from-citmp">从CitizenMP.Server迁移</a></li>
       </ul>
     </div>
     <div style="border: 1px solid lightgray; padding: 15px; margin-bottom: 5px;">

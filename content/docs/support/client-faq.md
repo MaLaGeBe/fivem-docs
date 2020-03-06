@@ -1,35 +1,35 @@
 ---
-title: Client FAQ
+title: 客户端常见问题
 weight: 810
 ---
 
-Will FiveM run on Xbox or Playstation?
+FiveM可以在Xbox或Playstation上运行吗？
 -------------------------------------
 
-No. FiveM is developed exclusively for the PC version of GTA V. There are no plans to support consoles.
+不会。FiveM是专门为PC版的GTA V开发的。没有计划支持游戏机。
 
-Will FiveM run on Linux?
+FiveM是否可以在Linux上运行？
 ------------------------
 
-The FiveM client cannot run on Linux due to [no support](https://github.com/doitsujin/dxvk/issues/899) for shared resources in DXVK. You can run a FiveM server on Linux.
+FiveM客户端由于[不支持](https://github.com/doitsujin/dxvk/issues/899)DXVK中的共享资源而无法在Linux上运行。不过您可以在Linux上运行FiveM服务器。
 
-Where is FiveM installed?
+FiveM安装在哪里？
 -------------------------
 
-That depends on how you installed it in the first place.
+首先这取决于您如何安装它。
 
-- Did you run FiveM.exe in an empty folder? Then that's where FiveM is installed.
-- Otherwise, FiveM installs in `%localappdata%`:
-    - Press `WinKey+R` on your keyboard
-    - Type `%localappdata%/FiveM` in the dialog that opens
-    - Hit Enter
+- 您是否在一个空文件夹中运行FiveM.exe？ 然后就是安装FiveM的地方。
+- 否则，FiveM将安装在 `%localappdata%` 目录：
+    - 在键盘上按 `WinKey+R` 
+    - 在打开的对话框中输入 `%localappdata%/FiveM` 
+    - 按下Enter键
 
-More about installing FiveM [here][installing-fivem].
+有关安装FiveM的更多信息[点这里][installing-fivem].
 
-I'm running into issues, what can I do?
+我运行程序遇到了问题，该怎么办？
 ---------------------------------------
 
-It's never fun to run into problems. Read the [client issues manual][client-issues] for help.
+遇到问题从来都不是一件有趣的事。阅读[客户端问题手册][client-issues]以寻求帮助。
 
 [installing-fivem]: /docs/client-manual/installing-fivem
 [client-issues]: /docs/support/client-issues
