@@ -1,40 +1,38 @@
 ---
-title: Installing FiveM
+title: 安装 FiveM
 weight: 240
 ---
 
-Installing FiveM is pretty straightforward. It's usually a matter of [downloading FiveM][home], then simply running the
-downloaded file. For those who'd like a bit more detail, read below.
+安装FiveM非常简单。通常是[FiveM主页[下载]，然后简单地运行
+下载的FiveM.exe。想要了解更加详细的安装方法，请阅读下面的内容。
 
-Installing
+安装
 ----------
 
-Running into trouble? Make sure your system meets the [minimum requirements][system-requirements] and
-read the [client issues manual][client-issues].
+遇到麻烦了？确保您的系统满足[最低要求][系统要求]并且
+阅读[客户端问题手册][客户端问题]。
 
-- Disable any antivirus before you download FiveM. Some antivirus vendors like Avast, AVG, and others are
-  known to block FiveM procedures, so make sure your antivirus is fully turned off. Once FiveM is installed, add FiveM
-  to the whitelist/exclusions of your antivirus. [See here how][antivirus-help]. We're working on a solution.
-- Make sure you have installed and updated [GTA V][where-to-buy].
-- [Download FiveM][home] off the website.
-- Run FiveM.exe. If you run the installer in an empty folder, FiveM will install there. Otherwise, it will install
-  in `%localappdata%\FiveM`.
-- Start FiveM from your Windows start menu.
+- 在下载FiveM之前禁用所有杀毒软件。一些杀毒软件供应商，如Avast、AVG、360、腾讯电脑管家等，会删除FiveM文件，因此导致安装失败。所以请确保您的防病毒程序已完全关闭。安装FiveM后，添加FiveM
+卸载，或添加杀毒软件防病毒白名单/排除。 [See here how][antivirus-help]. 我们正在研究解决办法。
+- 确保已安装并更新 [GTA V][where-to-buy].
+- [Download FiveM][home] 离开网站。
+- 运行FiveM.exe。如果您在一个空文件夹中运行FiveM安装程序，FiveM将会安装在文件夹中。否则，它将安装在`%localappdata%\FiveM`。
+- 从Windows的“开始”菜单启动FiveM。
 
-Uninstalling
+卸载
 ------------
 
-- If you installed FiveM in an empty folder, just delete that folder.
-- Otherwise:
-    - Press `WinKey+R` on your keyboard
-    - Type `%localappdata%` in the dialog that opens
-    - Hit Enter
-    - Delete the FiveM folder
-- That is all you need to do!
-- Run FiveM.exe again if you want to reinstall FiveM.
+- 如果您将FiveM安装在一个空文件夹中，只需删除该文件夹。
+- 如果没有安装在空文件夹中，则
+    - 按键盘上的“WinKey+R”
+    - 在打开的对话框中键入“%localappdata%”
+    - 按回车键
+    - 删除FiveM文件夹
+- 这就是你需要操作的步骤
+- 如果要重新安装FiveM，请再次运行FiveM.exe。
 
-[home]: https://fivem.net
-[system-requirements]: /docs/client-manual/system-requirements
-[client-issues]: /docs/support/client-issues
-[antivirus-help]: /docs/client-manual/disabling-antivirus
-[where-to-buy]: /docs/client-manual/where-to-buy-gtav
+[主页]: https://fivem.net
+[系统要求]: /docs/client-manual/system-requirements
+[客户端问题]: /docs/support/client-issues
+[杀毒软件帮助]: /docs/client-manual/disabling-antivirus
+[在哪里购买游戏]: /docs/client-manual/where-to-buy-gtav
