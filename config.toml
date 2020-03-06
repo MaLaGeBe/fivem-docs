@@ -29,7 +29,7 @@ home = ["HTML", "RSS", "JSON"]
 disableHomeIcon = true
 editURL = "https://github.com/malagebe/fivem-docs/edit/master/content/"
 github_repo = "https://github.com/malagebe/fivem-docs"
-github_project_repo = "https://github.com/citizenfx/fivem/"
+#github_project_repo = "https://github.com/citizenfx/fivem"
 offlineSearch = true
 
 [blackfriday]
@@ -48,7 +48,7 @@ weight = 10
 [[menu.main]]
 name = "中文社区"
 url = "https://forum.fivem.net.cn/"
-weight = 20
+weight = 30
 
 [[menu.main]]
 name = "官方社区"

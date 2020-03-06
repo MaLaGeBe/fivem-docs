@@ -1,17 +1,17 @@
 ---
-title: Ped models
+title: 角色模型
 weight: 760
 ---
 
-List of all working ped models in GTA V as of July 23, 2019.
+截至2019年7月23日，GTAV中所有可用的角色模型列表。
 
 - [Ambient female](#ambient-female)
 - [Ambient male](#ambient-male)
-- [Animals](#animals)
+- [动物](#动物)
 - [Cutscene](#cutscene)
-- [Gang female](#gang-female)
-- [Gang male](#gang-male)
-- [Multiplayer](#multiplayer)
+- [帮派女性](#gang-female)
+- [帮派男性](#gang-male)
+- [多人游戏](#多人游戏)
 - [Scenario female](#scenario-female)
 - [Scenario male](#scenario-male)
 - [Story](#story)
@@ -264,7 +264,7 @@ Ambient male
 	<div class="model"><span><img src="/peds/a_m_y_smartcaspat_01.png" alt="a_m_y_smartcaspat_01"><strong>a_m_y_smartcaspat_01</strong><br>2 props<br>5 components</span></div>
 </div>
 
-Animals
+动物
 -----
 
 <div class="models">
@@ -457,7 +457,7 @@ Cutscene
 	<div class="model"><span><img src="/peds/csb_vincent.png" alt="csb_vincent"><strong>csb_vincent</strong><br>0 prop<br>9 components</span></div>
 </div>
 
-Gang female
+帮派女性
 -----
 
 <div class="models">
@@ -469,7 +469,7 @@ Gang female
 	<div class="model"><span><img src="/peds/g_f_y_vagos_01.png" alt="g_f_y_vagos_01"><strong>g_f_y_vagos_01</strong><br>2 props<br>6 components</span></div>
 </div>
 
-Gang male
+帮派男性
 -----
 
 <div class="models">
@@ -514,7 +514,7 @@ Gang male
 	<div class="model"><span><img src="/peds/g_m_m_casrn_01.png" alt="g_m_m_casrn_01"><strong>g_m_m_casrn_01</strong><br>2 props<br>8 components</span></div>
 </div>
 
-Multiplayer
+多人游戏
 -----
 
 <div class="models">

@@ -1,5 +1,5 @@
 ---
-title: Creating your first script in C#
+title: 用C＃创建您的第一个脚本
 weight: 412
 ---
 

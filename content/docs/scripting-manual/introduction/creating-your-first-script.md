@@ -1,5 +1,5 @@
 ---
-title: Creating your first script in Lua
+title: 用Lua创建您的第一个脚本
 weight: 412
 ---
 
