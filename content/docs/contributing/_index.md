@@ -1,6 +1,6 @@
 ---
-title: Contributing
+title: 贡献
 toc_hide: true
 ---
 
-- [How you can help](/docs/contributing/how-you-can-help)
+- [您将如何提供帮助](/docs/contributing/how-you-can-help)

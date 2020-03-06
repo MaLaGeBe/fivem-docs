@@ -1,5 +1,5 @@
 ---
-title: Coding guidelines
+title: 编码准则
 draft: true
 ---
 

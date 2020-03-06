@@ -1,5 +1,5 @@
 ---
-title: Compiling FiveM
+title: 编译FiveM
 draft: true
 ---
 

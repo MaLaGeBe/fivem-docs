@@ -1,10 +1,10 @@
 ---
-title: Game references
+title: 游戏参考
 weight: 700
 layout: single
 ---
 
-Reference lists and guides for game data are in this category.
+游戏数据参考列表和指南在此类别中。
 
 - [Controls](/docs/game-references/controls)
 - [Blips](/docs/game-references/blips)
