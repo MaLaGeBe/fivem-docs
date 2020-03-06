@@ -1,22 +1,22 @@
 ---
-title: Ped models
+title: 角色模型
 weight: 760
 ---
 
-List of all working ped models in GTA V as of July 23, 2019.
+截至2019年7月23日，GTA V中所有可用的角色模型列表。
 
-- [Ambient female](#ambient-female)
-- [Ambient male](#ambient-male)
-- [Animals](#animals)
-- [Cutscene](#cutscene)
-- [Gang female](#gang-female)
-- [Gang male](#gang-male)
-- [Multiplayer](#multiplayer)
-- [Scenario female](#scenario-female)
-- [Scenario male](#scenario-male)
-- [Story](#story)
-- [Story scenario female](#story-scenario-female)
-- [Story scenario male](#story-scenario-male)
+- [路边女性](#ambient-female)
+- [路边男性](#ambient-male)
+- [动物](#animals)
+- [过场动画](#cutscene)
+- [帮派女](#gang-female)
+- [帮派男](#gang-male)
+- [多人线上角色](#multiplayer)
+- [场景女性](#scenario-female)
+- [场景男性](#scenario-male)
+- [故事模式](#story)
+- [故事模式女性](#story-scenario-female)
+- [故事模式男性](#story-scenario-male)
 
 <style type="text/css">
 	.models {
@@ -48,7 +48,7 @@ List of all working ped models in GTA V as of July 23, 2019.
 	}
 </style>
 
-Ambient female
+路边女性
 -----
 
 <div class="models">
@@ -129,7 +129,7 @@ Ambient female
 	<div class="model"><span><img src="/peds/a_f_y_smartcaspat_01.png" alt="a_f_y_smartcaspat_01"><strong>a_f_y_smartcaspat_01</strong><br>3 props<br>5 components</span></div>
 </div>
 
-Ambient male
+路边男性
 -----
 
 <div class="models">
@@ -264,7 +264,7 @@ Ambient male
 	<div class="model"><span><img src="/peds/a_m_y_smartcaspat_01.png" alt="a_m_y_smartcaspat_01"><strong>a_m_y_smartcaspat_01</strong><br>2 props<br>5 components</span></div>
 </div>
 
-Animals
+动物
 -----
 
 <div class="models">
@@ -302,7 +302,7 @@ Animals
 	<div class="model"><span><img src="/peds/a_c_westy.png" alt="a_c_westy"><strong>a_c_westy</strong><br>0 prop<br>4 components</span></div>
 </div>
 
-Cutscene
+剧情动画模型
 -----
 
 <div class="models">
@@ -457,7 +457,7 @@ Cutscene
 	<div class="model"><span><img src="/peds/csb_vincent.png" alt="csb_vincent"><strong>csb_vincent</strong><br>0 prop<br>9 components</span></div>
 </div>
 
-Gang female
+帮派女
 -----
 
 <div class="models">
@@ -469,7 +469,7 @@ Gang female
 	<div class="model"><span><img src="/peds/g_f_y_vagos_01.png" alt="g_f_y_vagos_01"><strong>g_f_y_vagos_01</strong><br>2 props<br>6 components</span></div>
 </div>
 
-Gang male
+帮派男
 -----
 
 <div class="models">
@@ -514,7 +514,7 @@ Gang male
 	<div class="model"><span><img src="/peds/g_m_m_casrn_01.png" alt="g_m_m_casrn_01"><strong>g_m_m_casrn_01</strong><br>2 props<br>8 components</span></div>
 </div>
 
-Multiplayer
+多人线上角色
 -----
 
 <div class="models">
@@ -560,7 +560,7 @@ Multiplayer
 	<div class="model"><span><img src="/peds/mp_s_m_armoured_01.png" alt="mp_s_m_armoured_01"><strong>mp_s_m_armoured_01</strong><br>1 prop<br>5 components</span></div>
 </div>
 
-Scenario female
+场景女性
 -----
 
 <div class="models">
@@ -591,7 +591,7 @@ Scenario female
 	<div class="model"><span><img src="/peds/s_f_y_casino_01.png" alt="s_f_y_casino_01"><strong>s_f_y_casino_01</strong><br>1 prop<br>9 components</span></div>
 </div>
 
-Scenario male
+场景男性
 -----
 
 <div class="models">
@@ -696,7 +696,7 @@ Scenario male
 	<div class="model"><span><img src="/peds/s_m_y_westsec_01.png" alt="s_m_y_westsec_01"><strong>s_m_y_westsec_01</strong><br>2 props<br>9 components</span></div>
 </div>
 
-Story
+故事模式
 -----
 
 <div class="models">
@@ -848,7 +848,7 @@ Story
 	<div class="model"><span><img src="/peds/ig_vincent.png" alt="ig_vincent"><strong>ig_vincent</strong><br>0 prop<br>9 components</span></div>
 </div>
 
-Story scenario female
+故事模式女性
 -----
 
 <div class="models">
@@ -882,7 +882,7 @@ Story scenario female
 	<div class="model"><span><img src="/peds/u_f_y_taylor.png" alt="u_f_y_taylor"><strong>u_f_y_taylor</strong><br>2 props<br>8 components</span></div>
 </div>
 
-Story scenario male
+故事模式男性
 -----
 
 <div class="models">

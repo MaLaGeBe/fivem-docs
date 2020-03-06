@@ -1,16 +1,16 @@
 ---
-title: Game events
+title: 游戏事件
 weight: 750
 ---
 
-This is a list of low-level game events. That means, these are the events that come straight from GTA V's core
-mechanics. Using these events can be useful when you need fine control over what happens in your scripts.
-See [gameEventTriggered][event-ref] for more information on how to use these events.
+这是一个低级游戏事件的列表。也就是说，这些都是直接来自GTAV核心的事件
+。当需要对脚本中发生的事情进行精细控制时，使用这些事件可能非常有用。
+有关如何使用这些事件的详细信息，请参见[gameEventTriggered][event-ref]。
 
-Note that this list is largely undocumented and you probably won't need most of the events listed here. If you have
-useful information to share, please [add it to this doc][contributing]. Any help is greatly appreciated!
+注意，这个列表文档记录并不全面，您可能不需要这里列出的大多数事件。如果你有
+共享有用信息，请[添加到文档中][contributing]。非常感谢您的帮助！
 
-| Event name                                         | Description |
+| 事件名称                                           | 说明        |
 |----------------------------------------------------|-------------|
 | CEventAcquaintancePed                              |             |
 | CEventAcquaintancePedDead                          |             |
@@ -279,5 +279,5 @@ useful information to share, please [add it to this doc][contributing]. Any help
 | CEventVehicleOnFire                                |             |
 | CEventWrithe                                       |             |
 
-[event-ref]: /docs/scripting-reference/events/list/gameEventTriggered
-[contributing]: /contributing
+[事件参考]: /docs/scripting-reference/events/list/gameEventTriggered
+[贡献]: /contributing

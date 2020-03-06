@@ -1,6 +1,6 @@
 ---
-title: Developer docs
+title: 开发人员文档
 weight: 900
 ---
 
-This section of the documentation is specific to the core mechanics of FiveM.
+这个文档是专门讲解FiveM核心机制内容的。

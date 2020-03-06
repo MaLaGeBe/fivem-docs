@@ -1,18 +1,18 @@
 ---
-title: Gamer tags
+title: 游戏标签
 weight: 760
 ---
 
 ![All flags enabled](/HeadDisplayExample2.png "All flags enabled")
 
-**Gamer tag** (also known as **head display**) - is an UI element above player character, which can display text and various icons. The control is carried out by enabling components. Usually used to display player's name.
+**Gamer tag** (also known as **head display**) - 是玩家角色上方的一个UI元素，可以显示文本和各种图标。通过启用部件来执行控制。通常用来显示玩家的名字。
 
-For each component you can: show/hide, change opacity, change colour.
+对于每个组件，您可以：显示/隐藏，更改不透明度，更改颜色。
 
-Components list
+标签组件列表
 ---------------
 
-| ID  | Name                      |
+| ID  | 名称                      |
 |-----|---------------------------|
 | 0   | GAMER\_NAME               |
 | 1   | CREW\_TAG                 |
@@ -45,10 +45,10 @@ Components list
 | 28  | MP\_TRANSMITTER           |
 | 29  | MP\_BOMB                  |
 
-Simple usage
+简单用法
 ------------
 ### Lua
-For a more complete example, see the stock `playernames` resource included in the server package, or the documentation for the resource.
+有关更完整的示例，请参阅服务器软件包中包含的`playernames`资源，或该资源的文档。
 
 ``` lua
 local mpGamerTags = {}
@@ -80,13 +80,13 @@ for i = 0, 255 do
 end
 ```
 
-Example
+例子
 -------
 
 ### Lua
 
 ``` lua
--- Create gamer info
+-- 创建玩家信息
 local gamerTagId = CreateMpGamerTagForNetPlayer(
   ped, -- Ped to which gamer info will be assigned
   "User name", -- String to display for flag ""
@@ -103,8 +103,8 @@ local gamerTagId = CreateMpGamerTagForNetPlayer(
 ### C\#
 
 ``` csharp
-// Create gamer info
-// assuming using static CitizenFX.Core.API;
+ 创建玩家信息
+// 假设使用静态 CitizenFX.Core.API;
 int gamerTagId = CreateMpGamerTagForNetPlayer(
   ped.Handle, // Ped to which gamer info will be assigned
   "User name", // String to display for flag ""
@@ -120,13 +120,13 @@ int gamerTagId = CreateMpGamerTagForNetPlayer(
 
 
 
-Toggling flags
+切换标志
 --------------
 
 ### Lua
 
 ``` lua
--- Toggle components
+-- 切换组件
 SetMpGamerTagVisibility(
   gamerTagId,
   component,
@@ -137,7 +137,7 @@ SetMpGamerTagVisibility(
 ### C\#
 
 ``` csharp
-// Toggle flags
+// 切换标志
 SetMpGamerTagVisibility(
   gamerTagId,
   component,
@@ -147,13 +147,13 @@ SetMpGamerTagVisibility(
 
 
 
-Changing flags colour
+更改标志颜色
 ---------------------
 
 ### Lua
 
 ``` lua
--- Change component colour
+-- 更改组件颜色
 SetMpGamerTagColour(
   gamerTagId,
   component,
@@ -164,7 +164,7 @@ SetMpGamerTagColour(
 ### C\#
 
 ``` csharp
-// Change component colour
+// 更改组件颜色
 Function.Call(
   (Hash)0x613ED644950626AE,
   (int)gamerTagId,
@@ -175,13 +175,13 @@ Function.Call(
 
 
 
-Changing flags opacity
+更改标志的不透明度
 ----------------------
 
 ### Lua
 
 ``` lua
--- Change component opacity
+-- 更改组件的不透明度
 SetMpGamerTagAlpha(
   gamerTagId,
   component,
@@ -192,7 +192,7 @@ SetMpGamerTagAlpha(
 ### C\#
 
 ``` csharp
-// Changes flag opacity
+// 更改标志的不透明度
 Function.Call(
   (Hash)0xD48FE545CD46F857,
   (int)gamerTagId,
@@ -202,15 +202,15 @@ Function.Call(
 ```
 
 
-Special flags controls
+特殊标志控件
 ----------------------
 
 ### Wanted level
 
-For the **WantedStar** flag you can set number that will be shown inside of star icon: ### Lua
+对于**WantedStar**标志，您可以设置将在星形图标内部显示的数字：### Lua
 
 ``` lua
--- Set the number that will be set inside the wanted star icon
+-- 设置将在想要的星形图标内设置的数字
 SetMpGamerTagWantedLevel(
   gamerTagId,
   wantedLevel -- 0 - 5
@@ -220,7 +220,7 @@ SetMpGamerTagWantedLevel(
 ### C\#
 
 ``` csharp
-// Set the number that will be set inside the wanted star icon
+// 设置将在想要的星形图标内设置的数字
 Function.Call(
   Hash._SET_HEAD_DISPLAY_WANTED,
   (int)gamerTagId,
@@ -230,12 +230,12 @@ Function.Call(
 
 ### Health bar colour
 
-Health bar has 0 opacity by default. Colour of health bar changes using it's own native: ### Lua
+默认情况下，健康栏的不透明度为0。 运行状况栏的颜色使用其自己的本机更改：### Lua
 
 ### Lua
 
 ``` lua
--- Change health bar colour
+-- 更改健康栏颜色
 SetMpGamerTagHealthBarColor(
   gamerTagId,
   colour -- 0 - 255
@@ -245,7 +245,7 @@ SetMpGamerTagHealthBarColor(
 ### C\#
 
 ``` csharp
-// Change health bar colour
+// 更改健康栏颜色
 Function.Call(
   (Hash)0x3158C77A7E888AB4,
   (int)gamerTagId,

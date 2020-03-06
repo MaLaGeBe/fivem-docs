@@ -1,6 +1,6 @@
 ---
-title: Server manual
+title: 服务端手册
 weight: 300
 ---
 
-Instructions on running and maintaining a server.
+有关运行和维护服务器的说明。

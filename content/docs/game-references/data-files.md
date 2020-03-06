@@ -1,14 +1,14 @@
 ---
-title: Data files
+title: 数据文件
 weight: 740
 ---
 
-A **data file** is an entry in the [resource manifest](/docs/scripting-manual/introduction/introduction-to-resources#the-resource-manifest) that references a file to load in the game extra content mounting system.
+**data file**是[resource manifest]中的条目(/docs/scripting-manual/introduction/introduction-to-resources#the-resource-manifest)，该文件引用了要加载到游戏中的额外内容安装文件 系统。
 
-Data file types
+数据文件类型
 ---------------
 
-| Key                                                                                   | File type                                                                    | Root element               | Mounter                                | Example                                                            |
+| 键                                                                                    | 文件类型                                                                     | 根元素                     | 安装                                | 例子                                                               |
 |---------------------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------------------------|
 | <span id="action_table_definitions">`ACTION_TABLE_DEFINITIONS`</span>                 |                                                                              |                            | CActionInfoDataFileMounter             |                                                                    |
 | <span id="alternate_variations_file">`ALTERNATE_VARIATIONS_FILE`</span>               |                                                                              |                            | CPedVariationStreamFileMounter         | `dlc_mpbattlecrc:/common/data/pedalternatevariations.meta`         |
