@@ -5,21 +5,21 @@ description: >
   描述对fxOM脚本运行环境的支持。
 ---
 
-CitizenFX supports pluggable scripting runtimes. These runtimes are implemented as CitizenFX components (`code/components/`) implementing `fxOM` (CitizenFX Object Model) interfaces defined in `fxScripting.idl`.
+CitizenFX支持可插入脚本运行环境。这些运行环境被实现为CitizenFX组件 (`code/components/`)，实现了在 `fxScripting.idl` 中定义的 `fxOM` (CitizenFX对象模型)接口。
 
-The specific interfaces used at the time of this writing are:
+在撰写本文时，使用的特定接口是：
 
-|         Interface          |                                     Purpose                                      |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| IScriptRuntime             | Base interface for script runtimes. Exposes basic lifetime management functions. |
-| IScriptTickRuntime         | Allows exposing a Tick function for runtimes that need to run periodically.      |
-| IScriptEventRuntime        | Allows exposing a TriggerEvent function to handle incoming script events.        |
-| IScriptRefRuntime          | Allows exposing function references that can be called, duplicated and cloned.   |
-| IScriptFileHandlingRuntime | Allows to mark a script runtime as handling specific files.                      |
+|             接口           |                         目的                                 |
+| -------------------------- | ------------------------------------------------------------ |
+| IScriptRuntime             | 脚本运行时的基本接口。公开基本的生命周期管理功能。           |
+| IScriptTickRuntime         | 允许为需要定期运行的运行时公开 Tick 函数。                   |
+| IScriptEventRuntime        | 允许公开一个触发事件函数(TriggerEvent)来处理传入的脚本事件。 |
+| IScriptRefRuntime          | 允许公开可以调用，复制和克隆的函数引用。                     |
+| IScriptFileHandlingRuntime | 允许将脚本运行时标记为处理特定文件。                         |
 
-In addition, there is a host interface: `IScriptHost`, which will be passed to `IScriptRuntime::Create`.
+另外，还有一个主机接口：`IScriptHost`，它将被传递给 `IScriptRuntime::Create`.
 
-## Interface reference
+## 接口参考
 
 ### IScriptRuntime
 
@@ -29,7 +29,7 @@ In addition, there is a host interface: `IScriptHost`, which will be passed to `
 void Create(in IScriptHost scriptHost);
 ```
 
-This method is called by the host when the script runtime is created. The script host passed should probably be saved.
+创建脚本运行时时，主机将调用此方法。 通过的脚本主机可能应该保存。
 
 #### Destroy
 
@@ -37,7 +37,7 @@ This method is called by the host when the script runtime is created. The script
 void Destroy();
 ```
 
-This method is called by the host when the script runtime is about to be destroyed.
+当脚本运行时即将销毁时，主机将调用此方法。
 
 #### GetParentObject
 
@@ -45,7 +45,7 @@ This method is called by the host when the script runtime is about to be destroy
 void* GetParentObject(); // direct return value, not result_t
 ```
 
-This should return the object set by `SetParentObject`.
+这应该返回由 `SetParentObject` 设置的对象。
 
 #### SetParentObject
 
@@ -53,7 +53,7 @@ This should return the object set by `SetParentObject`.
 void SetParentObject(void* object); // direct return value, not result_t
 ```
 
-This sets the parent object. This is typically a native `fx::Resource*`, which may be relevant to runtimes implemented in C++.
+这将设置父对象。这通常是本机的 `fx::Resource*`，可能与C++中实现的运行环境有关。
 
 #### GetInstanceId
 
@@ -61,7 +61,7 @@ This sets the parent object. This is typically a native `fx::Resource*`, which m
 int GetInstanceId(); // direct return value, not result_t
 ```
 
-This should return a random instance ID created by the runtime upon initialization.
+这将返回运行时在初始化时创建的随机实例ID。
 
 ### IScriptTickRuntime
 
@@ -71,7 +71,7 @@ This should return a random instance ID created by the runtime upon initializati
 void Tick();
 ```
 
-This is called by the host every frame.
+主机每隔一帧调用一次。
 
 ### IScriptEventRuntime
 
@@ -191,4 +191,4 @@ If one of the GUIDs is the null GUID, only tests if the version is greater/less 
 
 ### Serialization
 
-Serialization occurs using MessagePack, with a specific extension ID for delegates/function refs.
+序列化使用MessagePack进行，并为委托/功能引用使用特定的扩展ID。

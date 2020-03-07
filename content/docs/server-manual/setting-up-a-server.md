@@ -10,68 +10,68 @@ description: >
 
 FXServer是当前CitizenFX服务器版本的名称。此页面显示了如何运行它。
 
-Having trouble running your server? Visit [server issues][server-issues], use the Discord [#fxserver-support][fxserver-support] channel or create a topic in the [Server Discussion][fxserver-support-category] sub-category on the forum.
+运行服务端时遇到问题？请访问[疑难问题解答][server-issues]，使用 Discord [#fxserver-support][fxserver-support] 频道或在论坛的 [Server Discussion][fxserver-support-category] 子类别中创建主题。
 
 Windows
 -------
 
-#### Prerequisites
-1. [Visual C++ Redistributable 2019][vcredist] or newer.
-2. [Git][git-scm] to assure a correct installation.
+#### 先决条件
+1. [Visual C++ Redistributable 2019][vcredist] 或最新版
+2. 确保正确安装[Git][git-scm]环境。
 
-#### Installation
-1. Create a new directory (for example `D:\FXServer\server`), this will be used for the server binaries.
-2. Download the latest `master` branch build for Windows from the [artifacts server][windows-artifacts].
-3. Extract the build into the directory previously created.
-  <br>3b. Use any archiving tool (such as WinRAR or 7-Zip).
-4. Clone [cfx-server-data][server-data] in a new folder outside of your server binaries folder, for example, `D:\FXServer\server-data`.
-  <br>4b. `git clone https://github.com/citizenfx/cfx-server-data.git server-data`
-5. Make a **server.cfg** file in your `server-data` folder (copy the [example server.cfg](#servercfgexample) file below into that file).
-6. Generate a license key at <https://keymaster.fivem.net>.
-7. Set the license key in your server.cfg using `sv_licenseKey "licenseKeyGoesHere"`.
-8. Run the server from the `server-data` folder. For example, in a plain Windows command prompt (cmd.exe) window: 
+#### 安装
+1. 创建一个新目录（比如 `D:\FXServer\server`），这将用于存放服务端文件。
+2. 从[构建服务器][windows-artifacts]下载适用于Windows的最新`master`分支版本。
+3. 将构建解文件解压到先前创建的目录中。
+  <br>3.1 使用任何压缩文件工具（例如WinRAR或7-Zip）。
+4. 将 [cfx-server-data][server-data] 克隆到服务端文件夹之外的新文件夹中。例如 `D:\FXServer\server-data`。
+  <br>4.1 `git clone https://github.com/citizenfx/cfx-server-data.git server-data`
+5. 在 `server-data` 文件夹中创建一个 **server.cfg** 文件（将下面的[示例 server.cfg](#servercfgexample) 文件复制到该文件中）。
+6. 在 <https://keymaster.fivem.net> 上生成许可证密钥。
+7. 在server.cfg中设置许可证密钥至 `sv_licenseKey "licenseKeyGoesHere"`。
+8. 从 `server-data` 文件夹中运行服务。在纯Windows命令提示符（cmd.exe）窗口中输入如下命令：
     ```dos
     cd /d D:\FXServer\server-data
     D:\FXServer\server\run.cmd +exec server.cfg
     ```
 
-    (the `/d` flag is only needed when changing directory to somewhere on a different drive)
+    （仅在将目录更改为其他驱动器上的某个位置时才需要使用 `/d` 命令）
 
 ---
 
 Linux
 -----
-1. Create a new folder (for example `mkdir /home/username/FXServer/server`), this will be used for the server binaries.
-2. Download the latest `master` branch build for Linux from the [artifacts server][linux-artifacts](copy the URL for the latest server version and use `wget <url>` to download it).
-3. Extract the build to the directory that was previously created, using `cd /home/username/FXServer/server && tar xf fx.tar.xz` (you need to have `xz` installed, on Debian/Ubuntu this is in the `xz-utils` package).
-4. Clone [cfx-server-data][server-data] in a new folder outside of your server binaries folder.
-  <br>4b. For example `git clone https://github.com/citizenfx/cfx-server-data.git /home/username/FXServer/server-data`
-5. Make a **server.cfg** file in your `server-data` folder (copy the [example server.cfg](#servercfgexample) file below into that file).
-6. Generate a license key at <https://keymaster.fivem.net>.
-7. Set the license key in your `server.cfg` using `sv_licenseKey "licenseKeyGoesHere"`.
-8. Run the server from the `server-data` folder.
-  <br>8b. `bash /home/username/FXServer/server/run.sh +exec server.cfg`
+1. 创建一个新目录（比如 `mkdir /home/username/FXServer/server`），这将用于存放服务端文件。
+2. 从[构建服务器][linux-artifacts]下载适用于Linux的最新`master`分支版本。（复制最新服务器版本的URL并使用 `wget <url>` 进行下载）。
+3. 将构建解文件压缩到先前创建的目录中，使用 `cd /home/username/FXServer/server && tar xf fx.tar.xz` 解压缩（你需要 `xz` 解压缩软件，在Debian / Ubuntu上，这在 `xz-utils` 软件包中）。
+4. 将 [cfx-server-data][server-data] 克隆到服务端文件夹之外的新文件夹中。
+  <br>4.1 例如 `git clone https://github.com/citizenfx/cfx-server-data.git /home/username/FXServer/server-data`
+5. 在 `server-data` 文件夹中创建一个 **server.cfg** 文件（将下面的[示例 server.cfg](#servercfgexample) 文件复制到该文件中）。
+6. 在 <https://keymaster.fivem.net> 上生成许可证密钥。
+7. 在server.cfg中设置许可证密钥至 `sv_licenseKey "licenseKeyGoesHere"`。
+8. 从 `server-data` 文件夹中运行服务。
+  <br>8.1 `bash /home/username/FXServer/server/run.sh +exec server.cfg`
 
-Common issues
+常见问题
 ---------------
 
-- If you don't get any 'resources found', and it says 'Failed to start resource', you didn't 'cd' to the right folder.
-- If you get a lot of errors about citizen:/scripting/, you didn't use run.cmd.
-- If nothing happens at all except 'sending heartbeat', you didn't use run.cmd **and** failed to cd to the folder.
-- If no resources get started, and you can't connect, you didn't add +exec.
-- If you get 'no license key was specified', one of the above things applies.
+- 如果提示 `resources found`，并且提示 `Failed to start resource`，则你没有 `cd` 至正确的目录。
+- 如果有一些关于 `citizen:/scripting/` 的错误提示，那是因为你没有正确的运行 `run.cmd`。
+- 如果除了 `sending heartbeat`之外什么都没有发生，那是你没有正确的运行 `run.cmd`。 **并且** 没有 `cd` 至正确的目录。
+- 如果没有资源开始启动，并且你无法成功连接，那是因为你在启动时没有加 `+exec` 命令。
+- 如果提示 `no license key was specified`，总有上面某个情况适用。
 
 <a name="servercfgexample"></a>server.cfg
 ----------
 
-An example server.cfg follows.
+下面是一个示例 server.cfg 文件。
 
 ```sh
-# Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
+# 仅在使用具有多个网络接口的服务器时才更改IP，否则仅更改端口。
 endpoint_add_tcp "0.0.0.0:30120"
 endpoint_add_udp "0.0.0.0:30120"
 
-# These resources will start by default.
+# 这些资源将默认启动。
 ensure mapmanager
 ensure chat
 ensure spawnmanager
@@ -81,70 +81,70 @@ ensure hardcap
 ensure rconlog
 ensure scoreboard
 
-# This allows players to use scripthook-based plugins such as the legacy Lambda Menu.
-# Set this to 1 to allow scripthook. Do note that this does _not_ guarantee players won't be able to use external plugins.
+# 这允许玩家使用基于脚本挂钩的插件，例如旧版Lambda菜单。
+# 将此设置为1以允许脚本挂钩。 请注意，这并不能保证玩家将无法使用外部插件。
 sv_scriptHookAllowed 0
 
-# Uncomment this and set a password to enable RCON. Make sure to change the password - it should look like rcon_password "YOURPASSWORD"
+# 取消注释，并设置密码以启用RCON。确保更改密码 - it should look like rcon_password "YOURPASSWORD"
 #rcon_password ""
 
-# A comma-separated list of tags for your server.
-# For example:
+# 以逗号分隔的服务器标签列表。
+# 例如：
 # - sets tags "drifting, cars, racing"
 # Or:
 # - sets tags "roleplay, military, tanks"
 sets tags "default"
 
-# A valid locale identifier for your server's primary language.
-# For example "en-US", "fr-CA", "nl-NL", "de-DE", "en-GB", "pt-BR"
+# 服务器主要语言的有效语言环境标识符。
+# 例如 "zh-CN", "zh-HK", "zh-TW", "en-US", "fr-CA", "nl-NL", "de-DE", "en-GB", "pt-BR"
 sets locale "root-AQ" 
-# please DO replace root-AQ on the line ABOVE with a real language! :)
+# 请务必用真实语言替换上面的root-AQ！ :)
 
-# Set an optional server info and connecting banner image url.
-# Size doesn't matter, any banner sized image will be fine.
+# 设置可选的服务器信息和连接标题图像URL。
+# 大小无所谓，任何横幅大小的图像都可以。
 #sets banner_detail "https://url.to/image.png"
 #sets banner_connecting "https://url.to/image.png"
 
-# Set your server's hostname
+# 设置服务器的主机名
 sv_hostname "FXServer, but unconfigured"
 
-# Nested configs!
+# 嵌套的配置！
 #exec server_internal.cfg
 
-# Loading a server icon (96x96 PNG file)
+# 加载服务器图标（96x96 PNG文件）
 #load_server_icon myLogo.png
 
-# convars which can be used in scripts
+# 可以在脚本中使用的convars
 set temp_convar "hey world!"
 
-# Uncomment this line if you do not want your server to be listed in the server browser.
-# Do not edit it if you *do* want your server listed.
+# 如果您不想在服务器浏览器中展示服务器，请取消注释此行。
+# 如果确实要展示服务器，请不要对其进行编辑。
 #sv_master1 ""
 
-# Add system admins
-add_ace group.admin command allow # allow all commands
-add_ace group.admin command.quit deny # but don't allow quit
-add_principal identifier.fivem:1 group.admin # add the admin to the group
+# 添加系统管理员
+add_ace group.admin command allow # 允许所有命令
+add_ace group.admin command.quit deny # 但不允许退出命令
+add_principal identifier.fivem:1 group.admin # 将管理员添加到组
 
-# Hide player endpoints in external log output.
+# 在外部日志输出中隐藏玩家端点。
 sv_endpointprivacy true
 
-# Server player slot limit (must be between 1 and 32, unless using OneSync)
+# 服务端玩家数量限制（除非使用OneSync，否则必须在1到32之间）
 sv_maxclients 32
 
-# Steam Web API key, if you want to use Steam authentication (https://steamcommunity.com/dev/apikey)
+# Steam Web API密钥（如果要使用Steam身份验证）(https://steamcommunity.com/dev/apikey)
 # -> replace "" with the key
 set steam_webApiKey ""
 
-# License key for your server (https://keymaster.fivem.net)
+# 服务端的许可证密钥 (https://keymaster.fivem.net)
 sv_licenseKey changeme
 ```
 
-What's next?
+之后开始做什么？
 ------------
 
-- [Using server commands][server-commands]
-- [Start scripting][scripting-introduction]
+- [使用服务端命令][server-commands]
+- [开始编写脚本][scripting-introduction]
 
 [windows-artifacts]: https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/
 [linux-artifacts]: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
