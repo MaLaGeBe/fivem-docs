@@ -1,11 +1,11 @@
 ---
-title: Migrating from CitizenMP.Server
+title: 从CitizenMP.Server迁移
 weight: 360
 description: >
-  Got some ancient server? This is a guide on migrating.
+  有一些古老的服务器？这是有关迁移的指南。
 ---
 
-### Loading Scripts
+### 加载脚本
 
 `require` doesn't exist anymore, any scripts/libraries should be loaded using the `server_script` directive in the resource manifest.
 

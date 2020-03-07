@@ -1,14 +1,14 @@
 ---
-title: Scripting reference
+title: 脚本参考
 weight: 500
 layout: single
 ---
 
-- [Resource manifest](/docs/scripting-reference/resource-manifest/resource-manifest)
-- [Native functions](https://runtime.fivem.net/doc/reference.html)
-- [Client functions](/docs/scripting-reference/client-functions)
-- [Server functions](/docs/scripting-reference/server-functions)
+- [资源清单](/docs/scripting-reference/resource-manifest/resource-manifest)
+- [本地函数](https://runtime.fivem.net/doc/reference.html)
+- [客户端函数](/docs/scripting-reference/client-functions)
+- [服务端函数](/docs/scripting-reference/server-functions)
 <!-- TODO: - [Useful functions](/docs/scripting-reference/useful-functions)-->
-- [Client events](/docs/scripting-reference/events/client-events)
-- [Server events](/docs/scripting-reference/events/server-events)
+- [客户端事件](/docs/scripting-reference/events/client-events)
+- [服务端事件](/docs/scripting-reference/events/server-events)
 - [Convars](/docs/scripting-reference/convars)

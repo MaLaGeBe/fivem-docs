@@ -23,7 +23,7 @@ disablePathToLower = true
 enableGitInfo = true
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS"]
 
 [params]
 disableHomeIcon = true
@@ -31,6 +31,8 @@ editURL = "https://github.com/malagebe/fivem-docs/edit/master/content/"
 github_repo = "https://github.com/malagebe/fivem-docs"
 #github_project_repo = "https://github.com/citizenfx/fivem"
 offlineSearch = true
+
+time_format_default = "2006-01-02"
 
 [blackfriday]
 hrefTargetBlank = true

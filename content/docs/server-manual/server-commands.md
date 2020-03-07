@@ -1,8 +1,8 @@
 ---
-title: Server Commands
+title: 服务端命令
 weight: 330
 description: >
-  A list of commands to run in the server console.
+  在服务端控制台中运行的命令列表。
 ---
 
 <!-- TODO: format this like client commands? -->

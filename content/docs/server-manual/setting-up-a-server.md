@@ -1,14 +1,14 @@
 ---
-title: Setting up a server
+title: 设置服务器
 weight: 310
 description: >
-  A step-by-step guide on setting up FXServer.
+  设置FXServer的分步指南。
 ---
 
-Running FXServer
+运行FXServer
 ================
 
-FXServer is the name of the current CitizenFX server version. This page shows you how to run it.
+FXServer是当前CitizenFX服务器版本的名称。此页面显示了如何运行它。
 
 Having trouble running your server? Visit [server issues][server-issues], use the Discord [#fxserver-support][fxserver-support] channel or create a topic in the [Server Discussion][fxserver-support-category] sub-category on the forum.
 
