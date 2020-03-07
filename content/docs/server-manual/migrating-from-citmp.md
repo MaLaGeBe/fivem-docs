@@ -1,15 +1,15 @@
 ---
-title: ´ÓCitizenMP.ServerÇ¨ÒÆ
+title: ä»ŽCitizenMP.Serverè¿ç§»
 weight: 360
 description: >
-  ÓÐÒ»Ð©¹ÅÀÏµÄ·þÎñ¶Ë£¿ ÕâÊÇÓÐ¹ØÇ¨ÒÆÀÏ·þÎñ¶ËµÄÖ¸ÄÏ¡£
+  æœ‰ä¸€äº›å¤è€çš„æœåŠ¡ç«¯ï¼Ÿ è¿™æ˜¯æœ‰å…³è¿ç§»è€æœåŠ¡ç«¯çš„æŒ‡å—ã€‚
 ---
 
 ### Loading Scripts
 
-`require`²»ÔÙ´æÔÚ£¬ÈÎºÎ½Å±¾/¿â¶¼Ó¦Ê¹ÓÃ×ÊÔ´Çåµ¥ÖÐµÄ`server_script`Ö¸Áî¼ÓÔØ¡£
+`require`ä¸å†å­˜åœ¨ï¼Œä»»ä½•è„šæœ¬/åº“éƒ½åº”ä½¿ç”¨èµ„æºæ¸…å•ä¸­çš„`server_script`æŒ‡ä»¤åŠ è½½ã€‚
 
-ÀýÈç:
+ä¾‹å¦‚:
 
 ``` lua
 server_script "my_script.lua" -- load script
@@ -17,13 +17,13 @@ server_script "my_lib.net.dll" -- load a particular assembly into the .net appdo
 server_script "@resource_name/script.lua" -- load a script from another resource
 ```
 
-ÒªÔÚÔËÐÐÊ±¼ÓÔØÎÄ¼þ£¬¿ÉÒÔÊ¹ÓÃ [LOAD\_RESOURCE\_FILE]({{<native "LOAD_RESOURCE_FILE">}}) (`LoadResourceFile("resource_name", "file_name")`), Èç¹ûËüÊÇÒ»¸öLuaÎÄ¼þ£¬Ôò¿ÉÒÔÊ¹ÓÃ¡£
+è¦åœ¨è¿è¡Œæ—¶åŠ è½½æ–‡ä»¶ï¼Œå¯ä»¥ä½¿ç”¨ [LOAD\_RESOURCE\_FILE]({{<native "LOAD_RESOURCE_FILE">}}) (`LoadResourceFile("resource_name", "file_name")`), å¦‚æžœå®ƒæ˜¯ä¸€ä¸ªLuaæ–‡ä»¶ï¼Œåˆ™å¯ä»¥ä½¿ç”¨ã€‚
 
 ``` lua
 load(...)
 ```
 
-¼ÓÔØLua´úÂë£¬ÈçÒÔÏÂÊ¾ÀýËùÊ¾£º
+åŠ è½½Luaä»£ç ï¼Œå¦‚ä»¥ä¸‹ç¤ºä¾‹æ‰€ç¤ºï¼š
 
 ``` lua
 function loadLuaFile(resource, file)
@@ -33,7 +33,7 @@ end
 
 ### String Splitting
 
-`str:Split` ²»ÔÙ´æÔÚ£¬ÄúÓ¦¸ÃÎª´ËÊ¹ÓÃÊÊµ±µÄLuaº¯Êý¡£ ¶ÔÓÚÍ¨³£¸´ÖÆÕ³ÌùµÄ `stringsplit` º¯Êý£¬ËüÊÇ£º
+`str:Split` ä¸å†å­˜åœ¨ï¼Œæ‚¨åº”è¯¥ä¸ºæ­¤ä½¿ç”¨é€‚å½“çš„Luaå‡½æ•°ã€‚ å¯¹äºŽé€šå¸¸å¤åˆ¶ç²˜è´´çš„ `stringsplit` å‡½æ•°ï¼Œå®ƒæ˜¯ï¼š
 
 ``` lua
 function stringsplit(inputstr, sep)
@@ -51,12 +51,12 @@ end
 
 ### Bitwise Operations
 
-Lua 5.3ÒÑÆúÓÃ`bit32`£¬¶øCfxLuaÔËÐÐÊ±Î´ÆôÓÃËü¡£ Ïñ´ó¶àÊýÆäËû±à³ÌÓïÑÔÒ»Ñù£¬°´Î»ÔËËãÏÖÔÚÒ²¿ÉÒÔÊ¹ÓÃÆÕÍ¨ÔËËã·û£¨`£¦`£¬`|`£¬...£©À´¹¤×÷¡£
+Lua 5.3å·²å¼ƒç”¨`bit32`ï¼Œè€ŒCfxLuaè¿è¡Œæ—¶æœªå¯ç”¨å®ƒã€‚ åƒå¤§å¤šæ•°å…¶ä»–ç¼–ç¨‹è¯­è¨€ä¸€æ ·ï¼ŒæŒ‰ä½è¿ç®—çŽ°åœ¨ä¹Ÿå¯ä»¥ä½¿ç”¨æ™®é€šè¿ç®—ç¬¦ï¼ˆ`ï¼†`ï¼Œ`|`ï¼Œ...ï¼‰æ¥å·¥ä½œã€‚
 
 ### CLR
 
-NeoLua²»ÔÙÊ¹ÓÃ£¬Òò´Ë`clr`ÃüÃû¿Õ¼ä²»ÔÙ´æÔÚ¡£ Èç¹ûÐèÒªÔËÐÐC \££´úÂë£¬ÇëÊ¹ÓÃÕý³£µÄ.NETÔËÐÐÊ±ºÍ·þÎñÆ÷µ¼³ö¡£
+NeoLuaä¸å†ä½¿ç”¨ï¼Œå› æ­¤`clr`å‘½åç©ºé—´ä¸å†å­˜åœ¨ã€‚ å¦‚æžœéœ€è¦è¿è¡ŒC \ï¼ƒä»£ç ï¼Œè¯·ä½¿ç”¨æ­£å¸¸çš„.NETè¿è¡Œæ—¶å’ŒæœåŠ¡å™¨å¯¼å‡ºã€‚
 
 ### TempIDs
 
-Èç¹ûÄúÔÚÖ´ÐÐ¡° playerConnecting¡±ÆÚ¼ä½øÐÐÁËÈÎºÎÌØ¶¨µÄ°´Î»ÔËËã£¬Ôò¼ÙÉè¡° source¡±Öµ´óÓÚ0x10000£¬ÄÇÃ´ÔÚ¡° playerConnecting¡±ÆÚ¼äÊ¹ÓÃº¯Êý¾Í²»ÔÙÐèÒªÁË¡£
+å¦‚æžœæ‚¨åœ¨æ‰§è¡Œâ€œ playerConnectingâ€æœŸé—´è¿›è¡Œäº†ä»»ä½•ç‰¹å®šçš„æŒ‰ä½è¿ç®—ï¼Œåˆ™å‡è®¾â€œ sourceâ€å€¼å¤§äºŽ0x10000ï¼Œé‚£ä¹ˆåœ¨â€œ playerConnectingâ€æœŸé—´ä½¿ç”¨å‡½æ•°å°±ä¸å†éœ€è¦äº†ã€‚

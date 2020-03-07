@@ -1,18 +1,18 @@
 ---
-title: ÓÎÏ·±êÇ©
+title: æ¸¸æˆæ ‡ç­¾
 weight: 760
 ---
 
 ![All flags enabled](/HeadDisplayExample2.png "All flags enabled")
 
-**Gamer tag** (also known as **head display**) - ÊÇÍæ¼Ò½ÇÉ«ÉÏ·½µÄÒ»¸öUIÔªËØ£¬¿ÉÒÔÏÔÊ¾ÎÄ±¾ºÍ¸÷ÖÖÍ¼±ê¡£Í¨¹ıÆôÓÃ²¿¼şÀ´Ö´ĞĞ¿ØÖÆ¡£Í¨³£ÓÃÀ´ÏÔÊ¾Íæ¼ÒµÄÃû×Ö¡£
+**Gamer tag** (also known as **head display**) - æ˜¯ç©å®¶è§’è‰²ä¸Šæ–¹çš„ä¸€ä¸ªUIå…ƒç´ ï¼Œå¯ä»¥æ˜¾ç¤ºæ–‡æœ¬å’Œå„ç§å›¾æ ‡ã€‚é€šè¿‡å¯ç”¨éƒ¨ä»¶æ¥æ‰§è¡Œæ§åˆ¶ã€‚é€šå¸¸ç”¨æ¥æ˜¾ç¤ºç©å®¶çš„åå­—ã€‚
 
-¶ÔÓÚÃ¿¸ö×é¼ş£¬Äú¿ÉÒÔ£ºÏÔÊ¾/Òş²Ø£¬¸ü¸Ä²»Í¸Ã÷¶È£¬¸ü¸ÄÑÕÉ«¡£
+å¯¹äºæ¯ä¸ªç»„ä»¶ï¼Œæ‚¨å¯ä»¥ï¼šæ˜¾ç¤º/éšè—ï¼Œæ›´æ”¹ä¸é€æ˜åº¦ï¼Œæ›´æ”¹é¢œè‰²ã€‚
 
-±êÇ©×é¼şÁĞ±í
+æ ‡ç­¾ç»„ä»¶åˆ—è¡¨
 ---------------
 
-| ID  | Ãû³Æ                      |
+| ID  | åç§°                      |
 |-----|---------------------------|
 | 0   | GAMER\_NAME               |
 | 1   | CREW\_TAG                 |
@@ -45,10 +45,10 @@ weight: 760
 | 28  | MP\_TRANSMITTER           |
 | 29  | MP\_BOMB                  |
 
-¼òµ¥ÓÃ·¨
+ç®€å•ç”¨æ³•
 ------------
 ### Lua
-ÓĞ¹Ø¸üÍêÕûµÄÊ¾Àı£¬Çë²ÎÔÄ·şÎñÆ÷Èí¼ş°üÖĞ°üº¬µÄ`playernames`×ÊÔ´£¬»ò¸Ã×ÊÔ´µÄÎÄµµ¡£
+æœ‰å…³æ›´å®Œæ•´çš„ç¤ºä¾‹ï¼Œè¯·å‚é˜…æœåŠ¡å™¨è½¯ä»¶åŒ…ä¸­åŒ…å«çš„`playernames`èµ„æºï¼Œæˆ–è¯¥èµ„æºçš„æ–‡æ¡£ã€‚
 
 ``` lua
 local mpGamerTags = {}
@@ -80,13 +80,13 @@ for i = 0, 255 do
 end
 ```
 
-Àı×Ó
+ä¾‹å­
 -------
 
 ### Lua
 
 ``` lua
--- ´´½¨Íæ¼ÒĞÅÏ¢
+-- åˆ›å»ºç©å®¶ä¿¡æ¯
 local gamerTagId = CreateMpGamerTagForNetPlayer(
   ped, -- Ped to which gamer info will be assigned
   "User name", -- String to display for flag ""
@@ -103,8 +103,8 @@ local gamerTagId = CreateMpGamerTagForNetPlayer(
 ### C\#
 
 ``` csharp
- ´´½¨Íæ¼ÒĞÅÏ¢
-// ¼ÙÉèÊ¹ÓÃ¾²Ì¬ CitizenFX.Core.API;
+ åˆ›å»ºç©å®¶ä¿¡æ¯
+// å‡è®¾ä½¿ç”¨é™æ€ CitizenFX.Core.API;
 int gamerTagId = CreateMpGamerTagForNetPlayer(
   ped.Handle, // Ped to which gamer info will be assigned
   "User name", // String to display for flag ""
@@ -120,13 +120,13 @@ int gamerTagId = CreateMpGamerTagForNetPlayer(
 
 
 
-ÇĞ»»±êÖ¾
+åˆ‡æ¢æ ‡å¿—
 --------------
 
 ### Lua
 
 ``` lua
--- ÇĞ»»×é¼ş
+-- åˆ‡æ¢ç»„ä»¶
 SetMpGamerTagVisibility(
   gamerTagId,
   component,
@@ -137,7 +137,7 @@ SetMpGamerTagVisibility(
 ### C\#
 
 ``` csharp
-// ÇĞ»»±êÖ¾
+// åˆ‡æ¢æ ‡å¿—
 SetMpGamerTagVisibility(
   gamerTagId,
   component,
@@ -147,13 +147,13 @@ SetMpGamerTagVisibility(
 
 
 
-¸ü¸Ä±êÖ¾ÑÕÉ«
+æ›´æ”¹æ ‡å¿—é¢œè‰²
 ---------------------
 
 ### Lua
 
 ``` lua
--- ¸ü¸Ä×é¼şÑÕÉ«
+-- æ›´æ”¹ç»„ä»¶é¢œè‰²
 SetMpGamerTagColour(
   gamerTagId,
   component,
@@ -164,7 +164,7 @@ SetMpGamerTagColour(
 ### C\#
 
 ``` csharp
-// ¸ü¸Ä×é¼şÑÕÉ«
+// æ›´æ”¹ç»„ä»¶é¢œè‰²
 Function.Call(
   (Hash)0x613ED644950626AE,
   (int)gamerTagId,
@@ -175,13 +175,13 @@ Function.Call(
 
 
 
-¸ü¸Ä±êÖ¾µÄ²»Í¸Ã÷¶È
+æ›´æ”¹æ ‡å¿—çš„ä¸é€æ˜åº¦
 ----------------------
 
 ### Lua
 
 ``` lua
--- ¸ü¸Ä×é¼şµÄ²»Í¸Ã÷¶È
+-- æ›´æ”¹ç»„ä»¶çš„ä¸é€æ˜åº¦
 SetMpGamerTagAlpha(
   gamerTagId,
   component,
@@ -192,7 +192,7 @@ SetMpGamerTagAlpha(
 ### C\#
 
 ``` csharp
-// ¸ü¸Ä±êÖ¾µÄ²»Í¸Ã÷¶È
+// æ›´æ”¹æ ‡å¿—çš„ä¸é€æ˜åº¦
 Function.Call(
   (Hash)0xD48FE545CD46F857,
   (int)gamerTagId,
@@ -202,15 +202,15 @@ Function.Call(
 ```
 
 
-ÌØÊâ±êÖ¾¿Ø¼ş
+ç‰¹æ®Šæ ‡å¿—æ§ä»¶
 ----------------------
 
 ### Wanted level
 
-¶ÔÓÚ**WantedStar**±êÖ¾£¬Äú¿ÉÒÔÉèÖÃ½«ÔÚĞÇĞÎÍ¼±êÄÚ²¿ÏÔÊ¾µÄÊı×Ö£º### Lua
+å¯¹äº**WantedStar**æ ‡å¿—ï¼Œæ‚¨å¯ä»¥è®¾ç½®å°†åœ¨æ˜Ÿå½¢å›¾æ ‡å†…éƒ¨æ˜¾ç¤ºçš„æ•°å­—ï¼š### Lua
 
 ``` lua
--- ÉèÖÃ½«ÔÚÏëÒªµÄĞÇĞÎÍ¼±êÄÚÉèÖÃµÄÊı×Ö
+-- è®¾ç½®å°†åœ¨æƒ³è¦çš„æ˜Ÿå½¢å›¾æ ‡å†…è®¾ç½®çš„æ•°å­—
 SetMpGamerTagWantedLevel(
   gamerTagId,
   wantedLevel -- 0 - 5
@@ -220,7 +220,7 @@ SetMpGamerTagWantedLevel(
 ### C\#
 
 ``` csharp
-// ÉèÖÃ½«ÔÚÏëÒªµÄĞÇĞÎÍ¼±êÄÚÉèÖÃµÄÊı×Ö
+// è®¾ç½®å°†åœ¨æƒ³è¦çš„æ˜Ÿå½¢å›¾æ ‡å†…è®¾ç½®çš„æ•°å­—
 Function.Call(
   Hash._SET_HEAD_DISPLAY_WANTED,
   (int)gamerTagId,
@@ -230,12 +230,12 @@ Function.Call(
 
 ### Health bar colour
 
-Ä¬ÈÏÇé¿öÏÂ£¬½¡¿µÀ¸µÄ²»Í¸Ã÷¶ÈÎª0¡£ ÔËĞĞ×´¿öÀ¸µÄÑÕÉ«Ê¹ÓÃÆä×Ô¼ºµÄ±¾»ú¸ü¸Ä£º### Lua
+é»˜è®¤æƒ…å†µä¸‹ï¼Œå¥åº·æ çš„ä¸é€æ˜åº¦ä¸º0ã€‚ è¿è¡ŒçŠ¶å†µæ çš„é¢œè‰²ä½¿ç”¨å…¶è‡ªå·±çš„æœ¬æœºæ›´æ”¹ï¼š### Lua
 
 ### Lua
 
 ``` lua
--- ¸ü¸Ä½¡¿µÀ¸ÑÕÉ«
+-- æ›´æ”¹å¥åº·æ é¢œè‰²
 SetMpGamerTagHealthBarColor(
   gamerTagId,
   colour -- 0 - 255
@@ -245,7 +245,7 @@ SetMpGamerTagHealthBarColor(
 ### C\#
 
 ``` csharp
-// ¸ü¸Ä½¡¿µÀ¸ÑÕÉ«
+// æ›´æ”¹å¥åº·æ é¢œè‰²
 Function.Call(
   (Hash)0x3158C77A7E888AB4,
   (int)gamerTagId,

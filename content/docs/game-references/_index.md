@@ -1,15 +1,15 @@
 ---
-title: ÓÎÏ·º¯Êı²Î¿¼
+title: æ¸¸æˆå‡½æ•°å‚è€ƒ
 weight: 700
 layout: single
 ---
 
-ÔÚ´ËÀà±ğÖĞ²Î¿¼ÓÎÏ·º¯ÊıÊı¾İÁĞ±íºÍÖ¸ÄÏ¡£
+åœ¨æ­¤ç±»åˆ«ä¸­å‚è€ƒæ¸¸æˆå‡½æ•°æ•°æ®åˆ—è¡¨å’ŒæŒ‡å—ã€‚
 
-- [¿ØÖÆÏîÄ¿](/docs/game-references/controls)
-- [¹â±êÏîÄ¿](/docs/game-references/blips)
-- [±ê¼ÇÏîÄ¿](/docs/game-references/markers)
-- [×ÊÁÏµµ°¸](/docs/game-references/data-files)
-- [ÓÎÏ·º¯Êı²Î¿¼](/docs/game-references/game-events)
-- [Íæ¼Ò±êÇ©](/docs/game-references/gamer-tags)
-- [¸öÈË×ÊÁÏÉèÖÃ](/docs/game-references/profile-settings)
+- [æ§åˆ¶é¡¹ç›®](/docs/game-references/controls)
+- [å…‰æ ‡é¡¹ç›®](/docs/game-references/blips)
+- [æ ‡è®°é¡¹ç›®](/docs/game-references/markers)
+- [èµ„æ–™æ¡£æ¡ˆ](/docs/game-references/data-files)
+- [æ¸¸æˆå‡½æ•°å‚è€ƒ](/docs/game-references/game-events)
+- [ç©å®¶æ ‡ç­¾](/docs/game-references/gamer-tags)
+- [ä¸ªäººèµ„æ–™è®¾ç½®](/docs/game-references/profile-settings)

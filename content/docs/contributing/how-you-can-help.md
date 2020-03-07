@@ -1,35 +1,35 @@
 ---
-title: Äú½«ÈçºÎÌá¹©°ïÖú
+title: æ‚¨å°†å¦‚ä½•æä¾›å¸®åŠ©
 ---
 
-Äú¿ÉÒÔÍ¨¹ý¶àÖÖ·½·¨À´°ïÖúFiveM½øÐÐ¿ª·¢¡£
+æ‚¨å¯ä»¥é€šè¿‡å¤šç§æ–¹æ³•æ¥å¸®åŠ©FiveMè¿›è¡Œå¼€å‘ã€‚
 
-¿ª·¢FiveM
+å¼€å‘FiveM
 ----------------
 
-ÏëÒªÐÞ¸´´íÎó£¬´´½¨ÐÂ¹¦ÄÜ»¹ÊÇ°ïÖúÎÒÃÇ¹¹½¨FiveM£¿ ÔÄ¶Á[¿ª·¢ÈËÔ±ÎÄµµ] [developer-docs]£¡
-Èç¹ûÄúÐèÒªÈÎºÎ°ïÖú£¬Çë¼ÓÈë[Discord] [discord]¡£ ÎÒÃÇ·Ç³£ÀÖÒâÎªÄúÌá¹©°ïÖú¡£
+æƒ³è¦ä¿®å¤é”™è¯¯ï¼Œåˆ›å»ºæ–°åŠŸèƒ½è¿˜æ˜¯å¸®åŠ©æˆ‘ä»¬æž„å»ºFiveMï¼Ÿ é˜…è¯»[å¼€å‘äººå‘˜æ–‡æ¡£] [developer-docs]ï¼
+å¦‚æžœæ‚¨éœ€è¦ä»»ä½•å¸®åŠ©ï¼Œè¯·åŠ å…¥[Discord] [discord]ã€‚ æˆ‘ä»¬éžå¸¸ä¹æ„ä¸ºæ‚¨æä¾›å¸®åŠ©ã€‚
 
-´´½¨×ÊÔ´
+åˆ›å»ºèµ„æº
 ------------------
 
-Èç¹û²»ÊÇÊ¹ÓÃC ++£¬ÄÇÃ´ÎÒÃÇ×ÜÊÇ»¶Ó­ÏòÉçÇø·¢²¼ÐÂ×ÊÔ´¡£ Èç¹ûÎÒÃÇ¿´µ½
-ÊÊºÏµÄ»°£¬ÎÒÃÇÒ²¿ÉÄÜ»á½«ÄúµÄ×ÊÔ´°üº¬ÔÚ[cfx-server-data] [server-data]ÖÐ£¡
+å¦‚æžœä¸æ˜¯ä½¿ç”¨C ++ï¼Œé‚£ä¹ˆæˆ‘ä»¬æ€»æ˜¯æ¬¢è¿Žå‘ç¤¾åŒºå‘å¸ƒæ–°èµ„æºã€‚ å¦‚æžœæˆ‘ä»¬çœ‹åˆ°
+é€‚åˆçš„è¯ï¼Œæˆ‘ä»¬ä¹Ÿå¯èƒ½ä¼šå°†æ‚¨çš„èµ„æºåŒ…å«åœ¨[cfx-server-data] [server-data]ä¸­ï¼
 
-FiveMÎÄµµ
+FiveMæ–‡æ¡£
 -------------
 
-ÎÄµµÊÇÒ»Ïî³ÖÐø²»¶ÏµÄ¹¤×÷¡£ Èç¹ûÄú·¢ÏÖÕâÐ©ÎÄµµÓÐÈÎºÎ¸Ä½øµÄÓàµØ£¬Ôò¿ÉÒÔÍ¨¹ýÒÔÏÂ·½Ê½ÊµÏÖ
-ÔÚÎÒÃÇµÄ[docsÐÅÏ¢¿â] [docs-rep]ÉÏÌá½»À­È¡ÇëÇó£¬»òµ¥»÷ÒÔÏÂÒ³Ãæµ×²¿µÄ¡°¸Ä½ø´ËÒ³Ãæ¡±Á´½Ó
-Ò³Ãæ¡£
+æ–‡æ¡£æ˜¯ä¸€é¡¹æŒç»­ä¸æ–­çš„å·¥ä½œã€‚ å¦‚æžœæ‚¨å‘çŽ°è¿™äº›æ–‡æ¡£æœ‰ä»»ä½•æ”¹è¿›çš„ä½™åœ°ï¼Œåˆ™å¯ä»¥é€šè¿‡ä»¥ä¸‹æ–¹å¼å®žçŽ°
+åœ¨æˆ‘ä»¬çš„[docsä¿¡æ¯åº“] [docs-rep]ä¸Šæäº¤æ‹‰å–è¯·æ±‚ï¼Œæˆ–å•å‡»ä»¥ä¸‹é¡µé¢åº•éƒ¨çš„â€œæ”¹è¿›æ­¤é¡µé¢â€é“¾æŽ¥
+é¡µé¢ã€‚
 
-Patreon ¾è¿îÖ§³ÖFiveM
+Patreon ææ¬¾æ”¯æŒFiveM
 -------
 
-Ñ°ÕÒÖ§³ÖÎÒÃÇ¹¤×÷µÄÁíÒ»ÖÖ·½Ê½£¿ ÔÚ[Patreon] [patreon]ÉÏÕÒµ½ÎÒÃÇ¡£
+å¯»æ‰¾æ”¯æŒæˆ‘ä»¬å·¥ä½œçš„å¦ä¸€ç§æ–¹å¼ï¼Ÿ åœ¨[Patreon] [patreon]ä¸Šæ‰¾åˆ°æˆ‘ä»¬ã€‚
 
-[¿ª·¢ÈËÔ±ÎÄµµ]: /docs/developers
+[å¼€å‘äººå‘˜æ–‡æ¡£]: /docs/developers
 [discord]: https://discord.gg/GtvkUsc
-[·þÎñÆ÷Êý¾Ý]: https://github.com/citizenfx/cfx-server-data
-[Ò³£º1]: https://github.com/citizenfx/fivem-docs
+[æœåŠ¡å™¨æ•°æ®]: https://github.com/citizenfx/cfx-server-data
+[é¡µï¼š1]: https://github.com/citizenfx/fivem-docs
 [patreon]: https://patreon.com/fivem

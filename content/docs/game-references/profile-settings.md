@@ -1,13 +1,13 @@
 ---
-title: ÅäÖÃÎÄ¼şÉèÖÃ
+title: é…ç½®æ–‡ä»¶è®¾ç½®
 weight: 770
 ---
 
 
-¿ÉÒÔÊ¹ÓÃ±¾»ú»ñÈ¡GTA VÅäÖÃÎÄ¼şÉèÖÃÖµ: [`GetProfileSetting(int id)`]({{<native "GET_PROFILE_SETTING">}}).
+å¯ä»¥ä½¿ç”¨æœ¬æœºè·å–GTA Vé…ç½®æ–‡ä»¶è®¾ç½®å€¼: [`GetProfileSetting(int id)`]({{<native "GET_PROFILE_SETTING">}}).
 
 
-|    ID |      ÉèÖÃÀà±ğ           | ÅäÖÃÎÄ¼şÉèÖÃÃèÊö                                      |
+|    ID |      è®¾ç½®ç±»åˆ«           | é…ç½®æ–‡ä»¶è®¾ç½®æè¿°                                      |
 |------:|:------------------------|:------------------------------------------------------|
 |   `0` | Gamepad                 | Targeting Mode                                        |
 |   `1` | Gamepad                 | Inverted Look                                         |

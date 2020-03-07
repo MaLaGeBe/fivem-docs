@@ -1,14 +1,14 @@
 ---
-title: Êı¾İÎÄ¼ş
+title: æ•°æ®æ–‡ä»¶
 weight: 740
 ---
 
-**data file**ÊÇ[resource manifest]ÖĞµÄÌõÄ¿(/docs/scripting-manual/introduction/introduction-to-resources#the-resource-manifest)£¬¸ÃÎÄ¼şÒıÓÃÁËÒª¼ÓÔØµ½ÓÎÏ·ÖĞµÄ¶îÍâÄÚÈİ°²×°ÎÄ¼ş ÏµÍ³¡£
+**data file**æ˜¯[resource manifest]ä¸­çš„æ¡ç›®(/docs/scripting-manual/introduction/introduction-to-resources#the-resource-manifest)ï¼Œè¯¥æ–‡ä»¶å¼•ç”¨äº†è¦åŠ è½½åˆ°æ¸¸æˆä¸­çš„é¢å¤–å†…å®¹å®‰è£…æ–‡ä»¶ ç³»ç»Ÿã€‚
 
-Êı¾İÎÄ¼şÀàĞÍ
+æ•°æ®æ–‡ä»¶ç±»å‹
 ---------------
 
-| ¼ü                                                                                    | ÎÄ¼şÀàĞÍ                                                                     | ¸ùÔªËØ                     | °²×°                                | Àı×Ó                                                               |
+| é”®                                                                                    | æ–‡ä»¶ç±»å‹                                                                     | æ ¹å…ƒç´                      | å®‰è£…                                | ä¾‹å­                                                               |
 |---------------------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------------------------|
 | <span id="action_table_definitions">`ACTION_TABLE_DEFINITIONS`</span>                 |                                                                              |                            | CActionInfoDataFileMounter             |                                                                    |
 | <span id="alternate_variations_file">`ALTERNATE_VARIATIONS_FILE`</span>               |                                                                              |                            | CPedVariationStreamFileMounter         | `dlc_mpbattlecrc:/common/data/pedalternatevariations.meta`         |

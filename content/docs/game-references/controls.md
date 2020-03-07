@@ -1,9 +1,9 @@
 ---
-title: ¿ØÖÆÏîÄ¿
+title: æŽ§åˆ¶é¡¹ç›®
 weight: 710
 ---
 
-Àý×Ó
+ä¾‹å­
 -------
 
 ### Lua
@@ -18,18 +18,18 @@ end
 ### C\#
 
 ``` csharp
-// ¼ì²é INPUT_CONTEXT ÊÇ·ñ¸Õ¸Õ±»ÊÍ·Å
-// ¼ÙÉè `Ê¹ÓÃ¾²Ì¬ CitizenFX.Core.API;`
+// æ£€æŸ¥ INPUT_CONTEXT æ˜¯å¦åˆšåˆšè¢«é‡Šæ”¾
+// å‡è®¾ `ä½¿ç”¨é™æ€ CitizenFX.Core.API;`
 if(IsControlJustReleased(1, 51))
 {
-   // ÔÚÕâÀïÔËÐÐ´úÂë
+   // åœ¨è¿™é‡Œè¿è¡Œä»£ç 
 }
 ```
 
-ÊäÈëÏî
+è¾“å…¥é¡¹
 ------------
 
-|  ÐòºÅ |                 Ãû³Æ                 |
+|  åºå· |                 åç§°                 |
 | ----- | ------------------------------------ |
 | 0     | INPUTGROUP\_MOVE                     |
 | 1     | INPUTGROUP\_LOOK                     |
@@ -64,10 +64,10 @@ if(IsControlJustReleased(1, 51))
 | 30    | INPUTGROUP\_SNIPER\_ZOOM\_SECONDARY  |
 | 31    | INPUTGROUP\_VEH\_HYDRAULICS\_CONTROL |
 
-¿ØÖÆÏîÄ¿
+æŽ§åˆ¶é¡¹ç›®
 --------
 
-| ÐòºÅ  | Ãû³Æ                                             | Ä¬ÈÏ    QWERTY                            |    Xbox¿ØÖÆÆ÷   |
+| åºå·  | åç§°                                             | é»˜è®¤    QWERTY                            |    XboxæŽ§åˆ¶å™¨   |
 |-------|--------------------------------------------------|-------------------------------------------|-----------------|
 | 0     | INPUT\_NEXT\_CAMERA                              | V                                         | BACK            |
 | 1     | INPUT\_LOOK\_LR                                  | MOUSE RIGHT                               | RIGHT STICK     |

@@ -1,15 +1,15 @@
 ---
-title: ½Å±¾ÔËĞĞ
+title: è„šæœ¬è¿è¡Œ
 weight: 930
 description: >
- ÃèÊö¶ÔfxOM½Å±¾ÔËĞĞÊ±µÄÖ§³Ö¡£
+ æè¿°å¯¹fxOMè„šæœ¬è¿è¡Œæ—¶çš„æ”¯æŒã€‚
 ---
 
-CitizenFXÖ§³Ö¿É²åÈë½Å±¾ÔËĞĞÊ±¡£ ÕâĞ©ÔËĞĞÊ±±»ÊµÏÖÎªCitizenFX×é¼ş£¨´úÂë/×é¼ş/£©£¬ÊµÏÖÁËÔÚfxScripting.idlÖĞ¶¨ÒåµÄfxOM£¨CitizenFX¶ÔÏóÄ£ĞÍ£©½Ó¿Ú¡£
+CitizenFXæ”¯æŒå¯æ’å…¥è„šæœ¬è¿è¡Œæ—¶ã€‚ è¿™äº›è¿è¡Œæ—¶è¢«å®ç°ä¸ºCitizenFXç»„ä»¶ï¼ˆä»£ç /ç»„ä»¶/ï¼‰ï¼Œå®ç°äº†åœ¨fxScripting.idlä¸­å®šä¹‰çš„fxOMï¼ˆCitizenFXå¯¹è±¡æ¨¡å‹ï¼‰æ¥å£ã€‚
 
-ÔÚ×«Ğ´±¾ÎÄÊ±£¬Ê¹ÓÃµÄÌØ¶¨µÄ½Ó¿Ú¸ñÊ½ÊÇ£º
+åœ¨æ’°å†™æœ¬æ–‡æ—¶ï¼Œä½¿ç”¨çš„ç‰¹å®šçš„æ¥å£æ ¼å¼æ˜¯ï¼š
 
-|           ½Ó¿Ú             |                                        Ä¿µÄ                                      |
+|           æ¥å£             |                                        ç›®çš„                                      |
 | -------------------------- | -------------------------------------------------------------------------------- |
 | IScriptRuntime             | Base interface for script runtimes. Exposes basic lifetime management functions. |
 | IScriptTickRuntime         | Allows exposing a Tick function for runtimes that need to run periodically.      |
@@ -17,7 +17,7 @@ CitizenFXÖ§³Ö¿É²åÈë½Å±¾ÔËĞĞÊ±¡£ ÕâĞ©ÔËĞĞÊ±±»ÊµÏÖÎªCitizenFX×é¼ş£¨´úÂë/×é¼ş/£©£¬Ê
 | IScriptRefRuntime          | Allows exposing function references that can be called, duplicated and cloned.   |
 | IScriptFileHandlingRuntime | Allows to mark a script runtime as handling specific files.                      |
 
-ÁíÍâ£¬»¹ÓĞÒ»¸öÖ÷»ú½Ó¿Ú£º¡° IScriptHost¡±£¬Ëü½«±»´«µİ¸ø¡° IScriptRuntime :: Create¡±¡£
+å¦å¤–ï¼Œè¿˜æœ‰ä¸€ä¸ªä¸»æœºæ¥å£ï¼šâ€œ IScriptHostâ€ï¼Œå®ƒå°†è¢«ä¼ é€’ç»™â€œ IScriptRuntime :: Createâ€ã€‚
 
 ## Interface reference
 
@@ -29,7 +29,7 @@ CitizenFXÖ§³Ö¿É²åÈë½Å±¾ÔËĞĞÊ±¡£ ÕâĞ©ÔËĞĞÊ±±»ÊµÏÖÎªCitizenFX×é¼ş£¨´úÂë/×é¼ş/£©£¬Ê
 void Create(in IScriptHost scriptHost);
 ```
 
-´´½¨½Å±¾ÔËĞĞÊ±Ê±£¬Ö÷»ú½«µ÷ÓÃ´Ë·½·¨¡£ Í¨¹ıµÄ½Å±¾Ö÷»ú»á±£´æ¡£
+åˆ›å»ºè„šæœ¬è¿è¡Œæ—¶æ—¶ï¼Œä¸»æœºå°†è°ƒç”¨æ­¤æ–¹æ³•ã€‚ é€šè¿‡çš„è„šæœ¬ä¸»æœºä¼šä¿å­˜ã€‚
 
 #### Destroy
 
@@ -37,7 +37,7 @@ void Create(in IScriptHost scriptHost);
 void Destroy();
 ```
 
-µ±½Å±¾ÔËĞĞÊ±¼´½«Ïú»ÙÊ±£¬Ö÷»ú½«µ÷ÓÃ´Ë·½·¨¡£
+å½“è„šæœ¬è¿è¡Œæ—¶å³å°†é”€æ¯æ—¶ï¼Œä¸»æœºå°†è°ƒç”¨æ­¤æ–¹æ³•ã€‚
 
 #### GetParentObject
 
@@ -45,7 +45,7 @@ void Destroy();
 void* GetParentObject(); // direct return value, not result_t
 ```
 
-ÕâÓ¦¸Ã·µ»ØÓÉSetParentObjectÉèÖÃµÄ¶ÔÏó¡£
+è¿™åº”è¯¥è¿”å›ç”±SetParentObjectè®¾ç½®çš„å¯¹è±¡ã€‚
 
 #### SetParentObject
 
@@ -53,7 +53,7 @@ void* GetParentObject(); // direct return value, not result_t
 void SetParentObject(void* object); // direct return value, not result_t
 ```
 
-Õâ½«ÉèÖÃ¸¸¶ÔÏó¡£ ÕâÍ¨³£ÊÇ±¾»úµÄ`fx :: Resource *`£¬¿ÉÄÜÓëC ++ÖĞÊµÏÖµÄÔËĞĞÊ±ÓĞ¹Ø¡£
+è¿™å°†è®¾ç½®çˆ¶å¯¹è±¡ã€‚ è¿™é€šå¸¸æ˜¯æœ¬æœºçš„`fx :: Resource *`ï¼Œå¯èƒ½ä¸C ++ä¸­å®ç°çš„è¿è¡Œæ—¶æœ‰å…³ã€‚
 
 #### GetInstanceId
 
@@ -61,7 +61,7 @@ void SetParentObject(void* object); // direct return value, not result_t
 int GetInstanceId(); // direct return value, not result_t
 ```
 
-Õâ½«·µ»ØÔËĞĞÊ±ÔÚ³õÊ¼»¯Ê±´´½¨µÄËæ»úÊµÀıID¡£
+è¿™å°†è¿”å›è¿è¡Œæ—¶åœ¨åˆå§‹åŒ–æ—¶åˆ›å»ºçš„éšæœºå®ä¾‹IDã€‚
 
 ### IScriptTickRuntime
 
@@ -71,7 +71,7 @@ int GetInstanceId(); // direct return value, not result_t
 void Tick();
 ```
 
-Ö÷»úÃ¿¸ôÒ»Ö¡µ÷ÓÃÒ»´Î¡£
+ä¸»æœºæ¯éš”ä¸€å¸§è°ƒç”¨ä¸€æ¬¡ã€‚
 
 ### IScriptEventRuntime
 
@@ -81,15 +81,15 @@ void Tick();
 void TriggerEvent(in char* eventName, in char* argsSerialized, in uint32_t serializedSize, in char* sourceId);
 ```
 
-Ã¿µ±´¥·¢ÊÂ¼şÊ±£¬Ö÷»ú¾Í»áµ÷ÓÃTriggerEvent¡£ ¡° eventName¡±°üº¬ÒÑÖ´ĞĞÊÂ¼şµÄÃû³Æ£¬
-argsSerializedºÍserializedSize±íÊ¾²ÎÊıÊı×é£¨Ê¹ÓÃÍ¨ÓÃĞòÁĞ»¯Ô¼¶¨½øĞĞĞòÁĞ»¯£¬Çë²Î¼û¡°³£¹æ¡±²¿·Ö£©£¬ÒÔ¼°
-sourceId°üº¬Ò»¸ö×Ö·û´®£¬ÓÃÓÚ±êÊ¶ÊÂ¼şµÄÀ´Ô´¡£
+æ¯å½“è§¦å‘äº‹ä»¶æ—¶ï¼Œä¸»æœºå°±ä¼šè°ƒç”¨TriggerEventã€‚ â€œ eventNameâ€åŒ…å«å·²æ‰§è¡Œäº‹ä»¶çš„åç§°ï¼Œ
+argsSerializedå’ŒserializedSizeè¡¨ç¤ºå‚æ•°æ•°ç»„ï¼ˆä½¿ç”¨é€šç”¨åºåˆ—åŒ–çº¦å®šè¿›è¡Œåºåˆ—åŒ–ï¼Œè¯·å‚è§â€œå¸¸è§„â€éƒ¨åˆ†ï¼‰ï¼Œä»¥åŠ
+sourceIdåŒ…å«ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œç”¨äºæ ‡è¯†äº‹ä»¶çš„æ¥æºã€‚
 
 ### IScriptRefRuntime
 
-¡°ref¡±ÊÇÒ»¸ö¹¦ÄÜÒıÓÃ£¬ÓÃÓÚÔÊĞíÆäËû×ÊÔ´£¨»òÖ÷»ú£©ÔÚ½Å±¾ÔËĞĞÊ±ÖĞµ÷ÓÃÎ¯ÍĞ/¹Ø±Õ¡£
-Ã¿¸öÒıÓÃÔÚ×ÊÔ´¼¶±ğÉÏÓÉÒ»¸öÕûÊı±êÊ¶£¬ÔÚÖ÷»úÖĞÊ¹ÓÃ×ÊÔ´Ãû³Æ£¬ÊµÀıIDºÍÒıÓÃË÷Òı¶ÔÆä½øĞĞÏŞ¶¨¡£
-ÒıÓÃ²»Ó¦°´Ë÷Òı½øĞĞÒıÓÃ¼ÆÊı£¬Ã¿¸ö´´½¨¶¼Ó¦Óëµ¥¸öÉ¾³ıÅä¶Ô¡£
+â€œrefâ€æ˜¯ä¸€ä¸ªåŠŸèƒ½å¼•ç”¨ï¼Œç”¨äºå…è®¸å…¶ä»–èµ„æºï¼ˆæˆ–ä¸»æœºï¼‰åœ¨è„šæœ¬è¿è¡Œæ—¶ä¸­è°ƒç”¨å§”æ‰˜/å…³é—­ã€‚
+æ¯ä¸ªå¼•ç”¨åœ¨èµ„æºçº§åˆ«ä¸Šç”±ä¸€ä¸ªæ•´æ•°æ ‡è¯†ï¼Œåœ¨ä¸»æœºä¸­ä½¿ç”¨èµ„æºåç§°ï¼Œå®ä¾‹IDå’Œå¼•ç”¨ç´¢å¼•å¯¹å…¶è¿›è¡Œé™å®šã€‚
+å¼•ç”¨ä¸åº”æŒ‰ç´¢å¼•è¿›è¡Œå¼•ç”¨è®¡æ•°ï¼Œæ¯ä¸ªåˆ›å»ºéƒ½åº”ä¸å•ä¸ªåˆ é™¤é…å¯¹ã€‚
 
 #### CallRef
 
@@ -97,7 +97,7 @@ sourceId°üº¬Ò»¸ö×Ö·û´®£¬ÓÃÓÚ±êÊ¶ÊÂ¼şµÄÀ´Ô´¡£
 void CallRef(in int32_t refIdx, in char* argsSerialized, in uint32_t argsSize, out char* retvalSerialized, out uint32_t retvalSize);
 ```
 
-µ÷ÓÃÒıÓÃÊ±£¬Ö÷»ú½«µ÷ÓÃCallRef¡£ refIdx°üº¬Òªµ÷ÓÃµÄref£¬argsSerialized / argsSize°üº¬²ÎÊıÊı×é£¬retvalSerializedºÍretvalSizeÔÚÍê³ÉÊ±Ó¦°üº¬·µ»ØÖµÊı×é¡£
+è°ƒç”¨å¼•ç”¨æ—¶ï¼Œä¸»æœºå°†è°ƒç”¨CallRefã€‚ refIdxåŒ…å«è¦è°ƒç”¨çš„refï¼ŒargsSerialized / argsSizeåŒ…å«å‚æ•°æ•°ç»„ï¼ŒretvalSerializedå’ŒretvalSizeåœ¨å®Œæˆæ—¶åº”åŒ…å«è¿”å›å€¼æ•°ç»„ã€‚
 
 #### DuplicateRef
 
@@ -105,7 +105,7 @@ void CallRef(in int32_t refIdx, in char* argsSerialized, in uint32_t argsSize, o
 void DuplicateRef(in int32_t refIdx, out int32_t newRefIdx);
 ```
 
-DuplicateRefÓ¦¸Ã·µ»ØÒ»¸öĞÂµÄÒıÓÃË÷Òı£¬¸ÃÒıÓÃ½«ÓërefIdxÏàÍ¬µÄÄÚ²¿º¯Êı¶ÔÏóÒıÓÃµ½newRefIdxÖĞ¡£
+DuplicateRefåº”è¯¥è¿”å›ä¸€ä¸ªæ–°çš„å¼•ç”¨ç´¢å¼•ï¼Œè¯¥å¼•ç”¨å°†ä¸refIdxç›¸åŒçš„å†…éƒ¨å‡½æ•°å¯¹è±¡å¼•ç”¨åˆ°newRefIdxä¸­ã€‚
 
 #### RemoveRef
 
@@ -113,7 +113,7 @@ DuplicateRefÓ¦¸Ã·µ»ØÒ»¸öĞÂµÄÒıÓÃË÷Òı£¬¸ÃÒıÓÃ½«ÓërefIdxÏàÍ¬µÄÄÚ²¿º¯Êı¶ÔÏóÒıÓÃµ½ne
 void RemoveRef(in int32_t refIdx);
 ```
 
-RemoveRefÓ¦¸ÃÉ¾³ıÓÉrefIdx±êÊ¶µÄÒıÓÃ¡£
+RemoveRefåº”è¯¥åˆ é™¤ç”±refIdxæ ‡è¯†çš„å¼•ç”¨ã€‚
 
 ### IScriptFileHandlingRuntime
 
@@ -123,7 +123,7 @@ RemoveRefÓ¦¸ÃÉ¾³ıÓÉrefIdx±êÊ¶µÄÒıÓÃ¡£
 int32_t HandlesFile(in char* scriptFile);
 ```
 
-Ó¦¸Ã·µ»Ø´ËÔËĞĞÊ±ÊÇ·ñÓ¦´¦ÀíÖ¸¶¨µÄÎÄ¼ş¡£
+åº”è¯¥è¿”å›æ­¤è¿è¡Œæ—¶æ˜¯å¦åº”å¤„ç†æŒ‡å®šçš„æ–‡ä»¶ã€‚
 
 #### LoadFile
 
@@ -131,7 +131,7 @@ int32_t HandlesFile(in char* scriptFile);
 void LoadFile(in char* scriptFile);
 ```
 
-´Ëº¯ÊıÓ¦ÔÚÔËĞĞÊ±¼ÓÔØÎÄ¼ş¡£
+æ­¤å‡½æ•°åº”åœ¨è¿è¡Œæ—¶åŠ è½½æ–‡ä»¶ã€‚
 
 ### IScriptHost
 
@@ -141,17 +141,17 @@ void LoadFile(in char* scriptFile);
 void InvokeNative(inout NativeCtx context);
 ```
 
-µ÷ÓÃ±¾»úº¯Êı¡£ ¡° nativeIdentifier¡±Ó¦°üº¬±¾»úº¯Êı±êÊ¶·û£¬¡° numArguments¡±Ó¦°üº¬²ÎÊıÊıÁ¿£¬¡° arguments¡±Ó¦°üº¬ÔÚRAGE±¾»úABIÖ®ºóµÄÌØ¶¨¹¦ÄÜ²ÎÊı¡£
+è°ƒç”¨æœ¬æœºå‡½æ•°ã€‚ â€œ nativeIdentifierâ€åº”åŒ…å«æœ¬æœºå‡½æ•°æ ‡è¯†ç¬¦ï¼Œâ€œ numArgumentsâ€åº”åŒ…å«å‚æ•°æ•°é‡ï¼Œâ€œ argumentsâ€åº”åŒ…å«åœ¨RAGEæœ¬æœºABIä¹‹åçš„ç‰¹å®šåŠŸèƒ½å‚æ•°ã€‚
 
-¶ÔÓÚ·µ»ØÈÎºÎ½á¹ûµÄ±¾»ú£¬ÈÎºÎ½á¹û¶¼½«ÔÚÉÏÏÂÎÄµÄµÚÒ»¸ö²ÎÊı×Ö¶ÎÖĞ·µ»Ø¡£
+å¯¹äºè¿”å›ä»»ä½•ç»“æœçš„æœ¬æœºï¼Œä»»ä½•ç»“æœéƒ½å°†åœ¨ä¸Šä¸‹æ–‡çš„ç¬¬ä¸€ä¸ªå‚æ•°å­—æ®µä¸­è¿”å›ã€‚
 
 #### OpenSystemFile
 
-·µ»ØÒıÓÃÏµÍ³VFSÖĞÖ¸¶¨ÎÄ¼şÃûµÄÁ÷¡£
+è¿”å›å¼•ç”¨ç³»ç»ŸVFSä¸­æŒ‡å®šæ–‡ä»¶åçš„æµã€‚
 
 #### OpenHostFile
 
-·µ»ØÏà¶ÔÓÚÖ÷»úÂ·¾¶£¨`resources£º/ resourceName /`£©ÒıÓÃÖ¸¶¨ÎÄ¼şÃûµÄÁ÷¡£
+è¿”å›ç›¸å¯¹äºä¸»æœºè·¯å¾„ï¼ˆ`resourcesï¼š/ resourceName /`ï¼‰å¼•ç”¨æŒ‡å®šæ–‡ä»¶åçš„æµã€‚
 
 #### CanonicalizeRef
 
@@ -159,23 +159,23 @@ void InvokeNative(inout NativeCtx context);
 
 ### IScriptHostWithResourceData
 
-Õâ¿ÉÒÔÊ¹ÓÃIScriptHostÉÏµÄQueryInterface»ñµÃ¡£
+è¿™å¯ä»¥ä½¿ç”¨IScriptHostä¸Šçš„QueryInterfaceè·å¾—ã€‚
 
 #### GetResourceName
 
-·µ»Ø¸¸×ÊÔ´µÄÃû³Æ¡£
+è¿”å›çˆ¶èµ„æºçš„åç§°ã€‚
 
 #### GetNumResourceMetaData
 
-²»Ó¦Ê¹ÓÃ´Ë¹¦ÄÜ£¬¶øÓ¦Ê¹ÓÃ±¾»úÖĞµÄ {{<native_link "GET_NUM_RESOURCE_METADATA">}} .
+ä¸åº”ä½¿ç”¨æ­¤åŠŸèƒ½ï¼Œè€Œåº”ä½¿ç”¨æœ¬æœºä¸­çš„ {{<native_link "GET_NUM_RESOURCE_METADATA">}} .
 
 #### GetResourceMetaData
 
-²»Ó¦Ê¹ÓÃ´Ë¹¦ÄÜ£¬¶øÓ¦Ê¹ÓÃ±¾»úÖĞµÄ  {{<native_link "GET_RESOURCE_METADATA">}} .
+ä¸åº”ä½¿ç”¨æ­¤åŠŸèƒ½ï¼Œè€Œåº”ä½¿ç”¨æœ¬æœºä¸­çš„  {{<native_link "GET_RESOURCE_METADATA">}} .
 
 ### IScriptHostWithManifest
 
-Õâ¿ÉÒÔÊ¹ÓÃIScriptHostÉÏµÄQueryInterface»ñµÃ¡£
+è¿™å¯ä»¥ä½¿ç”¨IScriptHostä¸Šçš„QueryInterfaceè·å¾—ã€‚
 
 #### IsManifestVersionBetween
 
@@ -183,12 +183,12 @@ void InvokeNative(inout NativeCtx context);
 bool IsManifestVersionBetween(guid_t* lowerBound, guid_t* upperBound);
 ```
 
-·µ»ØÖ÷»ú×ÊÔ´µÄÇåµ¥°æ±¾ÊÇ·ñÔÚGUIDµÄÌØ¶¨·¶Î§ÄÚ (`lowerBound <= guid < upperBound`).
+è¿”å›ä¸»æœºèµ„æºçš„æ¸…å•ç‰ˆæœ¬æ˜¯å¦åœ¨GUIDçš„ç‰¹å®šèŒƒå›´å†… (`lowerBound <= guid < upperBound`).
 
-Èç¹ûÆäÖĞÒ»¸öGUIDÎª¿ÕGUID£¬Ôò½ö²âÊÔ°æ±¾ÊÇ·ñ´óÓÚ/Ğ¡ÓÚÁíÒ»¸öGUID¡£
+å¦‚æœå…¶ä¸­ä¸€ä¸ªGUIDä¸ºç©ºGUIDï¼Œåˆ™ä»…æµ‹è¯•ç‰ˆæœ¬æ˜¯å¦å¤§äº/å°äºå¦ä¸€ä¸ªGUIDã€‚
 
 ## Conventions
 
 ### Serialization
 
-ĞòÁĞ»¯Ê¹ÓÃMessagePack½øĞĞ£¬²¢ÎªÎ¯ÍĞ/¹¦ÄÜÒıÓÃÊ¹ÓÃÌØ¶¨µÄÀ©Õ¹ID¡£
+åºåˆ—åŒ–ä½¿ç”¨MessagePackè¿›è¡Œï¼Œå¹¶ä¸ºå§”æ‰˜/åŠŸèƒ½å¼•ç”¨ä½¿ç”¨ç‰¹å®šçš„æ‰©å±•IDã€‚
