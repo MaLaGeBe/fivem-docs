@@ -1,5 +1,5 @@
 ---
-title: Data files
+title: 数据文件
 weight: 740
 ---
 
@@ -8,7 +8,7 @@ A **data file** is an entry in the [resource manifest](/docs/scripting-manual/in
 Data file types
 ---------------
 
-| Key                                                                                   | File type                                                                    | Root element               | Mounter                                | Example                                                            |
+| Key                                                                                   | 文件类型                                                                      | Root element               | Mounter                                | 示例                                                              |
 |---------------------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------------------------|
 | <span id="action_table_definitions">`ACTION_TABLE_DEFINITIONS`</span>                 |                                                                              |                            | CActionInfoDataFileMounter             |                                                                    |
 | <span id="alternate_variations_file">`ALTERNATE_VARIATIONS_FILE`</span>               |                                                                              |                            | CPedVariationStreamFileMounter         | `dlc_mpbattlecrc:/common/data/pedalternatevariations.meta`         |

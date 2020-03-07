@@ -1,35 +1,35 @@
 ---
-title: Controls
+title: 控制项
 weight: 710
 ---
 
-Example
+示例
 -------
 
 ### Lua
 
 ``` lua
--- checks if INPUT_CONTEXT has just been released
+-- 检查INPUT_CONTEXT是否刚刚被释放
 if IsControlJustReleased(1--[[input group]],  51--[[control index]]) then
-    -- run code here
+    -- 在这里运行代码
 end
 ```
 
 ### C\#
 
 ``` csharp
-// checks if INPUT_CONTEXT has just been released
-// assumes `using static CitizenFX.Core.API;`
+// 检查INPUT_CONTEXT是否刚刚被释放
+// 假设 `using static CitizenFX.Core.API;`
 if(IsControlJustReleased(1, 51))
 {
-   // run code here
+   // 在这里运行代码
 }
 ```
 
-Input groups
+输入组
 ------------
 
-| Index |                 Name                 |
+| 序号  |                 名称                 |
 | ----- | ------------------------------------ |
 | 0     | INPUTGROUP\_MOVE                     |
 | 1     | INPUTGROUP\_LOOK                     |
@@ -64,10 +64,10 @@ Input groups
 | 30    | INPUTGROUP\_SNIPER\_ZOOM\_SECONDARY  |
 | 31    | INPUTGROUP\_VEH\_HYDRAULICS\_CONTROL |
 
-Controls
+控制项
 --------
 
-| Index | Name                                             | Default QWERTY                            | Xbox Controller |
+| 序号  | 名称                                             | 默认    QWERTY                            |    Xbox控制器   |
 |-------|--------------------------------------------------|-------------------------------------------|-----------------|
 | 0     | INPUT\_NEXT\_CAMERA                              | V                                         | BACK            |
 | 1     | INPUT\_LOOK\_LR                                  | MOUSE RIGHT                               | RIGHT STICK     |

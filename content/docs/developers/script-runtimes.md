@@ -29,7 +29,7 @@ CitizenFX支持可插入脚本运行环境。这些运行环境被实现为Citiz
 void Create(in IScriptHost scriptHost);
 ```
 
-创建脚本运行时时，主机将调用此方法。 通过的脚本主机可能应该保存。
+创建脚本运行时时，主机将调用此方法。 通过的脚本主机会保存。
 
 #### Destroy
 

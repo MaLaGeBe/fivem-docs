@@ -7,49 +7,48 @@ description: >
 
 <!-- TODO: format this like client commands? -->
 
-Console commands can be executed either using an RCon tool, directly from the server console GUI, a server configuration
-file, or (if a resource is allowed by ACE) the [ExecuteCommand]({{<native "EXECUTE_COMMAND">}}) function.
+可以使用RCon工具直接从服务器控制台GUI（服务器配置）执行控制台命令文件，或者（如果ACE允许资源）[ExecuteCommand]({{<native "EXECUTE_COMMAND">}})函数。
 
-Adding a custom RCon command can be done using the [RegisterCommand]({{<native "REGISTER_COMMAND">}}) function on the
-server, or the (legacy) `rconCommand` event.
+添加自定义RCon命令可以通过使用 [RegisterCommand]({{<native "REGISTER_COMMAND">}})函数来完成。
+服务器，或（旧版）`rconCommand`事件。
 
 ### `start [resourceName]`
 
-Starts the resource specified in the argument, if it was stopped.
+启动参数中指定的资源（如果已停止）。
 
-Example:
+示例：
 
     start lambda-menu
 
 ### `stop [resourceName]`
 
-Stops the resource specified in the argument, if it was started.
+停止参数中指定的资源（如果已启动）。
 
-Example:
+示例：
 
     stop mymode
 
 ### `ensure [resourceName]`
 
-Restarts the resource specified in the argument, if it was started. If it wasn't, starts the resource specified in the argument.
+重新启动参数中指定的资源（如果已启动）。 如果不是，则启动参数中指定的资源。
 
-Example:
+示例：
 
     ensure my-testing-resource
 
 ### `restart [resourceName]`
 
-Restarts the resource specified in the argument, if it was started.
+重新启动参数中指定的资源（如果已启动）。
 
-Example:
+示例：
 
     restart lambda-menu
 
 ### `refresh`
 
-Rescans the *resources* folder and loads all \_\_resource.lua files in them, making new resources available to start using [start](#start "wikilink").
+重新扫描*resources*文件夹并加载其中的所有\_\_resource.lua文件，使新资源可用于使用 [start](#start "wikilink")开始。
 
-Example:
+示例：
 
     refresh
 
@@ -100,20 +99,20 @@ Example:
 
 ### `say [message]`
 
-{{% alert theme="info" %}}This is provided by the **chat** resource. {{% /alert %}}
+{{% alert theme="info" %}}这是由 **chat** 提供的资源. {{% /alert %}}
 
-Sends a message in the chat as *console*.
+在聊天室中以 *控制台* 形式发送消息。
 
-Example:
+示例：
 
     say Hi, everybody!
 
 
 ### `load_server_icon [fileName.png]`
 
-Loads a specfied icon and sets it as the server icon. The icon needs to be a 96x96 PNG file.
+加载指定的图标并将其设置为服务器图标。该图标必须是96x96 PNG文件。
 
-Example:
+示例：
 
 ```toml
 load_server_icon "my-server.png"
@@ -121,9 +120,9 @@ load_server_icon "my-server.png"
 
 ### `add_ace [principal] [object] [allow|deny]`
 
-Adds an access control entry to the server's access control list.
+将访问控制条目添加到服务器的访问控制列表中。
 
-Example:
+示例：
 
 ```
 add_ace group.admin command.potato allow
@@ -132,9 +131,9 @@ add_ace identifier.steam:110000112345678 command.apple deny
 
 ### `add_principal [child_principal] [parent_principal]`
 
-Sets a principal to inherit from another principal.
+设置一个要从另一个主体继承的主体。
 
-Example:
+示例：
 ```toml
 # makes identifier.steam:110000112345678 inherit from group.admin
 add_principal identifier.steam:110000112345678 group.admin
@@ -142,9 +141,9 @@ add_principal identifier.steam:110000112345678 group.admin
 
 ### `remove_ace [principal] [object] [allow|deny]`
 
-Removes a specified ACE from the server's access control list.
+从服务器的访问控制列表中删除指定的ACE。
 
-Example:
+示例：
 
 ```
 remove_ace identifier.steam:110000112345678 command.apple deny
@@ -152,14 +151,14 @@ remove_ace identifier.steam:110000112345678 command.apple deny
 
 ### `remove_principal [child_principal] [parent_principal]`
 
-Removes a specified principal inheritance entry.
+删除指定的主体继承项。
 
-Example:
+示例：
 ```
 remove_principal identifier.steam:110000112345678 group.admin
 ```
 
 ### `test_ace [principal] [object]`
-Tests if a principal is allowed or denied access to a given object.
+测试是否允许委托人访问给定对象。
 
-Example: `test_ace group.admin command.adminstuff`
+示例： `test_ace group.admin command.adminstuff`
