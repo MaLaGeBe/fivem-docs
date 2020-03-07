@@ -1,19 +1,20 @@
 ---
-title: Disabling antivirus
+title: 禁用防病毒程序
 weight: 230
 ---
 
-Some antivirus vendors like Avast, AVG and others are known to block FiveM procedures. Make sure your antivirus allows
-FiveM to run by adding FiveM to its exclusions list. We are aware of the situation and are intending to work on a
-solution for these issues.
+一些防病毒供应商（例如Avast、AVG等）会阻止FiveM程序。通过将FiveM添加到其排除列表（白名单）中，确保防病毒软件可以运行FiveM。我们知道这种情况，并打算为这些问题寻求解决方案。
 
-- First, locate where FiveM is installed.
-    - If you installed FiveM in an empty folder, that's where you installed FiveM.
-    - Otherwise:
-        - Press `WinKey+R` on your keyboard
-        - Type `%localappdata%\FiveM` in the dialog that opens
-        - Hit enter
-- Copy the path to your FiveM folder.
-- Add it to your antivirus exclusions. For the common antivirus vendors:
+- 首先，找到FiveM的安装位置。
+    - 如果将FiveM安装在一个空文件夹中，则FiveM的安装位置就是该文件夹。
+    - 除此以外：
+        - 在键盘上按 `WinKey+R` 键
+        - 在打开的对话框中输入 `%localappdata%\FiveM` 
+        - 按Enter键
+- 将路径复制到FiveM文件夹。
+- 将其添加到您的防病毒白名单中。对于常见的防病毒供应商：
     - [Avast](https://support.avast.com/en-eu/article/Antivirus-scan-exclusions)
     - [AVG](https://support.avg.com/SupportArticleView?urlname=How-to-exclude-file-folder-or-website-from-AVG-scanning)
+    - [360](#)待补充
+    - [腾讯电脑管家](#)待补充
+    - [火绒](#)待补充
