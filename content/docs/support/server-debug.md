@@ -1,9 +1,9 @@
 ---
-title: Server debugging
+title: 服务端调试
 weight: 840
 ---
 
-Creating Full Dumps
+创建完全转储
 -------
 
 This section will explain how to create useful debugging dumps (called .dmp files) in order to assist with troubleshooting. If you encounter a crash, set up your environment to capture the next time it happens.

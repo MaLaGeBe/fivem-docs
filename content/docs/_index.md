@@ -52,12 +52,12 @@ FiveM 中文文档
     <div style="border: 1px solid lightgray; padding: 15px; margin-bottom: 5px;">
       <h4>游戏参考</h4>
       <ul>
-        <li><a href="/docs/game-references/blips">Blips</a></li>
+        <li><a href="/docs/game-references/blips">光标</a></li>
         <li><a href="/docs/game-references/controls">控制项</a></li>
         <li><a href="/docs/game-references/data-files">数据文件</a></li>
-        <li><a href="/docs/game-references/gamer-tags">玩家标签</a></li>
+        <li><a href="/docs/game-references/gamer-tags">游戏标签</a></li>
         <li><a href="/docs/game-references/markers">标记</a></li>
-        <li><a href="/docs/game-references/ped-models">任务模型</a></li>
+        <li><a href="/docs/game-references/ped-models">角色</a></li>
         <li><a href="/docs/game-references">浏览全部</a></li>
       </ul>
     </div>
