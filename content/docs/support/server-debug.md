@@ -6,35 +6,35 @@ weight: 840
 创建完全转储
 -------
 
-This section will explain how to create useful debugging dumps (called .dmp files) in order to assist with troubleshooting. If you encounter a crash, set up your environment to capture the next time it happens.
+本节将解释如何创建有用的调试转储（称为.dmp文件），以帮助进行故障排除。如果遇到崩溃，请设置环境以在下次发生时捕获。
 
-**NOTE**: Creating full dumps is for Windows servers only. This method is currently not supported on Linux.
+**注意**：创建完全转储仅适用于Windows服务器。Linux当前不支持此方法。
 
-#### Prerequisites
-1. [ProcDump v9.0][procdump] or newer.
+#### 先决条件
+1. [ProcDump v9.0][procdump] 或更新的.
 
-#### Usage
-1. Make sure your server is running.
-2. Open a command prompt where you extracted procdump to. **Use an ELEVATED command prompt** for this (should say "Administrator" in the title bar).
-3. Type in the following command:
+#### 用法
+1. 确保服务器正在运行。
+2. 打开将procdump解压到的命令提示符。为此**使用 ELEVATED 命令提示符** (标题栏上应该写“管理员”).
+3. 键入以下命令：
     ```dos
     procdump64.exe -accepteula -i
     ```
-    This registers procdump as a debugger to capture certain crashes.
-4. Open task manager, click `"Details"`. Locate the *largest* `FXServer.exe`. There should be a `"PID"` column. Note down the number.
-5. Go back to your command prompt and type in:
+    这将procdump注册为调试器以捕获某些崩溃。
+4. 打开任务管理器，单击`详细信息`。*定位到* `FXServer.exe`。应该有一个`"PID`列。记下号码。
+5. 返回命令提示符并键入：
     ```dos
     procdump64.exe -accepteula -e -h -mp pidhere
     ```
-    where `pidhere` is the number you noted down previously. If you get an error, make sure your `PID` is correct.
-6. Wait for the server to crash. When it does, it will write a large .dmp file to the procdump folder.
-7. Compress this file (e.g. `.zip`) and upload it to [DropMeFiles][dropmefiles] or equivalent.
-8. Run the following in your command prompt to unregister the debugger when you are done:
+    其中 `pidhere` 是您先前记下的数字。如果出现错误，请确保`"PID"`正确。
+6. 等待服务器崩溃。当它崩溃时，它会将一个大的.dmp文件写入procdump文件夹。
+7. 压缩此文件（例如`.zip`），并将其上载到 [DropMeFiles][dropmefiles] 或等效文件。
+8. 完成后，在命令提示符中运行以下命令以注销调试器：
     ```dos
     procdump64.exe -accepteula -u
     ```
 
-You can now analyze the dump file (using VS2019+, click 'Debug with Native Only' and load [symbols][symbols]) or supply it to whomever requested it. If you are certain you have found a bug, report it on our [forum](https://forum.fivem.net/c/general-discussion/bug-reports) or in the Discord [#server-bugs][discord] channel with as much detail as possible. Using OneSync? Please report OneSync bugs [here](https://forum.fivem.net/c/general-discussion/1s-reports).
+现在可以分析转储文件（使用VS2019+，单击“仅使用本机调试”并加载 [symbols][symbols]）或将其提供给任何请求它的人。如果你确定你发现了一个bug，尽可能详细地在我们的[社区](https://forum.fivem.net/c/general-discussion/bug-reports)或Discord [#server-bugs][discord]频道中报告。使用OneSync？请在[此处](https://forum.fivem.net/c/general-discussion/1s-reports)报告OneSync错误。
 
 [procdump]: https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
 [discord]: https://discord.gg/GtvkUsc
