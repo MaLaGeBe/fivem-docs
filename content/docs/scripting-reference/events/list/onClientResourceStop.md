@@ -3,29 +3,29 @@ title: onClientResourceStop
 weight: 546
 ---
 
-Called after a resource stops.
+在资源停止后调用。
 
-Parameters
+参数
 ----------
 
 ```
 string resourceName
 ```
 
-- resourceName: The name of the resource that stopped.
+- resourceName: 已停止的资源的名称。
 
-Examples
+示例
 --------
-This example prints the name of the resource that was just stopped.
+此示例打印刚刚停止的资源的名称。
 
-##### Lua Example:
+##### Lua 示例：
 ```lua
 AddEventHandler('onClientResourceStop', function (resourceName)
   print('The resource ' .. resourceName .. ' has been stopped on the client.')
 end)
 ```
 
-##### C\# Example:
+##### C\# 示例：
 ```csharp
 // In class constructor
 EventHandlers["onClientResourceStop"] += new Action<string>(OnClientResourceStop);
@@ -37,7 +37,7 @@ private void OnClientResourceStop(string resourceName)
 }
 ```
 
-##### JavaScript Example:
+##### JavaScript 示例：
 ```js
 on("onClientResourceStop", (resourceName) => {
   if(GetCurrentResourceName() != resourceName) {

@@ -1,5 +1,5 @@
 ---
-title: Client-side functions in Lua
+title: Lua 中的客户端函数
 weight: 514
 ---
 

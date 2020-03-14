@@ -1,5 +1,5 @@
 ---
-title: Resource manifest
+title: 资源清单
 weight: 505
 ---
 
