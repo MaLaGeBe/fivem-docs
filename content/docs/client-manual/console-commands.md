@@ -88,8 +88,10 @@ identifier.steam:110000111111112 <- group.moderator
 示例：`net_statsFile metrics.csv` - 这将在 FiveM [application data][faq-data]文件夹中创建一个名为`metrics.csv`的 CSV 文件。
 
 ### cl_drawfps
-The `cl_drawfps` command will show reliably the frames per second.
-Usage: `cl_drawfps <true|false>`
+
+`cl_drawfps`命令将可靠地显示每秒的帧数。
+
+用法：`cl_drawfps <true|false>`
 
 ### netgraph
 
