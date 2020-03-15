@@ -3,18 +3,18 @@ title: 用C＃创建您的第一个脚本
 weight: 412
 ---
 
-Getting started with scripting for FiveM might be a tad overwhelming, given the wide range of possibilities and the sparsely spread documentation. In this quick and simple guide, we'll try to show you how to get started with a quick resource in C#. We will be implementing a car spawner through a command.
+鉴于种类繁多的可能性和文档稀疏，您可能在FiveM脚本编写时可能有点不知所措。而在这个快速而简单的指南中，我们将尝试向您展示如何开始使用C＃中的快速资源。 我们将通过命令实现汽车的生成。
 
 ## Prerequisites
-Before creating your first script with C#, there are a couple of things you will need to set up and understand.
+在使用C＃创建第一个脚本之前，你需要了解以下内容。
 
 * [Creating a C# project and setup your environment](/docs/scripting-manual/runtimes/csharp)
 * [Understanding of resources and manifest files](/docs/scripting-reference/resource-manifest/resource-manifest)
 
 ### Writing code
-Now that you have set up your C# project and environment, you will have two projects; `MyResourceNameClient` and `MyResourceNameServer`.
+现在，您已经设置了C＃项目和环境，您将拥有两个项目。 `MyResourceNameClient` 和 `MyResourceNameServer`.
 
-Any C# class that handles FiveM scripting-related events must inherit from the `BaseScript` class. Lets do this by going to `Class1.cs` in your client project. At the same time, we will also define a constructor, which we will use further on. Make sure you have a using directive to `CitizenFX.Core`.
+任何处理FiveM脚本相关事件的C＃类都必须继承自`BaseScript`类。 让我们通过在客户端项目中访问`Class1.cs`来实现。 同时，我们还将定义一个构造函数，我们将在以后使用它。 确保您对`CitizenFX.Core`具有using指令。
 ```csharp
 using CitizenFX.Core;
 
@@ -30,7 +30,7 @@ namespace MyResourceNameClient
 }
 ```
 
-Easy right? But what about adding functionality? We will start by adding a command using various FiveM scripting concepts.
+容易吧？ 但是增加的功能呢？ 我们将从使用各种FiveM脚本概念添加命令开始。
 
 ```csharp
 using System;
@@ -65,17 +65,17 @@ namespace MyResourceNameClient
 }
 ```
 
-You might be overwhelmed at this point, but don't worry. We will go through everything bit by bit.
+这时您可能不知所措，但是不用担心。 我们将一点一点地解释所有的步骤。
 
 ```csharp
 EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
 ```
-In the constructor we've added an event handler for the [onClientResourceStart](/docs/scripting-reference/events/list/onClientResourceStart/) event. It takes one argument; a string with the name of the resource that was started. It also has a delegate method `OnClientResourceStart`, which we defined beneath the constructor. Once the resource has started, FiveM will trigger this event and invoke the method.
+在构造函数中，我们为[onClientResourceStart](/docs/scripting-reference/events/list/onClientResourceStart/) 事件添加了事件处理程序。 这需要一个论点。 一个字符串，其中包含已启动资源的名称。 它还有一个委托方法`OnClientResourceStart`，我们在构造函数下定义了该方法。 资源启动后，FiveM将触发此事件并调用该方法。
 
 ```csharp
 if (GetCurrentResourceName() != resourceName) return;
 ```
-This if statement makes use of the native `GetCurrentResourceName()`. In short, _natives_, which has nothing to do with indigenous people, is actually a R* label for 'game-defined script functions'. We can access these natives through the `CitizenFX.Core.Native.API` class. You will be using other natives later when spawning a vehicle. In this snippet, `GetCurrentResourceName()` returns the name of the resource that our script is running. We compare this to the `resourceName` argument to make sure that we only call the rest of the method once. If we don't do this check, the rest of the method will run every time any resource has started.
+这个if语句使用了本地的`GetCurrentResourceName()`。 简而言之，与土著人民无关的_natives_实际上是“游戏定义的脚本功能”的R *标签。 我们可以通过`CitizenFX.Core.Native.API`类访问这些本地用户。 稍后会在生成车辆时使用其他本地人。 在此代码段中，`GetCurrentResourceName()`返回脚本正在运行的资源的名称。 我们将其与`resourceName`参数进行比较，以确保仅调用该方法的其余部分一次。 如果我们不执行此检查，则每次启动任何资源时，其余方法将运行。
 
 ```csharp
 RegisterCommand("car", new Action<int, List<object>, string>((source, args, raw) =>
@@ -88,9 +88,9 @@ RegisterCommand("car", new Action<int, List<object>, string>((source, args, raw)
     });
 }), false);
 ```
-To start, we see a call to a function. We did not define that function. Well, _we_ (as in, the FiveM team) did, but not when guiding you, the reader, through this wondrously written marvel of a guide. That means it must come from somewhere else!
+首先，我们看到一个对函数的调用。 我们没有定义该功能。 好吧，（就像FiveM团队一样）做了，但是当引导读者这个奇妙的书面指南奇迹时，却没有。 这意味着它必须来自其他地方！
 
-And, guess what, it's actually {{<native_link "REGISTER_COMMAND">}}! Click that link, and you'll be led to the documentation for this native. It looks a bit like this:
+猜猜是什么，实际上是 {{<native_link "REGISTER_COMMAND">}}! 单击该链接，您将被带到该本地文件的文档。 它看起来像这样：
 
 ```c
 // 0x5fa79b0f
@@ -98,20 +98,19 @@ And, guess what, it's actually {{<native_link "REGISTER_COMMAND">}}! Click that 
 void REGISTER_COMMAND(char* commandName, func handler, BOOL restricted);
 ```
 
-We'll mainly care about the name on the second line (`RegisterCommand`, as used in the C# code above), and the arguments.
+我们主要关心第二行的名称(上面的C＃代码中使用的，`RegisterCommand`)和参数。
 
-As you can see, the first argument is the **command name**. The second argument is a **function** (represented by the Action delegate in our example) that is the command handler, and the third argument is a **boolean** that specifies whether or not it should be a restricted command.
+如您所见，第一个参数是 **command name**。 第二个参数是**function**（在我们的示例中由Action委托表示），它是命令处理程序，第三个参数是**boolean**，它指定是否应该将其作为受限命令。
 
-The function itself gets an argument that is the `source`, which only really matters if you're running on the server (it'll be the client ID of the player that entered the command, a really useful thing to have), and a List of `args` which are basically what you enter after the command like `/car zentorno` making `args` end up being `new List<object>{ "zentorno" }` or `/car zentorno unused` being `new List<object>{ "zentorno", "unused" }`.
+该函数本身会获得一个名为`source`的参数，该参数仅在您在服务器上运行时才真正重要（它将是输入命令的播放器的客户端ID，这是非常有用的东西），并且 `args`，基本上是您在像`/car zentorno`这样的命令之后输入的内容，使得args最终成为`new List<object>{ "zentorno" }`或`/car zentorno unused`成为`new List<object>{ "zentorno", "unused" }`.。
 
-But what about `TriggerEvent()`? That's also defined by _us_. It's used to call the event `chat:addMessage`, which is part of the [chat](/docs/resources/chat/events/chat-addMessage/) resource. In our written example, we send the author name `[CarSpawner]` in red and a message as arguments.
+但是`TriggerEvent()`呢？ 这也由_us_定义。 它用于调用事件`chat:addMessage`，它是[chat](/docs/resources/chat/events/chat-addMessage/)资源的一部分。 在我们的书面示例中，我们以红色发送作者姓名`[CarSpawner]`，并发送一条消息作为参数。
 
-At this point, you can build your client project, add/move it to your resource and run it. When typing `/car` in the chat box, you will see our command returning the chat message we defined. ![screenshot-1](/csharp-tut-6.png)
-
-Hey! It's complaining in the chat box that you were too lazy to implement this. We'll show them that you're _absolutely not lazy_, and actually implement this now.
+此时，您可以构建您的客户端项目，将其添加/移动到您的资源中并运行它。 在聊天框中输入`/car`时，您将看到我们的命令返回我们定义的聊天消息。![screenshot-1](/csharp-tut-6.png)
+嘿! 在聊天框中抱怨您懒得实现它。 我们将向他们展示您绝对不是“懒惰”，并立即实施此操作。
 
 ### Implementing a car spawner
-You may have followed the Lua tutorial on creating your first script and remember that there was a lot of boilerplate code that might looked overwhelming. Fear not, FiveM provides an easy to use C# wrapper that will allow us to reduce the code.
+您可能已经按照Lua教程创建了第一个脚本，并记住那里有很多样板代码可能看起来很压倒性的。 不用担心，FiveM提供了易于使用的C＃包装器，它使我们可以减少代码。
 
 ```csharp
 RegisterCommand("car", new Action<int, List<object>, string>(async (source, args, raw) =>
@@ -151,23 +150,23 @@ RegisterCommand("car", new Action<int, List<object>, string>(async (source, args
 }), false);
 ```
 
-This uses some natives and C# wrapper methods. We'll link a few of them and explain the hard parts.
+这使用了一些本机和C＃包装器方法。 我们将链接其中的一些内容并解释其中的难点。
 
 #### Step 1: Validation
-We started with checking the model. We set it to `adder`. If there are any arguments, we set the model to the first argument and cast it to a string.
+我们从检查模型开始。 我们将其设置为 `adder`。 如果有任何参数，我们将模型设置为第一个参数，并将其强制转换为字符串。
 
-Then, we check if the vehicle is in the CD image using {{<native_link "IS_MODEL_IN_CDIMAGE">}}. This basically means 'is this registered with the game'. We also check if it's a vehicle using {{<native_link "IS_MODEL_A_VEHICLE">}}. If either check fails, we tell the player and return from the command.
+然后，我们使用{{<native_link“ IS_MODEL_IN_CDIMAGE”>}}检查车辆是否在CD映像中。 这基本上意味着“已在游戏中注册”。 我们还会使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}来检查它是否是车辆。 如果任何一项检查失败，我们将告知玩家并从命令中返回。
 
-There may be C# wrapper here, but it's important to reify the use of natives as you will use them a lot when scripting. Make sure you have the `using static CitizenFX.Core.Native.API;` directive in your class.
+这里可能有C＃包装器，但是重要的是要重新使用本机，因为编写脚本时会大量使用它们。 确保您的类中具有`using static CitizenFX.Core.Native.API;`指令。
 
 #### Step 2: Creating the vehicle
-Using the client side C# wrapper class `World`, we call the `CreateVehicle` method which takes a model, `Vector3` position, and `float` heading as arguments. This is the great thing about C#. You have access to a method supplied by _us_ such that you don't have to request and load a model like you would in Lua. This method returns us a `Vehicle` object. If you have experience with *ScriptHookV.NET* you may recognize these classes. The C# wrapper of FiveM is very similar.
+通过使用客户端C＃包装器类`World`，我们调用`CreateVehicle`方法，该方法将模型，`Vector3`位置和`float`标题作为参数。 这是C＃的伟大之处。 您可以访问_us_提供的方法，从而不必像在Lua中那样请求和加载模型。 这个方法返回一个`Vehicle`对象。 如果您有使用*ScriptHookV.NET*的经验，则可以识别这些类。 FiveM的C＃包装器非常相似。
 
 #### Step 3: Setting the player into the vehicle
-Since we have our ped and a vehicle now, using the C# wrapper with the `Game.PlayerPed` object, we can set ourselves into the vehicle's driver seat.
+现在我们有了角色模型和车辆，可以使用带有`Game.PlayerPed`对象的C＃包装器，将自己放置在车辆的驾驶员座椅上。
 
 ### Running this
-Build your project and make sure the latest `MyResourceNameClient.net.dll` is in the folder of your resource. In your server console, type `restart mymode` (or whatever you named your resource), and try `/car voltic2` in the game client (which should by now be really bored of respawning). You'll now have your very own Rocket Voltic!
+生成您的项目，并确保最新的`MyResourceNameClient.net.dll`位于资源的文件夹中。 在服务器控制台中，键入`restart mymode`（或任何您命名的资源名称），然后在游戏客户端中尝试 `/car voltic2`（现在应该很无聊了）。 您现在将拥有自己的Rocket Voltic！
 
 ## Server scripts
-You'll probably also want to write scripts that interact with the server. This section is still to be written. :-(
+您可能还需要编写与服务器交互的脚本。 本节尚待编写。 :-(

@@ -1,70 +1,70 @@
 ---
-title: Scripting in C#
+title: 用C＃编写脚本
 weight: 423
 ---
 
-_This page is still a <b>work in progress</b> so this guide is not completed yet!_
+_这个文档页面仍是<b>正在建设中的工作</b>，因此本指南尚未完成！_
 
 # Setting up our environment
-Before you can create your first C# resource, you'll need to install [Visual Studio 2017](https://visualstudio.microsoft.com/vs/) (the community/free version will work just fine).
+在创建第一个C＃资源之前，您需要安装[Visual Studio 2017](https://visualstudio.microsoft.com/vs/) （社区/免费版本可以正常工作）。
 
 
 ## Creating your project
-1. Open Visual Studio, and click `File > New > Project`. A window should pop up that looks something like the window below:
+1. 打开Visual Studio，然后单击`文件>新建>项目`。 应该弹出一个窗口，看起来像下面的窗口：
 ![screenshot-1](/csharp-tut-1.png)
-2. Make sure you select **Visual C#** in the panel on the left, then choose **Class Library (.NET Framework)**.
-<br>It's very important that you select the correct project type, as otherwise your resource will **not** run.
-3. After selecting the project type, make sure you set the Framework version to **.NET Framework 4.5.2** (somewhere at the bottom of the window, see the highlighted areas in the screenshot above). Yes, this is **not** the latest version, but this specific version is required for your resource to work correctly.
-4. Once you've selected all these things and specified the correct framework version, it's time to enter a name for this project.
-  - If this is going to be a client script, name it something like `MyResourceNameClient`.
-  - If it's going to be a server script, name it something like `MyResourceNameServer`.
-  - If it's going to be a script for both the server and the client, we'll consider this a Client script for now because we will create the Server project for this resource later.
-<br><br>{{% alert theme="info" %}}You might want to change the "Solution name:" to something simpler. Instead of **MyResourceName[Server/Client]** you probably want to change it to just **MyResourceName**.<br>However, this is completely up to you.{{% /alert %}}
-5. After choosing a proper name, click "Browse..." to choose a folder where you want to save this project, or click "OK" if you want to save it in the default location.
-### Additional project
-**You can skip these steps if you only created a server or client side project, however continue reading if you need both a client and a server sided project.**
-6. So, you've just created a client side project, but you also need a server side project. To add this to the solution, right-click on the "Solution '<solution name>' (1 project)" item in the Solution Explorer on the right side of your screen, and click "Add > New Project". All the settings should be the same as you used for the client project. This time, change the name to "MyResourceNameServer" and click "OK".
-7. You should now have 2 projects inside your "Solution 'MyResourceName'" solution (again, you can view this in the Solution Explorer on the right).
+2. 确保在左侧面板中选择 **Visual C#** ，然后选择“类库（.NET Framework）”。
+<br>选择正确的项目类型非常重要，否则您的资源将“无法运行”。
+3. 选择项目类型后，请确保将Framework版本设置为**.NET Framework 4.5.2**（在窗口底部的某个位置，请参见上面屏幕快照中突出显示的区域）。 是的，这不是最新版本，但是此特定版本是您的资源正常工作所必需的。
+4. 一旦选择了所有这些内容并指定了正确的框架版本，就可以为该项目输入名称了。
+  - 如果这将是一个客户端脚本，则将其命名为`MyResourceNameClient`。
+  - 如果它将是服务器脚本，则将其命名为`MyResourceNameServer`。
+  - 如果它将同时用作服务器和客户端的脚本，我们现在将其视为客户端脚本，因为稍后将为该资源创建Server项目。
+<br><br>{{% alert theme="info" %}}您可能需要将“解决方案名称：”更改为更简单的名称。 您可能希望将其更改为**MyResourceName**，而不是**MyResourceName[Server/Client]**。<br>但是，这完全取决于您。{{% /alert %}}
+5. 选择适当的名称后，单击“浏览...”以选择要保存该项目的文件夹，或者如果要将其保存在默认位置，请单击“确定”。
+###附加项目
+**如果仅创建服务器或客户端项目，则可以跳过这些步骤，但是如果同时需要客户端和服务器项目，则可以继续阅读。**
+6. 因此，您刚刚创建了一个客户端项目，但是您还需要一个服务器端项目。 要将其添加到解决方案中，请在屏幕右侧的解决方案资源管理器中右键单击"解决方案'<解决方案名称>'（1个项目）”项，然后单击“添加>新建项目”。 所有设置应与用于客户端项目的设置相同。 这次，将名称更改为"MyResourceNameServer"，然后单击“确定”。
+7. 现在，您的“解决方案'MyResourceName'"解决方案中应该有2个项目（同样，您可以在右侧的解决方案资源管理器中查看此项目）。
 
 
 ## Configuring some project settings
-To be able to build these projects and prepare them for FXServer, we'll need to change some settings in the project settings (change these settings in both projects if you're using multiple projects for the client/server).
+为了能够构建这些项目并为FXServer做准备，我们需要在项目设置中更改一些设置（如果您在客户端/服务器上使用多个项目，则在两个项目中都更改这些设置）。
 
-1. In the solution explorer on the right, right-click on your **project** (not the solution), and select "Properties".
-2. Then go to the "Application" tab on the left, and in there add `.net` at the end of the "Assembly name". Now press CTRL + S to save this change. ![screenshot-2](/csharp-tut-2.png)
-This is a very important step, if you do not add `.net` at the end of the Assembly name, your resource will **NOT** run (as it won't be suffixed with `.net.dll` in the output - renaming it will work but you probably won't want to do this).
+1. 在右侧的解决方案资源管理器中，右键单击您的**项目**（不是解决方案），然后选择“属性”。
+2. 然后转到左侧的“应用程序”选项卡，然后在“程序集名称”的末尾添加`.net`。 现在按CTRL + S保存此更改。 ![screenshot-2](/csharp-tut-2.png)
+这是非常重要的一步，如果您不在程序集名称的末尾添加`.net`，则您的资源将**NOT**（因为在.NET.dll中不会以.net.dll为后缀） 输出-重命名即可，但您可能不想这样做）。
 
 ## Setting up the required dependencies
-Once you've set that all up, it's time to get our dependencies for our resource.
-<br>Depending on the type of resource you want to create, we'll either need the server CitizenFX.Core.dll dependency (for resources that need to run on the server side), or the client CitizenFX.Core.dll dependency (for resources that need to run on the client). If you want to be able to run your script both on the server and the client, you'll need to get both of those dependencies, and we'll make 2 separate projects in our resource solution.
+完成所有设置后，就该获取我们对资源的依赖关系了。
+<br>根据您要创建的资源的类型，我们要么需要服务器CitizenFX.Core.dll依赖关系（用于需要在服务器端运行的资源），要么需要客户端CitizenFX.Core.dll依赖关系（对于那些需要在服务器端运行的资源）。 需要在客户端上运行）。 如果您希望能够同时在服务器和客户端上运行脚本，则需要获取所有这些依赖关系，并且我们将在资源解决方案中创建两个单独的项目。
 
 #### Client dependency
-Getting the client dependency is very easy. Simply go to your local installation folder of FiveM, and follow the following path and copy the CitizenFX.Core.dll file. Then go to the folder where you saved your  Visual Studio project, and paste the DLL file in that folder.
+获取客户端依赖性非常容易。 只需转到您的FiveM的本地安装文件夹，然后遵循以下路径并复制CitizenFX.Core.dll文件。 然后转到保存Visual Studio项目的文件夹，然后将DLL文件粘贴到该文件夹中。
 ```ini
 FiveM Application Data\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll
 ```
-Now, go back into Visual Studio and go to your project in the Solution Explorer on the right. Right click on your (client) project, and click "Add > Reference".
-The following window should appear: ![screenshot-3](/csharp-tut-3.png)
-In that window, click on "Browse..." and go to your project folder. Find the CitizenFX.Core.dll file, select it, and press Add. You should now see that the DLL has been added to the "Browse > Recent" list. Make sure that the checkbox in front of the reference **is** checked, and click "OK" in the bottom right.
+现在，返回Visual Studio，并在右侧的解决方案资源管理器中转到您的项目。 右键单击您的（客户端）项目，然后单击“添加>参考”。
+应出现以下窗口：![screenshot-3](/csharp-tut-3.png)
+在该窗口中，单击“浏览...”，然后转到您的项目文件夹。 找到CitizenFX.Core.dll文件，将其选中，然后按“添加”。 现在，您应该看到该DLL已添加到“浏览>最近”列表中。 确保选中引用**前面的复选框，然后单击右下角的“确定”。
 
-Congratulations, you've now added the client dependency to your project. Only one more step before we can actually start coding. If you have a server sided project, also follow the next step. Otherwise, skip the next step and continue to the "Let's write some code" section.
+C恭喜，您现在已将客户端依赖项添加到您的项目中。 在实际开始编码之前，仅需再执行一步。 如果您有服务器端项目，也请执行下一步。 否则，请跳过下一步并继续执行“让我们编写一些代码”部分。
 
 
 #### Server dependency
-The server project dependency is very similar to the client one. One major change is the location where you get the dependency from. Instead of getting it from your client files, you actually need to grab it from your server files.
+服务器项目的依赖关系与客户端非常相似。 一个主要更改是您从中获取依赖项的位置。 您实际上需要从服务器文件中获取它，而不是从客户端文件中获取它。
 
-Go to the following folder in your server files:
+转到服务器文件中的以下文件夹：
 ```ini
 citizen\clr2\lib\mono\4.5\
 ```
-Once you're in there, copy the `CitizenFX.Core.dll` file and paste it in your C# server project folder.
+进入该目录后，复制`CitizenFX.Core.dll`文件并将其粘贴到C＃服务器项目文件夹中。
 
-Now, go back into Visual Studio and go to your project in the Solution Explorer on the right. Right click on your (server) project, and click "Add > Reference".
-The same window shown in the above section should appear.
+现在，返回Visual Studio，并在右侧的解决方案资源管理器中转到您的项目。 右键单击您的（服务器）项目，然后单击“添加>参考”。
+出现与上一节相同的窗口。
 
-In that window, click on "Browse..." and go to your server project folder. Find the CitizenFX.Core.dll file, select it, and press Add. You should now see that the DLL has been added to the "Browse > Recent" list. Make sure that the checkbox in front of the reference **is** checked, and click "OK" in the bottom right.
+在该窗口中，单击“浏览...”，然后转到服务器项目文件夹。 找到CitizenFX.Core.dll文件，将其选中，然后按“添加”。 现在，您应该看到该DLL已添加到“浏览>最近”列表中。 确保选中引用**前面的复选框，然后单击右下角的“确定”。
 
-Congratulations, you've now added the server dependency to your project.
+恭喜，您现在已将服务器依赖项添加到项目中。
 
 
 # Let's write some code

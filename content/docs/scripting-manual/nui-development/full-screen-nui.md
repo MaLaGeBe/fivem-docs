@@ -1,20 +1,20 @@
 ---
-title: Fullscreen NUI
+title: 全屏NUI
 weight: 441
 ---
 
-The most common use case of NUI is a full-screen 'UI page', which is overlaid on top of the game and may or may not have
-input focus. These are supported on both FiveM and RedM at this time, and are part of basic CitizenFX framework level
-support.
+NUI的最常见用例是全屏“ UI页面”，该页面覆盖在游戏顶部，可能有也可能没有
+输入焦点。 目前，FiiveM和RedM都支持这些功能，它们是基本CitizenFX框架级别的一部分
+支持。
 
-The following natives are related to using full-screen NUI:
+以下本机与使用全屏NUI有关：
 
 * {{<native_link "SEND_NUI_MESSAGE">}}
 * {{<native_link "SET_NUI_FOCUS">}}
 
 ## Setting up a fullscreen NUI page
-To assign a full-screen NUI page to a resource, currently you need to specify a single `ui_page` in the
-[resource manifest][resource-manifest] for the resource containing an UI page, like shown below:
+要将全屏NUI页面分配给资源，当前，您需要在页面中指定单个`ui_page`
+[resource manifest][resource-manifest] 用于包含UI页面的资源，如下所示：
 
 ```lua
 -- specify the root page, relative to the resource
@@ -28,42 +28,42 @@ files {
 
 ## Referencing other assets
 {{% alert title="Warning" color="warning" %}}
-Note that absolute NUI asset references **require** your resource name to be lowercased! This is due to DNS name
-restrictions.
+请注意，NUI资源引用**要求**您的资源名称要小写！ 这是由于DNS名称
+限制。
 {{% /alert %}}
 
-The NUI system registers a `nui://` protocol scope for resource files. Therefore, you can reference a file in a resource
-as follows:
+NUI系统为资源文件注册一个`nui://`协议范围。 因此，您可以引用资源中的文件
+如下：
 
 ```html
 <script type="text/javascript" src="nui://my-resource/production.js" async></script>
 ```
 
-This also means you can use the Chromium developer tools to, say, fetch _any_ packaged resource file (including client
-scripts) simply using `fetch('nui://spawnmanager/fxmanifest.lua')` or similar in the developer console. Open source for
-everyone! Anyone trying to sell you ways to 'dump assets' has basically been scamming you.
+这也意味着您可以使用Chromium开发人员工具来获取 _any_ 打包的资源文件（包括客户端）
+脚本），只需在开发者控制台中使用`fetch('nui://spawnmanager/fxmanifest.lua')`或类似方法即可。 的开源
+大家！ 任何试图向您出售“资产转储”方式的人都在骗您。
 
 <!-- #GAMETODO: block this? but then we'll get NUI bypasses.. eww -->
 
 ## Developer tools
-CEF remote debugging tools are exposed on [http://localhost:13172/](http://localhost:13172/) as long as the game is
-running. You can use any Chromium-based browser to easily access these tools.
+只要游戏运行，CEF远程调试工具就会在[http://localhost:13172/](http://localhost:13172/)上公开
+运行。 您可以使用任何基于Chromium的浏览器轻松访问这些工具。
 
 <!-- #GAMETODO: support this natively using a pop-up window/console shortcut? -->
 
 ## NUI focus
-There's a limited focus stack for NUI resources, you can set focus to the **current** resource using the
-{{<native_link "SET_NUI_FOCUS">}} native, which will set keyboard focus and/or mouse cursor focus depending on the
-provided arguments.
+NUI资源的焦点堆栈有限，您可以使用来将焦点设置为**当前**资源。
+{{<native_link "SET_NUI_FOCUS">}}本机，它将根据键盘上的焦点和/或鼠标光标的焦点来设置
+提供的参数。
 
-The most recently focused resource will be ordered on top of the focus stack, and resources are currently implemented
-as full-screen iframes: that means there's no click-through across resources.
+最近关注的资源将在焦点堆栈的顶部排序，并且当前已实现资源
+作为全屏iframe：这意味着没有跨资源点击。
 
 ## NUI messages
-You can send a [message][mdn-messages] to the current resource's NUI page using the {{<native_link "SEND_NUI_MESSAGE">}}
-native, or if using Lua, the convenience wrapper [SendNUIMessage][send-nui-message] which encodes a JSON string for you.
+您可以使用{{<native_link "SEND_NUI_MESSAGE">}}将[message][mdn-messages]发送到当前资源的NUI页面
+本地包装，或使用Lua的便利包装[SendNUIMessage][send-nui-message]，可为您编码JSON字符串。
 
-For example:
+例如:
 
 ```lua
 -- Lua

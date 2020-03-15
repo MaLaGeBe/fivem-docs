@@ -1,12 +1,12 @@
 ---
-title: Creating chat messages
+title: 创建聊天消息
 weight: 431
 ---
 
-Commonly found in tutorials and older resources, the `chatMessage` event is used to create a chat message. This method is now deprecated and people are encouraged to use the `chat:addMessage` event.
+通常在教程和较旧的资源中找到，`chatMessage`事件用于创建聊天消息。 现在不建议使用此方法，建议人们使用`chat:addMessage` 事件。
 
 ## chatMessage (The deprecated method)
-The old `chatMessage` event had 3 parameters (`author`[string], `color`[array] and `text`[string])
+旧的`chatMessage`事件具有3个参数(`author`[string], `color`[array] 和 `text`[string])
 
 ### Example
 ```lua
@@ -14,7 +14,7 @@ TriggerEvent("chatMessage", GetPlayerName(PlayerId()), {255, 255, 255}, "Hello, 
 ```
 
 ## `chat:addMessage` (The recommended method)
-This event has an object parameter which consists of 3 properties (`color`[array], `multiline`[boolean] and `args`[array])
+此事件的对象参数包含3个属性 (`color`[array], `multiline`[boolean] 和 `args`[array])
 
 ### Example
 ```lua
@@ -25,4 +25,4 @@ TriggerEvent("chat:addMessage", {
 })
 ```
 
-For further documentation of this event, see the [`chat:addMessage` section](../../../resources/chat/events/chat-addMessage).
+有关此事件的更多文档，请看 [`chat:addMessage` section](../../../resources/chat/events/chat-addMessage).
