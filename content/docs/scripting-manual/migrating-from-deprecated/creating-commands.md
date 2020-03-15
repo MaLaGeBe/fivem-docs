@@ -1,5 +1,5 @@
 ---
-title: Creating commands
+title: 创建命令
 weight: 432
 ---
 
@@ -34,7 +34,8 @@ end
 -->
 
 ## RegisterCommand
-It is recommended to **always** use this (and not `chatMessage`!) as it allows for the use of the integrated ACL system, and other core functionality (automatic completion, console usage, ...). This native consists of 3 parameters (`commandName`[string], `handler`[func] and `restricted`[boolean]).
+
+建议**一直**使用此功能(而不是 `chatMessage`!)，因为它允许使用集成的ACL系统以及其他核心功能（自动完成，控制台使用等）。 这个本地包括3个参数(`commandName`[string], `handler`[func] 和 `restricted`[boolean]).
 
 ### Example
 ```lua
@@ -44,7 +45,7 @@ RegisterCommand("commandName", function(source --[[ this is the player ID (on th
     else
         print("This is console!")
     end
-end, true) -- this true bool means that the user cannot execute the command unless they have the 'command.commandName' ACL object allowed to one of their identifiers.
+end, true) -- 此值表示用户无法执行命令，除非他们的标识符具有 'command.commandName'  ACL对象。
 ```
 
-Further examples can be found at the respective [Lua](../../introduction/creating-your-first-script) and [C#](../../introduction/creating-your-first-script-csharp) introductions.
+可以在相应的文档找到更多示例 [Lua](../../introduction/creating-your-first-script) 和 [C#](../../introduction/creating-your-first-script-csharp) 的介绍.
