@@ -3,24 +3,24 @@ title: NUI callbacks
 weight: 443
 ---
 
-NUI can also send calls back to the game using so-called 'NUI callbacks'. These are currently only fully supported in
-Lua, other languages can be used but need a bit of a [tricky workaround][workaround] as these predate function
-references in codegen.
+NUI还可以使用所谓的'NUI 回调'将调用发送回游戏。目前只有在
+Lua，可以使用其他语言，但需要一些[tricky workaround][workaround]，因为这些是预先设置的函数
+codegen中的引用。
 
 <!-- #GAMETODO: actually fix that? -->
 
-{{% alert theme="warning" %}}Note that NUI callbacks **require** your resource name to be lowercased! This is due to DNS
-name restrictions.{{% /alert %}}
+{{% alert theme="warning" %}}注意，NUI回调**要求**您的资源名称小写！这是由于DNS
+名称限制。{{% /alert %}}
 
-Generally, you'll use the [RegisterNUICallback][registernuicallback] function in Lua, and the
-{{<native_link "REGISTER_NUI_CALLBACK_TYPE">}} native along with an event handler in other languages.
+通常，您将在Lua中使用[RegisterNUICallback][registernuicallback]函数，
+{{<native_link "REGISTER_NUI_CALLBACK_TYPE">}}本机以及其他语言的事件处理程序。
 
-Both work very similarly, and we'll describe both below:
+两者的工作原理非常相似，我们将在下面描述两者：
 
 ## Registering a NUI callback in Lua
 ```lua
 RegisterNUICallback('getItemInfo', function(data, cb)
-    -- POST data gets parsed as JSON automatically
+    -- POST数据自动解析为JSON
     local itemId = data.itemId
 
     if not itemCache[itemId] then
@@ -28,7 +28,7 @@ RegisterNUICallback('getItemInfo', function(data, cb)
         return
     end
 
-    -- and so does callback response data
+    -- 回调响应数据也是
     cb(itemCache[itemId])
 end)
 ```
@@ -36,9 +36,9 @@ end)
 ## Registering a NUI callback in C#/JS
 ```js
 // JS
-RegisterNuiCallbackType('getItemInfo') // register the type
+RegisterNuiCallbackType('getItemInfo') // 注册类型
 
-// register a magic event name
+// 注册事件名称
 on('__cfx_nui:getItemInfo', (data, cb) => {
     const itemId = data.itemId;
 
@@ -53,13 +53,13 @@ on('__cfx_nui:getItemInfo', (data, cb) => {
 
 ```csharp
 // C#
-RegisterNuiCallbackType("getItemInfo"); // register the type
+RegisterNuiCallbackType("getItemInfo"); // 注册类型
 
-// register the event handler with manual marshaling
+// 使用手动封送处理注册事件处理程序
 EventHandlers["__cfx_nui:getItemInfo"] += new Action<IDictionary<string, object>, Action<object>>((data, cb) =>
 {
-    // get itemId from the object
-    // alternately you could use `dynamic` and rely on the DLR
+    // 从对象获取itemId
+    // 或者，您可以使用“dynamic”并依赖于DLR
     if (data.TryGetValue("itemId", out var itemIdObj))
     {
         cb(new 
@@ -102,8 +102,8 @@ fetch(`https://${GetParentResourceName()}/getItemInfo`, {
 }).then(resp => resp.json()).then(resp => console.log(resp));
 ```
 
-To prevent requests from stalling, you **have to** return the callback at all times - even if containing just an empty
-object, or `{"ok":true}`, or similar.
+为了防止请求暂停，您**必须**始终返回回调-即使只包含一个空的
+对象，或`{"ok":true}`，或类似的。
 
 [registernuicallback]: /docs/scripting-reference/runtimes/lua/functions/RegisterNUICallback/
 [workaround]: https://github.com/citizenfx/fivem/blob/d911ecf638337c7c61fc6728110c92d84a217156/data/shared/citizen/scripting/lua/scheduler.lua#L958
