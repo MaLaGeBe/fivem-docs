@@ -155,12 +155,12 @@ RegisterCommand("car", new Action<int, List<object>, string>(async (source, args
 #### Step 1: Validation
 我们从检查模型开始。 我们将其设置为 `adder`。 如果有任何参数，我们将模型设置为第一个参数，并将其强制转换为字符串。
 
-然后，我们使用{{<native_link“ IS_MODEL_IN_CDIMAGE”>}}检查车辆是否在CD映像中。 这基本上意味着“已在游戏中注册”。 我们还会使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}来检查它是否是车辆。 如果任何一项检查失败，我们将告知玩家并从命令中返回。
+然后，我们使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}检查车辆是否在CD映像中。 这基本上意味着“已在游戏中注册”。 我们还会使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}来检查它是否是车辆。 如果任何一项检查失败，我们将告知玩家并从命令中返回。
 
 这里可能有C＃包装器，但是重要的是要重新使用本机，因为编写脚本时会大量使用它们。 确保您的类中具有`using static CitizenFX.Core.Native.API;`指令。
 
 #### Step 2: Creating the vehicle
-通过使用客户端C＃包装器类`World`，我们调用`CreateVehicle`方法，该方法将模型，`Vector3`位置和`float`标题作为参数。 这是C＃的伟大之处。 您可以访问_us_提供的方法，从而不必像在Lua中那样请求和加载模型。 这个方法返回一个`Vehicle`对象。 如果您有使用*ScriptHookV.NET*的经验，则可以识别这些类。 FiveM的C＃包装器非常相似。
+通过使用客户端C＃包装器类`World`，我们调用`CreateVehicle`方法，该方法将模型，`Vector3`位置和`float`标题作为参数。 这是C＃的伟大之处。 您可以访问 _us_ 提供的方法，从而不必像在Lua中那样请求和加载模型。 这个方法返回一个`Vehicle`对象。 如果您有使用*ScriptHookV.NET*的经验，则可以识别这些类。 FiveM的C＃包装器非常相似。
 
 #### Step 3: Setting the player into the vehicle
 现在我们有了角色模型和车辆，可以使用带有`Game.PlayerPed`对象的C＃包装器，将自己放置在车辆的驾驶员座椅上。
