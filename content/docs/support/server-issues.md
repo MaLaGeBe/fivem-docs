@@ -1,83 +1,78 @@
 ---
-title: Server issues
+title: 服务端问题
 weight: 840
 ---
 
-My server does not show up in the server list
+我的服务器未显示在服务器列表中
 ---------------------------------------------
 
-When this happens, make sure other people can connect to your server using
-direct connect. This issue usually is a result of bad port forwarding or some
-firewall issue. Make sure your network configuration is correct.
+发生这种情况时，请确保其他人可以使用“直接连接”连接到您的服务器。此问题通常是由于端口转发错误或某些防火墙问题造成的。请确保您的网络配置正确。
 
-Server configuration is also important. Your server is listed in the server list if you use the [default server.cfg example][servercfg]. It's possible that you have removed the `#` in front of the following line in your server.cfg.
+服务器配置也很重要。如果使用 [默认的 server.cfg 示例][servercfg]，则服务器将列在服务器列表中。您可能已经删除了server.cfg中下面一行前面的 `#`。
 
 ```yaml
 #sv_master1 ""
 ```
 
-Please make sure to add the `#` in front of that line like shown in the example above. If this `#` is already added in front of the line, then try the following steps.
+请确保在该行前面添加 `#`，如上面的示例所示。如果此`#`已添加到行前面，请尝试以下步骤。
 
-#### Check if server is reachable
+#### 检查服务器是否可访问
 
-1. Make sure your server is running
-2. In your browser, go to http://ip:port/info.json (fill in your ip and port) - example http://127.0.0.1:30120/info.json
-3. Check whether it resolves, showing information about your server
+1. 确保服务器正在运行
+2. 在浏览器中， 转到 http://ip:port/info.json (填写您的ip和端口) - 例如 http://127.0.0.1:30120/info.json
+3. 检查是否解析，显示有关服务器的信息
 
-Alternatively, use [canyouseeme.org](http://canyouseeme.org). Only works if you're on a Windows server or a Linux machine with a GUI.
+或者使用 [canyouseeme.org](http://canyouseeme.org)。只有在Windows服务器或带有图形用户界面的Linux计算机上才能工作。
 
-1. In your browser, visit [canyouseeme.org](http://canyouseeme.org)
-2. Fill in your server port (default: 30120)
-3. Check your port
+1. 在浏览器中，访问 [canyouseeme.org](http://canyouseeme.org)
+2. 填写服务器端口（默认值：30120）
+3. 检查您的端口
 
 ##### Could it see the service?
 
-- A server can take up to 8 minutes to be shown in the server list after initially launching, if no other heartbeats are
-  sent. Please be patient.
-- In very rare cases, there might be an issue with the server listing services, please be patient, chances are very high
-  that our team is already hard at work trying to resolve this issue.
-- You might be using a NAT/gateway that masks UDP source ports. Here's a few guides on resolving this issue for certain
-  firewall applications:
+- 初次启动后，服务器可能需要8分钟才能显示在服务器列表中，如果没有其他心跳信号。请耐心点。
+- 在极少数情况下，服务器列表服务可能会打不开，请耐心点，很有可能我们的团队已经在努力解决这个问题。
+- 您可能正在使用一个NAT/网关来屏蔽UDP源端口。以下是一些针对某些防火墙应用程序解决此问题的指南：
   - [pfSense][pfsensenat]
 
 ##### Could it NOT see your service?
 
-There could be a lot of different problems, most likely it has something to do with one (or both) of the following:
+可能会有很多不同的问题，很可能与以下一项（或两者）有关：
 
-- Your ports aren't properly forwarded.
-- You have a firewall (or AV) that blocks (external) connections.
+- 您的端口未正确转发。
+- 你有一个防火墙（或 安全软件）阻止（外部）连接。
 
-My server can't use 64, 128, or more than 32 slots
+我的服务器不能使用64、128或超过32个玩家数量
 ---------------------------------
 
-Using more than 32 slots requires OneSync. The maximum slot count supported with OneSync is 128 slots. OneSync was publicly released in April 2018 as early access and made available for everyone in June 2019. However, the support of 32+ slots did not leave early access, yet. Hence, you still require an active FiveM Element Club Argentum (or higher) Patreon pledge tier or be part of the manually granted OneSync EAP.
+使用超过32个玩家数量需要OneSync。OneSync支持的最大玩家数为128个。OneSync于2018年4月作为早期访问公开发布，并于2019年6月向所有人开放。然而，32+玩家数的支持还没有离开早期访问。
+因此，你仍然需要积极的加入Patreon赞助者以获取FiveM Element Club Argentum或者更高等级，或是手动授予的OneSync EAP的一部分。
 
-To use more than 32 slots follow these steps.
+要使用32个以上的玩家数支持，请执行以下步骤。
 
-1. Use a license key with OneSync access
-2. Use the latest [server artifact][setting-up-server]
-2. Activate OneSync - add `onesync_enabled 1` to your server.cfg
-3. Set `sv_maxclients` in your server.cfg to a value higher than 32
-4. Restart your server
+1. 对OneSync访问使用许可证密钥
+2. 使用最新的 [服务端构建版本][setting-up-server]
+3. 激活OneSync - 在你的 server.cfg 添加 `onesync_enabled 1` 
+4. 在server.cfg中将 `sv_maxclients` 设置为大于32的值
+5. 重新启动服务器
 
-If you are not seeing the changes in the server list, be patient until the server list updates. You will see the changes already in Direct Connect.
+如果在服务器列表中没有看到更改，耐心等待服务器列表更新。您将在Direct Connect中看到这些更改。
 
-My server's name doesn't have colors
+我的服务器名称没有颜色
 ---------------------------------
 
-You may be experiencing this in different cases. For example, the server colors show in Direct Connect, but not on the server list. Or it doesn't show at all. There are a couple of reasons why this may happen.
+你可能在不同的情况下会遇到这种情况。例如，服务器颜色显示在Direct Connect中，但不在服务器列表上。或者根本不显示。这可能有几个原因。
 
-1. No active [Patreon][patreon] pledge with the requirement minimum tier - FiveM Element Club Argentum 💿 or higher
-2. Incorrect usage of [server name formatting][chat-formatting]
-3. Didn't save and/or restart server
-4. Server list cache hasn't updated, be patient
+1. 没有从[Patreon][patreon]赞助我们，要求最低级别 - FiveM Element Club Argentum 💿 或者更高
+2. 错误使用 [服务器名称格式][chat-formatting]
+3. 未保存和/或重新启动服务器
+4. 服务器列表缓存尚未更新，请耐心等待
 
-Help! I can't find my issue here!
+需要帮助！我在这里找不到我的问题！
 ---------------------------------
 
-We are more than happy to help you out!
-Please post a topic on the [forums][forum] so we can take a look at your issue.
-You can also join our [Discord][discord] and have a chat with us.
+我们非常乐意帮助你！如果你遇到崩溃或停止运行的情况。请将您的问题发表在我们的[论坛][forum]上。提供尽可能多的细节，这会让大家更容易帮助你。
+对于所有其他问题，我们非常欢迎你加入我们的[Discord][discord]和我们一起聊天。
 
 [patreon]: https://patreon.com/fivem
 [forum]: https://forum.fivem.net/

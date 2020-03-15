@@ -12,4 +12,4 @@ layout: single
 - [资料档案](/docs/game-references/data-files)
 - [游戏函数参考](/docs/game-references/game-events)
 - [玩家标签](/docs/game-references/gamer-tags)
-- [个人资料设置](/docs/game-references/profile-settings)
+- [配置文件设置](/docs/game-references/profile-settings)

@@ -1,5 +1,5 @@
 ---
-title: Server-side functions in Lua
+title: Lua 中的服务端函数
 weight: 515
 ---
 

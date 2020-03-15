@@ -1,12 +1,11 @@
 ---
 title: FiveM吧
-weight: 500
-layout: single
+weight: 1000
 ---
-- [FiveM吧介绍](/docs/fivemba/introduce.md)
-- [FiveM联机方法](/docs/fivemba/Method.md)
-- [FiveM常见弹窗解决](/docs/fivemba/Pop-up_error.md)
-- [大陆网络问题解决](/docs/fivemba/Internet_problem.md)
-- [FiveM常问问题](/docs/fivemba/Frequently_asked_questions.md)
-- [注意事项](/docs/fivemba/Matters_needing_attention.md)
-- [GTAV 版本介绍](/docs/fivemba/Introduction_to_game_version.md)
+
+[FiveM吧][fivem_ba]是百度贴吧众多吧中一个不起眼的小贴吧，但在这个小贴吧中的玩家，却是我们不可或缺的成员。
+
+因为有你们，FiveM吧才会变得更好，未来，我们一起努力！让FiveM国服变得更好！
+
+
+[fivem_ba]: https://tieba.baidu.com/f?kw=fivem
