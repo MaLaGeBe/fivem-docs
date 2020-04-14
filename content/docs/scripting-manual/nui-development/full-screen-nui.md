@@ -49,7 +49,7 @@ NUI系统为资源文件注册一个`nui://`协议范围。 因此，您可以�
 只要游戏运行，CEF远程调试工具就会在[http://localhost:13172/](http://localhost:13172/)上公开
 运行。 您可以使用任何基于Chromium的浏览器轻松访问这些工具。
 
-<!-- #GAMETODO: support this natively using a pop-up window/console shortcut? -->
+Alternately, it can be opened using the `nui_devTools` command in the game's <kbd>F8</kbd> console.
 
 ## NUI focus
 NUI资源的焦点堆栈有限，您可以使用来将焦点设置为**当前**资源。

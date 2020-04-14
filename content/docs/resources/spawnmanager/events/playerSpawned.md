@@ -16,6 +16,7 @@ object spawnInfo
     - **(float) heading**: 生成时玩家时面向位置。
     - **(int) idx**: 生成点索引。
     - **(Hash) model**: 生成玩家的ped模型哈希值。
+    - **(bool) skipFade**: 玩家生成时是否跳过淡入淡出。
 
 示例
 --------
