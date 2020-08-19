@@ -120,6 +120,6 @@ FiveM 中文文档
   </div>
 </div>
 
-[home]: https://fivem.net/
-[forum]: https://forum.fivem.net/
-[discord]: https://discord.gg/GtvkUsc
+[home]: https://fivem.net
+[forum]: https://forum.cfx.re
+[discord]: https://discord.gg/fivem

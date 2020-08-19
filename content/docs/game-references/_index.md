@@ -13,3 +13,4 @@ layout: single
 - [游戏函数参考](/docs/game-references/game-events)
 - [玩家标签](/docs/game-references/gamer-tags)
 - [配置文件设置](/docs/game-references/profile-settings)
+- [Ped models](/docs/game-references/ped-models)

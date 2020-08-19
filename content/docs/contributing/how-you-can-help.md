@@ -26,7 +26,7 @@ Patreon 捐款支持FiveM
 寻找支持我们工作的另一种方式？在 [Patreon][patreon] 找到我们。
 
 [developer-docs]: /docs/developers
-[discord]: https://discord.gg/GtvkUsc
+[discord]: https://discord.gg/fivem
 [server-data]: https://github.com/citizenfx/cfx-server-data
 [docs-rep]: https://github.com/malagebe/fivem-docs
 [patreon]: https://patreon.com/fivem

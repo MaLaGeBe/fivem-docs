@@ -55,8 +55,8 @@ on('__cfx_nui:getItemInfo', (data, cb) => {
 // C#
 RegisterNuiCallbackType("getItemInfo"); // 注册类型
 
-// 使用手动封送处理注册事件处理程序
-EventHandlers["__cfx_nui:getItemInfo"] += new Action<IDictionary<string, object>, Action<object>>((data, cb) =>
+// register the event handler with manual marshaling
+EventHandlers["__cfx_nui:getItemInfo"] += new Action<IDictionary<string, object>, CallbackDelegate>((data, cb) =>
 {
     // 从对象获取itemId
     // 或者，您可以使用“dynamic”并依赖于DLR

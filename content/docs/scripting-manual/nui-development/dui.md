@@ -23,6 +23,6 @@ weight: 442
 * 使用2D空间渲染 {{<native_link "DRAW_SPRITE">}}
 * 渲染到游戏时使用相似的本机渲染目标对象。
 * 使用专门的Scaleform在世界空间中任意渲染。
-  [Forum topic](https://forum.fivem.net/t/release-generic-dui-2d-3d-renderer/131208)
+  [Forum topic](https://forum.cfx.re/t/131208)
 
 这可用于使电影屏幕，异步游戏内提示叠加等变得非常简单。

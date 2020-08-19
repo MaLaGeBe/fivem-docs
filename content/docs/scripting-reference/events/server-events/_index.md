@@ -14,3 +14,21 @@ layout: single
 - [rconCommand](../list/rconCommand)
 - [playerDropped](../list/playerDropped)
 - [playerConnecting](../list/playerConnecting)
+- [onResourceListRefresh](../list/onResourceListRefresh)
+
+OneSync events
+-----------
+
+- [weaponDamageEvent](../list/weaponDamageEvent)
+- [vehicleComponentControlEvent](../list/vehicleComponentControlEvent)
+- [respawnPlayerPedEvent](../list/respawnPlayerPedEvent)
+- [explosionEvent](../list/explosionEvent)
+- [entityCreated](../list/entityCreated)
+- [entityCreating](../list/entityCreating)
+- [entityRemoved](../list/entityRemoved)
+
+OneSync Bigmode/infinity events
+-----------
+
+- [playerEnteredScope](../list/playerEnteredScope)
+- [playerLeftScope](../list/playerLeftScope)

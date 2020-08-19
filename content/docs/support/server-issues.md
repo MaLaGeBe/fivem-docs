@@ -75,9 +75,9 @@ weight: 840
 对于所有其他问题，我们非常欢迎你加入我们的[Discord][discord]和我们一起聊天。
 
 [patreon]: https://patreon.com/fivem
-[forum]: https://forum.fivem.net/
-[discord]: https://discord.gg/GtvkUsc
+[forum]: https://forum.cfx.re/
+[discord]: https://discord.gg/fivem
 [pfsensenat]: https://www.netgate.com/docs/pfsense/nat/static-port.html
 [servercfg]: /docs/server-manual/setting-up-a-server/#a-name-servercfgexample-a-server-cfg
-[chat-formatting]: https://forum.fivem.net/t/chat-formatting-colors-bold-underline/67641
+[chat-formatting]: https://forum.cfx.re/t/67641
 [setting-up-server]: /docs/server-manual/setting-up-a-server

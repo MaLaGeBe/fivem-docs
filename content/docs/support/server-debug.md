@@ -34,9 +34,9 @@ weight: 840
     procdump64.exe -accepteula -u
     ```
 
-现在可以分析转储文件（使用VS2019+，单击“仅使用本机调试”并加载 [symbols][symbols]）或将其提供给任何请求它的人。如果你确定你发现了一个bug，尽可能详细地在我们的[社区](https://forum.fivem.net/c/general-discussion/bug-reports)或Discord [#server-bugs][discord]频道中报告。使用OneSync？请在[此处](https://forum.fivem.net/c/general-discussion/1s-reports)报告OneSync错误。
+现在可以分析转储文件（使用VS2019+，单击“仅使用本机调试”并加载 [symbols][symbols]）或将其提供给任何请求它的人。如果你确定你发现了一个bug，尽可能详细地在我们的[社区](https://forum.cfx.re/c/general-discussion/bug-reports)或Discord [#server-bugs][discord]频道中报告。使用OneSync？请在[此处](https://forum.cfx.re/c/general-discussion/1s-reports)报告OneSync错误。
 
 [procdump]: https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
-[discord]: https://discord.gg/GtvkUsc
+[discord]: https://discord.gg/fivem
 [dropmefiles]: https://dropmefiles.com/
 [symbols]: https://runtime.fivem.net/client/symbols/

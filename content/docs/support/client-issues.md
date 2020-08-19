@@ -15,8 +15,12 @@ FiveM不对您在服务器上的操作负责，或者服务器管理员对你做
 
 我被FiveM全球封禁
 ------------------------------------
-真不幸，别作弊。如果你觉得你被误封了，请通过[support@fivem.net][email]联系我们，并提供可能被误封的潜在原因。<br />
+真很不幸，千万别作弊。如果你觉得你被误封了，请通过[support@fivem.net][email]联系我们，并提供可能被误封的潜在原因。<br />
 **请注意，FiveM论坛版主或FiveM discord的工作人员 _不能_ 协助您撤销此禁令。**
+<!-- 这里需要重新翻译 -->
+That's unfortunate, don't cheat.
+If you believe you've been falsely banned, you can fill out the ban report at https://forum.cfx.re/w/ban-report. This is **not a ban appeal**, but this data is used for structured collection of potential 'false positive' bans.<br />
+**Please note that you may not get a response and that FiveM forum/Discord moderators can _not_ assist you with your ban.**
 
 找不到游戏可执行文件
 ------------------------------
@@ -99,8 +103,8 @@ FVEM在运行后自行卸载了！
 [where-is-fivem-installed]: /docs/support/client-faq#where-is-fivem-installed
 [disabling-antivirus]: /docs/client-manual/disabling-antivirus
 [email]: mailto:support@fivem.net
-[forum]: https://forum.fivem.net/
-[discord]: https://discord.gg/GtvkUsc
+[forum]: https://forum.cfx.re
+[discord]: https://discord.gg/fivem
 [vanilla-server]: https://servers.fivem.net/#/servers/detail/198.27.79.239:30120
 [uninstalling]: /docs/client-manual/installing-fivem#uninstalling
-[discrete-gpu]: https://forum.fivem.net/t/solution-forcing-fivem-to-use-your-discrete-gpu-infinite-loading-fix/217731
+[discrete-gpu]: https://forum.cfx.re/t/217731

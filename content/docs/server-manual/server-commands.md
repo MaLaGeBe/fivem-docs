@@ -46,7 +46,7 @@ description: >
 
 ### `refresh`
 
-重新扫描*resources*文件夹并加载其中的所有\_\_resource.lua文件，使新资源可用于使用 [start](#start "wikilink")开始。
+重新扫描*resources*文件夹并加载其中的所有\_\_resource.lua文件，使新资源可用于使用 [start](#start-resourcename "wikilink")开始。
 
 示例：
 
