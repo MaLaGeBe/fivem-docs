@@ -26,7 +26,12 @@ FiveM安装在哪里？
 
 有关安装FiveM的更多信息[点这里][installing-fivem].
 
-我运行程序遇到了问题，该怎么办？
+Will I get banned from GTA:Online for playing FiveM?
+---------------------------------------
+
+Nope! [As mentioned on fivem.net](https://fivem.net/#no-bans), FiveM does not interact with the Rockstar Online Services other than to validate your game copy the first time you launch it. This validation emulates the game's interaction, and can not be detected by Rockstar. It also doesn't modify your game files at all, even when downloading server assets, so you don't have to do anything to move between FiveM or GTA:O.
+
+I'm running into issues, what can I do?
 ---------------------------------------
 
 遇到问题从来都不是一件有趣的事。阅读[客户端问题手册][client-issues]以寻求帮助。

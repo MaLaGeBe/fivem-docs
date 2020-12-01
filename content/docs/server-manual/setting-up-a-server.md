@@ -5,15 +5,17 @@ description: >
   设置FXServer的分步指南。
 ---
 
-运行FXServer
-================
 
 FXServer是当前CitizenFX服务器版本的名称。此页面显示了如何运行它。
 
 运行服务端时遇到问题？请访问[疑难问题解答][server-issues]，使用 Discord [#fxserver-support][fxserver-support] 频道或在论坛的 [Server Discussion][fxserver-support-category] 子类别中创建主题。
 
-Windows
--------
+## 开始之前
+Make sure you have registered a license key on the [Cfx.re Keymaster](https://keymaster.fivem.net/) service. You need to have the IP match the IP on which you're going to *first* use the key. Afterwards, the key can be used on any IP, but only on one server at a time.
+
+## 传统安装步骤
+
+### Windows
 
 #### 先决条件
 1. [Visual C++ Redistributable 2019][vcredist] 或最新版
@@ -59,8 +61,9 @@ Linux
 - 如果没有资源开始启动，并且你无法成功连接，那是因为你在启动时没有加 `+exec` 命令。
 - 如果提示 `no license key was specified`，总有上面某个情况适用。
 
-<a name="servercfgexample"></a>server.cfg
-----------
+<a name="servercfgexample"></a>
+
+## server.cfg
 
 下面是一个示例 server.cfg 文件。
 

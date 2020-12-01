@@ -10,6 +10,24 @@ weight: 260
 ### cmdlist
 `cmdlist` 命令将列出在客户端（或服务器）上注册的所有命令。它还将输出通过使用`set`、`sets`和`seta`命令设置的变量。
 
+### con_miniconChannels
+You can use the `con_miniconChannels` to display console messages on screen without needing to open the client console.
+
+A channel name is the text inside the colored box next to a console message.
+The message filter performs a *full match* of the pattern against the channel name, meaning it must match without any extra characters at the beginning or the end.  
+An asterisk (`*`) can be used to specify a partial channel name, as a placeholder for 0-or-more characters.  
+Multiple patterns can be combined using either a space or a plus sign (`+`).  
+
+Usage: `con_miniconChannels <pattern>`
+
+Default: `minicon:*`
+
+Example patterns:
+- All messages: `*`
+- Messages originating from any resource: `script:*`
+- Messages originating from both `banking` and `racing` resources: `script:banking script:racing`
+
+
 ### connect
 您可以使用`connect`通过给定的IP地址和端口连接到服务器。
 
@@ -78,6 +96,13 @@ identifier.steam:110000111111112 <- group.moderator
 ### net_showCommands
 内部开发工具。 不适合普通用户使用。
 
+### neteventlog
+The `neteventlog` is a command to show you all of the network event traffic.
+
+This command will show any incoming / outgoing event traffic. It shows the direction of the event (ex. Server -> Client), the event name, and the size of the data sent (ex. 2 bytes).
+
+Usage: `neteventlog <true|false>`
+
 ### net_statsFile
 `net_statsFile` 是用于存储 FiveM 客户端的网络使用/行为指标的命令。
 
@@ -88,10 +113,23 @@ identifier.steam:110000111111112 <- group.moderator
 示例：`net_statsFile metrics.csv` - 这将在 FiveM [application data][faq-data]文件夹中创建一个名为`metrics.csv`的 CSV 文件。
 
 ### cl_drawfps
+The `cl_drawfps` command will show reliably the frames per second.
 
-`cl_drawfps`命令将可靠地显示每秒的帧数。
+Usage: `cl_drawfps <true|false>`
 
-用法：`cl_drawfps <true|false>`
+### cl_drawperf
+The `cl_drawperf` command will show the following performance metrics:
+
+| Name (Units)  | Description                                                            |
+|---------------|------------------------------------------------------------------------|
+| FPS           | *Frames Per Second:* How many frames are drawn on screen each second.  |
+| Ping (ms)     | How long it takes to get a response from the server (round trip time). |
+| PL (%)        | *Packet Loss:* How many packets failed to reach their destination.     |
+| CPU Usage (%) | How much of the CPU's computing power is being utilized.               |
+| GPU Usage (%) | How much of the GPU Engine's computing power is being utilized.        |
+| GPU Temp (°C) | The temperature of the GPU in Celsius.                                 |
+
+Usage: `cl_drawperf <true|false>`
 
 ### netgraph
 
@@ -163,7 +201,8 @@ animal
 ```
 
 ### seta
-在客户端上设置一个归档变量。 当前，归档尚未实现。
+Set an archived variable on the client.  
+The variables are saved in `%AppData%\CitizenFX\fivem.cfg` and `%AppData%\CitizenFX\redm.cfg`.
 
 用法：`seta <key> <value>`
 
