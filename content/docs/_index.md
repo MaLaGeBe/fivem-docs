@@ -1,7 +1,7 @@
 ---
 title: 首页
 layout: single
-linkTitle: "文档"
+linkTitle: "FiveM中文文档"
 menu:
   main:
     weight: 20
@@ -9,6 +9,8 @@ menu:
 
 FiveM 中文文档
 ===================
+
+#### 点击链接加入群聊【[FiveM中文网官方群][qun]】
 
 欢迎浏览[FiveM][home] 多人游戏修改的中文文档 <br/>
 如果你 _只想玩_ FiveM，请从[网站][home]下载客户端.
@@ -123,3 +125,4 @@ FiveM 中文文档
 [home]: https://fivem.net
 [forum]: https://forum.cfx.re
 [discord]: https://discord.gg/fivem
+[qun]: https://jq.qq.com/?_wv=1027&k=mW27CJA9
