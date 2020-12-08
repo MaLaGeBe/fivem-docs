@@ -9,8 +9,8 @@ weight: 240
 安装
 ----------
 
-遇到麻烦了？确保您的系统满足[最低要求][系统要求]并且
-阅读[客户端问题手册][客户端问题]。
+遇到麻烦了？确保您的系统满足[最低要求][system-requirements]并且
+阅读[客户端问题手册][client-issues]。
 
 - 在下载FiveM之前禁用所有杀毒软件。一些杀毒软件供应商，如Avast、AVG、360、腾讯电脑管家等，会删除FiveM文件，因此导致安装失败。所以请确保您的防病毒程序已完全关闭。安装FiveM后，添加FiveM
 卸载，或添加杀毒软件防病毒白名单/排除。 [See here how][antivirus-help]. 我们正在研究解决办法。
@@ -31,8 +31,8 @@ weight: 240
 - 这就是你需要操作的步骤
 - 如果要重新安装FiveM，请再次运行FiveM.exe。
 
-[主页]: https://fivem.net
-[系统要求]: /docs/client-manual/system-requirements
-[客户端问题]: /docs/support/client-issues
-[杀毒软件帮助]: /docs/client-manual/disabling-antivirus
-[在哪里购买游戏]: /docs/client-manual/where-to-buy-gtav
+[home]: https://fivem.net
+[system-requirements]: /docs/client-manual/system-requirements
+[client-issues]: /docs/support/client-issues
+[antivirus-help]: /docs/client-manual/disabling-antivirus
+[where-to-buy]: /docs/client-manual/where-to-buy-gtav
