@@ -12,8 +12,8 @@ codegen中的引用。
 {{% alert theme="warning" %}}注意，NUI回调**要求**您的资源名称小写！这是由于DNS
 名称限制。{{% /alert %}}
 
-通常，您将在Lua中使用[RegisterNUICallback][registernuicallback]函数，
-{{<native_link "REGISTER_NUI_CALLBACK_TYPE">}}本机以及其他语言的事件处理程序。
+Generally, you'll use the [RegisterNUICallback][registernuicallback] function in Lua, and the
+{{% native_link "REGISTER_NUI_CALLBACK_TYPE" %}} native along with an event handler in other languages.
 
 两者的工作原理非常相似，我们将在下面描述两者：
 

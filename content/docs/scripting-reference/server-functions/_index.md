@@ -19,4 +19,4 @@ weight: 504
 
 这些本地函数可在**所有**运行环境使用。
 
-{{<native_list "server">}}
+{{% native_list "server" %}}

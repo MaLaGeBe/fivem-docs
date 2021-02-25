@@ -2,6 +2,7 @@
 title: 事件列表
 weight: 543
 layout: single
+hidden: true
 ---
 
 **所有非资源特定事件的列表。**
@@ -30,9 +31,3 @@ OneSync events
 - [entityCreated](../list/entityCreated)
 - [entityCreating](../list/entityCreating)
 - [entityRemoved](../list/entityRemoved)
-
-OneSync Bigmode/infinity events
------------
-
-- [playerEnteredScope](../list/playerEnteredScope)
-- [playerLeftScope](../list/playerLeftScope)

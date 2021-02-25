@@ -19,4 +19,4 @@ weight: 502
 
 这些本地函数可在**所有**运行环境使用。
 
-{{<native_list "client">}}
+{{% native_list "client" %}}

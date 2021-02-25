@@ -23,7 +23,9 @@ disablePathToLower = true
 enableGitInfo = true
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML", "JSON"]
+section = ["HTML", "JSON"]
 
 [params]
 disableHomeIcon = true

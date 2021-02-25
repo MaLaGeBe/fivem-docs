@@ -38,7 +38,7 @@ server                                  #服务端
 
 每个资源都必须包含一个名为`fxmanifest.lua`的资源清单，该清单定义了该资源使用的文件/脚本。一个简单的清单示例如下：
 
-{{< code file="/static/examples/manifest/fxmanifest.lua" language="lua" >}}
+{{%  code file="/static/examples/manifest/fxmanifest.lua" language="lua"  %}}
 
 有关更多详细信息，请参见[资源清单参考][manifest-reference]。
 

@@ -10,9 +10,7 @@ layout: single
 -----------
 这些事件是FiveM的一部分，不需要任何资源。
 
-- [onClientResourceStart](../list/onClientResourceStart)
-- [onClientResourceStop](../list/onClientResourceStop)
-- [populationPedCreating](../list/populationPedCreating)
+{{% events "client" %}}
 
 spawnmanager 事件
 -------------------

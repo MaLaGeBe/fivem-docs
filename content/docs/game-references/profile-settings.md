@@ -4,7 +4,7 @@ weight: 770
 ---
 
 
-可以使用本机获取GTA V配置文件设置值: [`GetProfileSetting(int id)`]({{<native "GET_PROFILE_SETTING">}}).
+GTA V profile setting values can be obtained using this native: [`GetProfileSetting(int id)`]({{% native "GET_PROFILE_SETTING" %}}).
 
 
 |    ID |      设置类别           | 配置文件设置描述                                      |

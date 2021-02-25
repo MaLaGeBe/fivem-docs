@@ -734,8 +734,8 @@ Blips
 光标颜色
 -----
 
-{{<native_link "SET_BLIP_AS_FRIENDLY">}} 是用于切换友方和敌人光标
-用于带有友好和敌对小步的反编译脚本中。
+{{% native_link "SET_BLIP_AS_FRIENDLY" %}} is the native used to toggle friendly and enemy flags.
+Used in decompiled scripts with friendly and enemy peds.
 
 <div class="blips blip-colors">
 <div class="blip bcolor"><div class="blip_color" style="background-color: #fefefe" ></div><span><strong>0</strong><br>White</span></div>

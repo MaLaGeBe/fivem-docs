@@ -18,3 +18,6 @@ weight: 230
     - [360](http://xinzhi.wenda.so.com/a/1542692592209575)
     - [腾讯电脑管家](https://jingyan.baidu.com/article/eb9f7b6d3c9973869364e8bf.html)
     - [火绒](#)待补充
+    - [Bitdefender](https://www.bitdefender.com/consumer/support/answer/13427/)
+    - [Kaspersky](https://usa.kaspersky.com/blog/kaspersky-add-exclusion/11075/)
+    - [McAfee](https://service.mcafee.com/webcenter/portal/oracle/webcenter/page/scopedMD/s55728c97_466d_4ddb_952d_05484ea932c6/Page29.jspx?articleId=TS102056)

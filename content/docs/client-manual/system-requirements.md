@@ -5,7 +5,8 @@ weight: 220
 
 要[运行FiveM][installing]，您的系统必须满足游戏的[最低配置要求][gtav-system-specs]。
 
-FiveM需要 _完全_ 更新版本的Windows 7、Windows 8.1 或 Windows 10。过时的操作系统可能无法正常工作。通常建议您尽可能升级到Windows 10，因为这样可以提供最佳体验。
+FiveM requires a _fully_ updated version of Windows 8.1 or Windows 10. An outdated operating system may not
+work. It is generally advised to upgrade to Windows 10 when you can as this provides the best experience.
 
 更多详情：
 

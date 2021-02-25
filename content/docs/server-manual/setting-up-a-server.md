@@ -8,10 +8,51 @@ description: >
 
 FXServer是当前CitizenFX服务器版本的名称。此页面显示了如何运行它。
 
-运行服务端时遇到问题？请访问[疑难问题解答][server-issues]，使用 Discord [#fxserver-support][fxserver-support] 频道或在论坛的 [Server Discussion][fxserver-support-category] 子类别中创建主题。
-
 ## 开始之前
-Make sure you have registered a license key on the [Cfx.re Keymaster](https://keymaster.fivem.net/) service. You need to have the IP match the IP on which you're going to *first* use the key. Afterwards, the key can be used on any IP, but only on one server at a time.
+Make sure you have registered a license key on the [Cfx.re Keymaster](https://keymaster.fivem.net/) service. You need to have the IP match the *public* IP on which you're going to *first* use the key. Afterwards, the key can be used on any IP, but only on one server at a time.
+
+## Ultimate easy setup guide
+![pic](/server-setup/header.png)
+### Windows
+#### Download the server
+1. Go to the [artifacts server][windows-artifacts].
+2. Download the latest recommended build.<br>
+   ![pic](/server-setup/windows-step-2.png)
+3. Open the `server.zip` you just downloaded.<br>
+   ![pic](/server-setup/windows-step-3.png)
+4. Extract it somewhere you want to store it. We'll pick `C:\FXServer\artifact`.<br>
+   ![pic](/server-setup/windows-step-4a.png)<br>
+   ![pic](/server-setup/windows-step-4b.png)
+5. Open the folder you just extracted it to. It should look a little like this:<br>
+   ![pic](/server-setup/windows-step-5.png)
+
+#### Start the server
+1. Double click `FXServer.exe`.<br>
+   ![pic](/server-setup/windows-step2-1.png)
+2. This site should open in your browser. Make sure a PIN is filled, and click `Link Account`.<br>
+   ![pic](/server-setup/windows-step2-2.png)
+3. Log in to your account on [Cfx.re](https://forum.cfx.re/) in this tab and then click `Yes, Allow`.<br>
+   ![pic](/server-setup/windows-step2-3.png)
+4. Set a password to log in to your server's admin page.<br>
+   ![pic](/server-setup/windows-step2-4.png)
+5. Click 'Next'.<br>
+   ![pic](/server-setup/windows-step2-5.png)
+6. Type a name for your server and click 'Next'.
+7. Select to use a 'Popular Template'.<br>
+   ![pic](/server-setup/windows-step2-7.png)
+8. Pick the 'CFX Default' template for now. Other templates may exist, but some will require a database server.<br>
+   ![pic](/server-setup/windows-step2-8.png)
+9. Click 'Save' or select another path.
+10. Go to the 'Recipe Deployer'.<br>
+   ![pic](/server-setup/windows-step2-10.png)
+11. Click 'Next' once you're sure the recipe looks fine. It should be fine the way it comes.<br>
+  ![pic](/server-setup/windows-step2-11.png)
+12. Enter the key you just made on the Keymaster in the 'Before you begin' step and click 'Run Recipe'.<br>
+   ![pic](/server-setup/windows-step2-12.png)
+13. If everything's correct, you can click 'Next' again.<br>
+   ![pic](/server-setup/windows-step2-13.png)
+14. ... and finally, "Save & Run Server", and you're done!<br>
+   ![pic](/server-setup/windows-step2-14.png)
 
 ## 传统安装步骤
 
@@ -67,7 +108,7 @@ Linux
 
 下面是一个示例 server.cfg 文件。
 
-{{< code file="/static/examples/config/server.cfg" language="sh" >}}
+{{%  code file="/static/examples/config/server.cfg" language="sh"  %}}
 
 之后开始做什么？
 ------------

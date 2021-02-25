@@ -90,7 +90,7 @@ RegisterCommand("car", new Action<int, List<object>, string>((source, args, raw)
 ```
 首先，我们看到一个对函数的调用。 我们没有定义该功能。 好吧，（就像FiveM团队一样）做了，但是当引导读者这个奇妙的书面指南奇迹时，却没有。 这意味着它必须来自其他地方！
 
-猜猜是什么，实际上是 {{<native_link "REGISTER_COMMAND">}}! 单击该链接，您将被带到该本地文件的文档。 它看起来像这样：
+And, guess what, it's actually {{% native_link "REGISTER_COMMAND" %}}! Click that link, and you'll be led to the documentation for this native. It looks a bit like this:
 
 ```c
 // 0x5fa79b0f
@@ -155,7 +155,7 @@ RegisterCommand("car", new Action<int, List<object>, string>(async (source, args
 #### Step 1: Validation
 我们从检查模型开始。 我们将其设置为 `adder`。 如果有任何参数，我们将模型设置为第一个参数，并将其强制转换为字符串。
 
-然后，我们使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}检查车辆是否在CD映像中。 这基本上意味着“已在游戏中注册”。 我们还会使用{{<native_link "IS_MODEL_IN_CDIMAGE">}}来检查它是否是车辆。 如果任何一项检查失败，我们将告知玩家并从命令中返回。
+Then, we check if the vehicle is in the CD image using {{% native_link "IS_MODEL_IN_CDIMAGE" %}}. This basically means 'is this registered with the game'. We also check if it's a vehicle using {{% native_link "IS_MODEL_A_VEHICLE" %}}. If either check fails, we tell the player and return from the command.
 
 这里可能有C＃包装器，但是重要的是要重新使用本机，因为编写脚本时会大量使用它们。 确保您的类中具有`using static CitizenFX.Core.Native.API;`指令。
 
